@@ -1,4 +1,6 @@
-.id{
-   
-    color: rgb(134, 203, 203);
-}
+@import 'vars';
+@import 'fonts';
+@import 'mixins';
+@import 'components/footer';
+@import 'components/header';
+
