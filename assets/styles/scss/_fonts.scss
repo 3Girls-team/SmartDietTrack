@@ -1,3 +1,12 @@
+@mixin title {
+    font-family: 'Yellowtail';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 49px;
+color: $color-green;
+}
+
 @mixin heading-h1 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
