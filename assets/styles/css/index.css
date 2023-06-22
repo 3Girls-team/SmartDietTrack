@@ -89,5 +89,17 @@
   line-height: 1.3;
   color: #274C5B;
 }
+.banner__buttom {
+  width: 142px;
+  height: 23px;
+  border-radius: 4px;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #EFD372;
+  color: #274C5B;
+  border-color: #EFD372;
+}
 
 /*# sourceMappingURL=index.css.map */
