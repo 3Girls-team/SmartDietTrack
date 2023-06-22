@@ -5,7 +5,7 @@ padding: 20px;
 justify-content: space-between;
 align-items: center;
 &__logo{
-    width: 150px;
+width: 150px;
 }
 &__nav{
 width: 55vw;
@@ -18,14 +18,12 @@ list-style: none;
 margin-top: 25px;
 padding: 10px; 
 }
-
 &__list-item a{
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 700;
 font-size: 20px;
 line-height: 23px;
-        
 color: $color-sgrey;
 text-decoration: none;
 }
@@ -33,3 +31,26 @@ text-decoration: none;
 color: $color-green ;
 }
 }
+@media (max-width: 767px){
+.footer{
+display: none;
+}
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+.footer{
+margin: 5px;
+padding: 5px;
+justify-content: space-between;
+&__logo{
+display: none;
+}
+&__nav{
+width: 90vw;
+margin-right: 5px;
+}       
+&__list-item a{
+font-size: 15px;  
+}        
+}
+}
+
