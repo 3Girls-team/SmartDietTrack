@@ -1,0 +1,16 @@
+@mixin button {
+	width: 142px;
+    height: 23px;
+	border-radius: 4px;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    
+    color:$color-yellow;
+    border-color:$color-yellow;
+
+    background:$color-sgrey;
+    border-color:$color-sgrey;
+
+}
