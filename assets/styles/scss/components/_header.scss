@@ -1,3 +1,6 @@
+body._lock{
+overflow: hidden;
+}
 .header{
 display: flex;
 margin: 15px;
@@ -6,9 +9,10 @@ justify-content: space-between;
 align-items: center;
 &__logo{
 width: 150px;
+height: 100px;
 }
 &__nav{
-width: 55vw;
+width: 65vw;
 }
 &__nav-list{
 display: flex;
@@ -24,7 +28,7 @@ font-style: normal;
 font-weight: 700;
 font-size: 20px;
 line-height: 23px;
-    
+
 color: $color-sgrey;
 text-decoration: none;
 }
@@ -55,4 +59,155 @@ background-image: url(/assets/images/user.png);
 background-repeat: no-repeat;
 height: 130px;
 }
+&__icon{
+display: none;
 }
+}
+
+
+@media (max-width: 767px){
+.header__icon{
+z-index: 5;
+display: block;
+position: relative;
+width: 30px;
+height: 18px;
+cursor: pointer;
+}
+.header__icon span,
+.header__icon::before,
+.header__icon::after {
+left: 0;
+position: absolute;
+height: 10%;
+width: 100%;
+transition: all 0.3s ease 0s;
+background-color: $color-sgrey;
+}
+.header__icon::before,
+.header__icon::after {
+content: "";
+
+}
+.header__icon::before{
+top: 0;
+}
+.header__icon::after {
+bottom: 0;  
+}
+.header__icon span{
+top: 50%;
+transform: scale(1) translate(0px, -50%);
+}
+.header__icon._active span{
+transform: scale(0) translate(0px,-50%);
+}
+
+.header__nav{
+position: fixed;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+padding: 100px 30px 30px 30px;
+transition: left 0.3s ease 0s;
+flex-direction: column;
+overflow: auto;
+}
+
+.header__nav._active{
+left: 0;
+}
+
+.header__nav-list {
+margin: 55px 0px 30px 0px;
+flex-wrap: wrap;
+flex-direction: column;
+
+}
+.header__nav-list li{
+margin: 0px 0px 30px 0px;
+}
+.header__list-item{
+font-size: 24px;
+}
+.header__text{
+display: none;
+}
+
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+.header__icon{
+z-index: 5;
+display: block;
+position: relative;
+width: 30px;
+height: 18px;
+cursor: pointer;
+}
+.header__icon span,
+.header__icon::before,
+.header__icon::after {
+left: 0;
+position: absolute;
+height: 10%;
+width: 100%;
+transition: all 0.3s ease 0s;
+background-color: $color-sgrey;
+}
+.header__icon::before,
+.header__icon::after {
+content: "";
+
+}
+.header__icon::before{
+top: 0;
+}
+.header__icon::after {
+bottom: 0;  
+}
+.header__icon span{
+top: 50%;
+transform: scale(1) translate(0px, -50%);
+}
+.header__icon._active span{
+transform: scale(0) translate(0px,-50%);
+}
+
+.header__nav{
+position: fixed;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+padding: 100px 30px 30px 30px;
+transition: left 0.3s ease 0s;
+flex-direction: column;
+overflow: auto;
+}
+
+.header__nav._active{
+left: 0;
+}
+
+.header__nav-list {
+margin: 55px 0px 30px 0px;
+flex-wrap: wrap;
+flex-direction: column;
+
+}
+.header__nav-list li{
+margin: 0px 0px 30px 0px;
+}
+.header__list-item{
+font-size: 24px;
+}
+.header__text{
+
+}
+
+}
+
+
+
+
