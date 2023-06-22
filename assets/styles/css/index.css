@@ -90,9 +90,9 @@
   color: #274C5B;
 }
 .banner__buttom {
-  width: 142px;
-  height: 23px;
-  border-radius: 4px;
+  width: 200px;
+  height: 80px;
+  border-radius: 10px;
   font-family: Roboto, sans-serif;
   font-size: 20px;
   font-weight: 700;
