@@ -1,7 +1,7 @@
 .footer {
   display: flex;
-  margin: 15px;
-  padding: 20px;
+  margin: 10px;
+  padding: 10px;
   justify-content: space-between;
   align-items: center;
 }
@@ -9,15 +9,15 @@
   width: 150px;
 }
 .footer__nav {
-  width: 55vw;
-  margin-right: 300px;
+  width: 75vw;
+  margin-right: 120px;
 }
 .footer__nav-list {
   display: flex;
   justify-content: space-between;
   list-style: none;
   margin-top: 25px;
-  padding: 10px;
+  padding: 25px;
 }
 .footer__list-item a {
   font-family: "Roboto";

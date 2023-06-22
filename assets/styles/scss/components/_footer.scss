@@ -1,22 +1,22 @@
 .footer{
 display: flex;
-margin: 15px;
-padding: 20px;
+margin: 10px;
+padding: 10px;
 justify-content: space-between;
 align-items: center;
 &__logo{
 width: 150px;
 }
 &__nav{
-width: 55vw;
-margin-right: 300px;
+width: 75vw;
+margin-right: 120px;
 }
 &__nav-list{
 display: flex;
 justify-content: space-between;
 list-style: none;
 margin-top: 25px;
-padding: 10px; 
+padding: 25px; 
 }
 &__list-item a{
 font-family: 'Roboto';
