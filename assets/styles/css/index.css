@@ -1,3 +1,37 @@
+.footer {
+  display: flex;
+  margin: 15px;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__logo {
+  width: 150px;
+}
+.footer__nav {
+  width: 55vw;
+  margin-right: 300px;
+}
+.footer__nav-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-top: 25px;
+  padding: 10px;
+}
+.footer__list-item a {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #274C5B;
+  text-decoration: none;
+}
+.footer__list-item :hover {
+  color: #7EB693;
+}
+
 .header {
   display: flex;
   margin: 15px;
