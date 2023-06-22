@@ -1,7 +1,7 @@
 @mixin buttonyellow {
-	width: 142px;
-    height: 23px;
-	border-radius: 4px;
+	width: 200px;
+    height: 80px;
+	border-radius: 10px;
     font-family: Roboto, sans-serif;
     font-size: 20px;
     font-weight: 700;
@@ -11,9 +11,9 @@
     border-color:$color-yellow;
 }
 @mixin buttonblue {
-	width: 142px;
-    height: 23px;
-	border-radius: 4px;
+	width: 200px;
+    height: 80px;
+	border-radius: 10px;
     font-family: Roboto, sans-serif;
     font-size: 20px;
     font-weight: 700;
