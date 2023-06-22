@@ -1,0 +1,44 @@
+.header{
+display: flex;
+margin: 15px;
+padding: 20px;
+justify-content: space-between;
+align-items: center;
+&__nav{
+width: 50vw;
+}
+&__nav-list{
+display: flex;
+justify-content: space-between;
+list-style: none;
+margin-top: 25px;
+padding: 10px; 
+}
+
+&__list-item a{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 23px;
+        
+color: $color-sgrey;
+text-decoration: none;
+}
+&__list-item :hover{
+color: $color-green ;
+}
+&__button{
+width: 10vw;
+height: 8vh;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 10px;
+color: $color-gwhite;
+border-radius: 20px;
+background-color: $color-sgrey;
+border-color: $color-sgrey;
+}
+}
