@@ -4,8 +4,12 @@ margin: 15px;
 padding: 20px;
 justify-content: space-between;
 align-items: center;
+&__logo{
+    width: 150px;
+}
 &__nav{
-width: 50vw;
+width: 55vw;
+margin-right: 300px;
 }
 &__nav-list{
 display: flex;
@@ -27,18 +31,5 @@ text-decoration: none;
 }
 &__list-item :hover{
 color: $color-green ;
-}
-&__button{
-width: 10vw;
-height: 8vh;
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 10px;
-color: $color-gwhite;
-border-radius: 20px;
-background-color: $color-sgrey;
-border-color: $color-sgrey;
 }
 }
