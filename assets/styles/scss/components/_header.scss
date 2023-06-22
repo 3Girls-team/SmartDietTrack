@@ -5,11 +5,10 @@ padding: 20px;
 justify-content: space-between;
 align-items: center;
 &__logo{
-    width: 150px;
+width: 150px;
 }
 &__nav{
 width: 55vw;
-margin-right: 300px;
 }
 &__nav-list{
 display: flex;
@@ -25,11 +24,35 @@ font-style: normal;
 font-weight: 700;
 font-size: 20px;
 line-height: 23px;
-        
+    
 color: $color-sgrey;
 text-decoration: none;
 }
 &__list-item :hover{
 color: $color-green ;
+}
+&__text{
+position: relative;
+margin-right: 20px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 23px;
+
+color: $color-sgrey;
+
+}
+&__text::before{
+content:'';
+position: absolute;
+top: 0px;
+right: 0px;
+bottom: 0px;
+left: -30px;
+background-image: url(/assets/images/user.png);
+background-repeat: no-repeat;
+height: 130px;
 }
 }

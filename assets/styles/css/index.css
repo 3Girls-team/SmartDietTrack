@@ -44,7 +44,6 @@
 }
 .header__nav {
   width: 55vw;
-  margin-right: 300px;
 }
 .header__nav-list {
   display: flex;
@@ -64,6 +63,27 @@
 }
 .header__list-item :hover {
   color: #7EB693;
+}
+.header__text {
+  position: relative;
+  margin-right: 20px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #274C5B;
+}
+.header__text::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: -30px;
+  background-image: url(/assets/images/user.png);
+  background-repeat: no-repeat;
+  height: 130px;
 }
 
 .banner {
@@ -101,6 +121,9 @@
   background-color: #EFD372;
   color: #274C5B;
   border-color: #EFD372;
+}
+.banner__button:hover {
+  background-color: #f9f8f8;
 }
 
 /*# sourceMappingURL=index.css.map */
