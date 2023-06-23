@@ -8,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@300;400&family=Roboto:wght@300;400;700;900&family=Yellowtail&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="assets/normalize.css">
-    <link rel="stylesheet" href="assets/styles/css/index.css" />
-</head>
-  
- <!--Рекомендации по работе в проекте:
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@300;400&family=Roboto:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/normalize.css" />
+    <link rel="stylesheet" href="assets/styles/scss/index.css" />
+  </head>
+
+  <!--Рекомендации по работе в проекте:
 (по этому списку буду проверять каждый блок)
 1.	Проверка блока в валидаторах.
 2.	У img развернутый alt.
@@ -27,19 +28,71 @@
 9.  fonts используем для стилей заголовков-->
 
   <!--Девочки, подписываем свои рабочие области, начало/конец-->
-  
-<body>
+  <body>
     <header>Анжелика</header>
     <main>
-        <section class="banner">Анжелика</section>
-        <section class="about-us">Аида</section>
-        <section class="nutrients">Катя Сафиуллова</section>
-        <section class="testimonial">Катя</section>
-        <section class="calculator">Марина</section>
-        <section class="recipes">Настя Clifford</section>
-        <section class="share-with-us">Катя</section>
-        <section class="form-news">Настя/Анжелика</section>
-        <!-- Есть еще свободные блоки для работы: Форма регистрации на сайте с всплывашкой "Welcome... 
+      <section class="banner">Анжелика</section>
+      <section class="about-us">Аида</section>
+      <section class="nutrients">Катя Сафиуллова</section>
+      <section class="testimonial">Катя</section>
+      <section class="calculator">Марина</section>
+      <section class="recipes">
+        <!--Clifford / START -->
+
+        <div class="randomRecipe">
+          <div class="randomRecipe__text">
+            <p class="randomRecipe__text__title">Recipes</p>
+            <p class="randomRecipe__text__body">
+              Discover our wide selection of perfectly balanced and delicious
+              recipes
+            </p>
+          </div>
+          <form class="randomRecipe__form">
+            <div class="form__inputs">
+              <select
+                id="select-meal"
+                name="selectMeal"
+                class="form__inputs__meal"
+              >
+                <option selected="true" disabled="disabled">
+                  Please select meal type
+                </option>
+
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="snack">Snack</option>
+                <option value="teatime">Teatime</option>
+              </select>
+
+              <input
+                type="text"
+                class="form__inputs__product"
+                placeholder="Please type in a product"
+              />
+            </div>
+            <button class="randomRecipe__form__button">
+              Search
+              <img
+                alt="searchImg"
+                src="/SmartDietTrack/assets/styles/img/aerrow.png"
+                class="imgSearch"
+              />
+            </button>
+          </form>
+          <div class="randomRecipe__result">
+            <div class="result__spinner"></div>
+            <div class="input_error-message"></div>
+            <div class="errorMessage"></div>
+            <div class="result-display"></div>
+          </div>
+        </div>
+
+        <!--Clifford / END -->
+      </section>
+      <section class="share-with-us">Катя</section>
+      <section class="form-news">Настя/Анжелика</section>
+      <!-- Есть еще свободные блоки для работы: Форма регистрации на сайте с всплывашкой "Welcome... 
                                             и 404 с кнопкой перехода на главную страницу -->
     </main>
     <footer>Анжелика</footer>

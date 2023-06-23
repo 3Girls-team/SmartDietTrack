@@ -79,6 +79,8 @@ color: $color-green;
     color: $color-dgrey;
     }
 
+
+
 @mixin text-Quotes {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
@@ -88,6 +90,7 @@ color: $color-green;
     text-align: center;
     color: $color-sgrey;
 }
+
 @mixin text-button {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
@@ -97,3 +100,38 @@ color: $color-green;
     color: $color-sgrey;
 }
 
+
+
+
+@mixin text-headline {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 36px;
+    color: $color-green;   
+    }
+ 
+@mixin button {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: $color-sgrey;
+    height: 60px;
+    width: 120px;
+    border-radius: 10px;
+    background-color: $color-gwhite;
+}
+
+@mixin input{
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    height: 60px;
+    width: 220px;
+    border-radius: 10px;
+    border: 1px solid $color-green;
+}
