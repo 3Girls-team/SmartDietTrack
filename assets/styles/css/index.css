@@ -316,6 +316,7 @@ body._lock {
 }
 .modal-window {
   display: none;
+  position: fixed;
   z-index: 1000;
   width: 70vw;
   margin: 50px 70px;
