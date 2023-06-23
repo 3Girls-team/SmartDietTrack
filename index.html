@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/normalize.css" />
-    <link rel="stylesheet" href="assets/styles/css/index.css" />
+    <link rel="stylesheet" href="assets/styles/scss/index.css" />
   </head>
 
   <!--Рекомендации по работе в проекте:
@@ -40,7 +40,58 @@
         <section></section>
         <section></section>
         <section></section>
-        <section></section>
+        <!--Clifford / START -->
+        <section class="main__section-randomRecipe">
+          <div class="randomRecipe">
+            <div class="randomRecipe__text">
+              <p class="randomRecipe__text__title">Recipes</p>
+              <p class="randomRecipe__text__body">
+                Discover our wide selection of perfectly balanced and delicious
+                recipes
+              </p>
+            </div>
+            <form class="randomRecipe__form">
+              <div class="form__inputs">
+                <select
+                  id="select-meal"
+                  name="selectMeal"
+                  class="form__inputs__meal"
+                >
+                  <option selected="true" disabled="disabled">
+                    Please select meal type
+                  </option>
+
+                  <option value="breakfast">Breakfast</option>
+                  <option value="lunch">Lunch</option>
+                  <option value="dinner">Dinner</option>
+                  <option value="snack">Snack</option>
+                  <option value="teatime">Teatime</option>
+                </select>
+
+                <input
+                  type="text"
+                  class="form__inputs__product"
+                  placeholder="Please type in a product"
+                />
+              </div>
+              <button class="randomRecipe__form__button">
+                Search
+                <img
+                  alt="searchImg"
+                  src="/SmartDietTrack/assets/styles/img/aerrow.png"
+                  class="imgSearch"
+                />
+              </button>
+            </form>
+            <div class="randomRecipe__result">
+              <div class="result__spinner"></div>
+              <div class="input_error-message"></div>
+              <div class="errorMessage"></div>
+              <div class="result-display"></div>
+            </div>
+          </div>
+        </section>
+        <!--Clifford / END -->
         <section></section>
         <section></section>
       </div>
