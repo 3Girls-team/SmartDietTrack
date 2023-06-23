@@ -1,0 +1,29 @@
+.modal-window{
+width: 70vw;
+margin: 50px 70px ;
+padding: 20px;
+background-image: url(/assets/images/modalpicture.png);
+border-radius: 15px;
+&__fon{
+width: 40vw;
+margin-left: 50px;
+border-radius: 15px;
+background-color: white;
+}
+&__button{
+    margin: 10px 0px 0px 260px;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    background: none;
+	color: inherit;
+	border: none;
+    color: $color-sgrey; 
+    cursor: pointer;
+}
+&__greeting{
+    margin: 0;
+}
+
+}

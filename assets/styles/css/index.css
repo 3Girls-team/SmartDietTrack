@@ -314,5 +314,33 @@ body._lock {
     font-size: 2vw;
   }
 }
+.modal-window {
+  width: 70vw;
+  margin: 50px 70px;
+  padding: 20px;
+  background-image: url(/assets/images/modalpicture.png);
+  border-radius: 15px;
+}
+.modal-window__fon {
+  width: 40vw;
+  margin-left: 50px;
+  border-radius: 15px;
+  background-color: white;
+}
+.modal-window__button {
+  margin: 10px 0px 0px 260px;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  background: none;
+  color: inherit;
+  border: none;
+  color: #274C5B;
+  cursor: pointer;
+}
+.modal-window__greeting {
+  margin: 0;
+}
 
 /*# sourceMappingURL=index.css.map */
