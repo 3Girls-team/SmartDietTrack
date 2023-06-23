@@ -319,7 +319,7 @@ body._lock {
   position: fixed;
   z-index: 1000;
   width: 70vw;
-  margin: 10px auto;
+  margin: auto;
   padding: 50px;
   background-image: url(/assets/images/modalpicture.png);
   border-radius: 15px;
