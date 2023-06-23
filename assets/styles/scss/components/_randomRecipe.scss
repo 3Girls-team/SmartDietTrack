@@ -9,7 +9,7 @@
               }
     &__title {
         margin-bottom: -45px;
-        @include text-headline;
+        @include title;
         @media (max-width: 828px) {
             margin-bottom: -35px;
             font-size: 20px;
