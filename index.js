@@ -24,6 +24,11 @@ buttonOpen.onclick =function(){
 bottonClose.onclick =function(){
   modalwindow.style.display="none";
 }
+window.onclick=function(event){
+  if(event.target == modalwindow){
+    modalwindow.style.display="none"
+  }
+}
  
  
     
