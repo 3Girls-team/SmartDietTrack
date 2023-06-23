@@ -28,11 +28,9 @@ margin: 10px 100px 100px;
 background-color:$color-gwhite;                          
 }
 }
-
 @media (max-width: 767px) {
 .banner{
 background-image:url(/assets/images/backgroundadaptive.png);
-
 padding: 5px;
 margin: 0 auto;
 background-size: 100% 100%;
@@ -58,8 +56,6 @@ height: 40px;
 font-size: 3vw;                           
 }
 }
-
-
 }
 @media (min-width: 768px) and (max-width: 1023px) {
 .banner{
@@ -71,7 +67,6 @@ background-repeat: no-repeat;
 &__text{
 margin: 30px 30px 0px;
 font-size: 3vw;
-
 }
 &__title{
 margin: 10px 20px 0px;
@@ -85,6 +80,5 @@ width: 150px;
 height: 40px; 
 font-size: 2vw;                           
 }
-
 }
 }
