@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+//Начало код Анжелика
+
+// Меню бургер
+const iconMenu= document.querySelector(".header__icon");
+if(iconMenu){
+    const menuNav= document.querySelector(".header__nav"); 
+
+    iconMenu.addEventListener('click', function(e){
+        document.body.classList.toggle('_lock');
+        iconMenu.classList.toggle('_active');
+        menuNav.classList.toggle('_active');
+    })
+}
+=======
 //Clifford / START
 
 const btnRanRec = document.querySelector(".randomRecipe__form__button"); //находим кнопку в разметке и задаем переменную ей
@@ -68,3 +83,4 @@ btnRanRec.onclick = function (e) {
 };
 
 //Clifford / END
+>>>>>>> 81ba8029ad7199f5f561d536ac222977e10d119b
