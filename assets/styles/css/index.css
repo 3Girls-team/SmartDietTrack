@@ -315,7 +315,6 @@ body._lock {
   }
 }
 .modal-window {
-  display: none;
   width: 70vw;
   margin: 50px 70px;
   padding: 50px;
@@ -368,6 +367,60 @@ body._lock {
   font-size: 2vw;
 }
 
+@media (max-width: 767px) {
+  .modal-window {
+    width: 70vw;
+    margin: 20px 7px;
+    padding: 20px;
+  }
+  .modal-window__fon {
+    width: 45vw;
+    padding: 10px;
+    margin-left: 10px;
+  }
+  .modal-window__button {
+    font-size: 2vw;
+  }
+  .modal-window__greeting {
+    font-size: 2vw;
+    line-height: 9px;
+  }
+  .modal-window__slogan {
+    font-size: 2vw;
+    line-height: 9px;
+  }
+  .modal-window__description {
+    font-size: 2vw;
+    line-height: 9px;
+  }
+}
+@media (max-width: 767px) and (min-width: 768px) and (max-width: 1023px) {
+  .modal-window {
+    width: 70vw;
+    margin: 20px 7px;
+    padding: 20px;
+  }
+  .modal-window__fon {
+    width: 45vw;
+    padding: 10px;
+    margin-left: 10px;
+  }
+  .modal-window__button {
+    font-size: 2vw;
+  }
+  .modal-window__greeting {
+    font-size: 2vw;
+    line-height: 9px;
+  }
+  .modal-window__slogan {
+    font-size: 2vw;
+    line-height: 9px;
+  }
+  .modal-window__description {
+    font-size: 2vw;
+    line-height: 9px;
+  }
+}
 .randomRecipe {
   width: 70%;
   margin-left: auto;

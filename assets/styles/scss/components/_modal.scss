@@ -1,5 +1,5 @@
 .modal-window{
-display: none;
+// display: none;
 width: 70vw;
 margin: 50px 70px ;
 padding: 50px;
@@ -14,34 +14,89 @@ border-radius: 15px;
 background-color: white;
 }
 &__button{
-    font-family: Roboto, sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-    background: none;
-	color: inherit;
-	border: none;
-    color: $color-sgrey; 
-    cursor: pointer;
+font-family: Roboto, sans-serif;
+font-size: 20px;
+font-weight: 700;
+text-align: center;
+background: none;
+color: inherit;
+border: none;
+color: $color-sgrey; 
+cursor: pointer;
 }
 &__greeting{
-   @include title;
-   font-size: 3vw;
+@include title;
+font-size: 3vw;
 
 }
 &__slogan{
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 3vw;
-    line-height: 20px;
-    color: $color-sgrey;
+font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 3vw;
+line-height: 20px;
+color: $color-sgrey;
 }
 
 &__description{
-    @include text-p;
-    font-size: 2vw;
+@include text-p;
+font-size: 2vw;
 
 }
 }
+@media (max-width: 767px){
+.modal-window{
+width: 70vw;
+margin: 20px 7px ;
+padding:20px;
+&__fon{
+width: 45vw;
+padding: 10px;
+margin-left: 10px;
+}
+&__button{
+font-size: 2vw;
+}
+&__greeting{
+font-size: 2vw;
+line-height: 9px;
+}
+&__slogan{
+font-size: 2vw;
+line-height: 9px;
+}
 
+&__description{
+font-size: 2vw; 
+line-height: 9px;
+
+}
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .modal-window{
+width: 70vw;
+margin: 20px 7px ;
+padding:20px;
+&__fon{
+width: 45vw;
+padding: 10px;
+margin-left: 10px;
+}
+&__button{
+font-size: 2vw;
+}
+&__greeting{
+font-size: 2vw;
+line-height: 9px;
+}
+&__slogan{
+font-size: 2vw;
+line-height: 9px;
+}
+
+&__description{
+font-size: 2vw; 
+line-height: 9px;
+}
+}
+}}
