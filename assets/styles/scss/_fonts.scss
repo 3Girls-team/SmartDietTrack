@@ -1,6 +1,6 @@
 @mixin title {
-    font-family: 'Yellowtail';
-font-style: normal;
+font-family: 'Yellowtail';
+font-style: italic;
 font-weight: 400;
 font-size: 36px;
 line-height: 49px;
@@ -79,6 +79,8 @@ color: $color-green;
     color: $color-dgrey;
     }
 
+
+
 @mixin text-Quotes {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
@@ -88,6 +90,7 @@ color: $color-green;
     text-align: center;
     color: $color-sgrey;
 }
+
 @mixin text-button {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
@@ -96,4 +99,7 @@ color: $color-green;
     line-height: 23px;
     color: $color-sgrey;
 }
+
+
+ 
 
