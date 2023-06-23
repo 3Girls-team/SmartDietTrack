@@ -1,5 +1,7 @@
 .modal-window{
-// display: none;
+display: none;
+// position: fixed;
+z-index: 1000;
 width: 70vw;
 margin: 50px 70px ;
 padding: 50px;
@@ -12,8 +14,10 @@ margin-left: 50px;
 padding: 15px;
 border-radius: 15px;
 background-color: white;
+z-index: 99999;
 }
 &__button{
+    float: right;
 font-family: Roboto, sans-serif;
 font-size: 20px;
 font-weight: 700;
@@ -73,7 +77,7 @@ line-height: 9px;
 }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-    .modal-window{
+.modal-window{
 width: 70vw;
 margin: 20px 7px ;
 padding:20px;

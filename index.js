@@ -12,6 +12,26 @@ if(iconMenu){
         menuNav.classList.toggle('_active');
     })
 }
+//Открытие и закрытие модального окна
+const buttonOpen= document.querySelector(".banner__button");//ищем кнопку открытия модального окна
+const modalwindow= document.querySelector(".modal-window");//ищем модальное окно
+const bottonClose= document.querySelector(".modal-window__button");//ищем кнопку закрытия модального окна
+
+buttonOpen.onclick =function(){
+  modalwindow.style.display="block";
+}
+
+bottonClose.onclick =function(){
+  modalwindow.style.display="none";
+}
+ 
+ 
+    
+
+
+
+
+
 
 //Clifford / START
 

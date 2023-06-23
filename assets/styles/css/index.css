@@ -315,6 +315,8 @@ body._lock {
   }
 }
 .modal-window {
+  display: none;
+  z-index: 1000;
   width: 70vw;
   margin: 50px 70px;
   padding: 50px;
@@ -328,8 +330,10 @@ body._lock {
   padding: 15px;
   border-radius: 15px;
   background-color: white;
+  z-index: 99999;
 }
 .modal-window__button {
+  float: right;
   font-family: Roboto, sans-serif;
   font-size: 20px;
   font-weight: 700;
