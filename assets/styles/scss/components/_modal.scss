@@ -1,17 +1,18 @@
 .modal-window{
 width: 70vw;
 margin: 50px 70px ;
-padding: 20px;
+padding: 50px;
 background-image: url(/assets/images/modalpicture.png);
 border-radius: 15px;
+background-repeat: no-repeat;
 &__fon{
-width: 40vw;
+width: 50vw;
 margin-left: 50px;
+padding: 15px;
 border-radius: 15px;
 background-color: white;
 }
 &__button{
-    margin: 10px 0px 0px 260px;
     font-family: Roboto, sans-serif;
     font-size: 20px;
     font-weight: 700;
@@ -23,7 +24,26 @@ background-color: white;
     cursor: pointer;
 }
 &__greeting{
-    margin: 0;
+   @include title;
+   font-size: 3vw;
+
+}
+&__slogan{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3vw;
+    line-height: 20px;
+    color: $color-sgrey;
 }
 
+&__description{
+    @include text-p;
+    font-size: 2vw;
+
+}
+}
+
+@media (max-width: 767px) {
+    
 }

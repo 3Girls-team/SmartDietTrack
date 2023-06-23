@@ -317,18 +317,19 @@ body._lock {
 .modal-window {
   width: 70vw;
   margin: 50px 70px;
-  padding: 20px;
+  padding: 50px;
   background-image: url(/assets/images/modalpicture.png);
   border-radius: 15px;
+  background-repeat: no-repeat;
 }
 .modal-window__fon {
-  width: 40vw;
+  width: 50vw;
   margin-left: 50px;
+  padding: 15px;
   border-radius: 15px;
   background-color: white;
 }
 .modal-window__button {
-  margin: 10px 0px 0px 260px;
   font-family: Roboto, sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -340,7 +341,30 @@ body._lock {
   cursor: pointer;
 }
 .modal-window__greeting {
-  margin: 0;
+  font-family: "Yellowtail";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+  color: #7EB693;
+  font-size: 3vw;
+}
+.modal-window__slogan {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3vw;
+  line-height: 20px;
+  color: #274C5B;
+}
+.modal-window__description {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #525C60;
+  font-size: 2vw;
 }
 
 /*# sourceMappingURL=index.css.map */
