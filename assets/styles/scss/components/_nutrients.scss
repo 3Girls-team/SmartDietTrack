@@ -33,6 +33,12 @@
         color: $color-sgrey;
         @include input;
     }
+    
+    &-error{
+        height: 25px;
+        @include title;
+        font-size: 20px;
+    }
 
     &-button {
         margin-top: 30px;

@@ -13,6 +13,60 @@ if(iconMenu){
     })
 }
 
+// Safiullova / START 
+const btnProduct = document.querySelector(".nutrients__form-button");  // Кнопка поиска продукта по названию
+const productName = document.querySelector("#nutrients-form"); // Находим input в котором ввели название продукта
+const productCard = document.querySelector(".nutrients__card"); // Элемент для отрисовки карточки продукта
+const productCardError = document.querySelector(".nutrients__form-error"); // Элемент с сообщением об ошибке
+
+btnProduct.onclick = function (e) {  // фнкция будет отображать карточку продукта, который ввел пользователь
+  e.preventDefault(); // убираю submit
+  productCardError.innerHTML = " "; // очистка сообщения об ошибке
+  if (productName.value == 0) {  //проверка, если пользователь не ввел значение, появится сообщение
+    productCardError.innerHTML = "Please enter the product you want to know about";
+  } else {
+    // fetch(
+    //   `https://api.edamam.com/api/recipes/v2?type=public&q=${product}&app_id=cedf5a94&app_key=86e377f38e1d30b44776242e0c405d20&mealType=${mealType}`
+    // ) //обращаемся к API в соответствии с введенными пользователем параметрами для поиска - продукт и прием пищи
+    //   .then((response) => {
+    //     return response.json(); //преобразовываем данные в массив
+    //   })
+    //   .then((data) => {
+    //     // выводим необходимые нам данные из массива, создаем разметку для карточки продукта
+    //     productCard.innerHTML = `<div class="result__item"><img src="${
+    //       data.hits[0].recipe.image
+    //     }" alt="recipeImage" class="item__img" /> 
+    //     <div class="item__info">
+    //     <div class="item__type">${
+    //       data.hits[0].recipe.dishType
+    //     }</div> <div class="item__diet">${
+    //       data.hits[0].recipe.dietLabels
+    //     } </div><div class="item__title">${data.hits[0].recipe.label}</div>
+    //     <div class="item__labels">${data.hits[0].recipe.healthLabels.join(
+    //       ""
+    //     )} </div>
+    //     <div class="item__ingredients">Ingredients: ${data.hits[0].recipe.ingredientLines.join(
+    //       ","
+    //     )} </div>
+    //     <a href="${
+    //       data.hits[0].recipe.url
+    //     }" class="item__prep">Preparation</a></div></div>`;
+    //   })
+    //   .catch((error) => {
+    //     //выводим сообщение об ошибке, если она возникла
+    //     productCardError.innerHTML = "Sorry, we couldn't find any data for this product. Please try again!";
+    //   })
+    //   .finally(() => {
+    //     //в конце убираем отображение спинера
+    //     // spinner.style.display = "none";
+    //   });
+  
+  }
+  productName.value = " "; // очистка поля ввода продукта
+}
+
+// Safiullova / END 
+
 //Clifford / START
 
 const btnRanRec = document.querySelector(".randomRecipe__form__button"); //находим кнопку в разметке и задаем переменную ей

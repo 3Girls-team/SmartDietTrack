@@ -661,6 +661,16 @@ body._lock {
   border-radius: 10px;
   border: 1px solid #7EB693;
 }
+.nutrients__form-error {
+  height: 25px;
+  font-family: "Yellowtail";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+  color: #7EB693;
+  font-size: 20px;
+}
 .nutrients__form-button {
   margin-top: 30px;
   width: 200px;
