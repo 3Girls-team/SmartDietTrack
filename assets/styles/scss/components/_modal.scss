@@ -3,10 +3,9 @@ display: none;
 position: fixed;
 z-index: 1000;
 width: 70vw;
-// margin: 50px 70px ;
-margin: auto;
+margin: 50px 90px;
 padding: 50px;
-background-image: url(/assets/images/modalpicture.png);
+background-image: url(../../images/modalpicture.png);
 border-radius: 15px;
 background-repeat: no-repeat;
 &__fon{
@@ -52,7 +51,7 @@ font-size: 2vw;
 @media (max-width: 767px){
 .modal-window{
 width: 70vw;
-margin: 20px 7px ;
+margin: 200px 30px ;
 padding:20px;
 &__fon{
 width: 45vw;
@@ -80,7 +79,6 @@ line-height: 9px;
 @media (min-width: 768px) and (max-width: 1023px) {
 .modal-window{
 width: 70vw;
-margin: 20px 7px ;
 padding:20px;
 &__fon{
 width: 45vw;
