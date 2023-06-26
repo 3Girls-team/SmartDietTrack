@@ -1,0 +1,36 @@
+.form-news{
+    margin: 100px auto;
+    padding: 50px;
+    height: 50vh;
+    width: 70vw;
+    background-image: url(../../images/imgnews.jpg);
+    border-radius: 15px;
+
+
+   &__name{
+    margin-top: 100px;
+    margin-left: 50px;
+    color: $color-sgrey;
+    @include input;
+    text-align: center;
+   }
+   &__email{
+    margin-left: 30px;
+    color: $color-sgrey;
+    @include input;
+    text-align: center;
+   }
+   &__button{    
+    @include buttonblue;
+    margin-left: 20px;
+    height: 63px;
+    width: 220px;
+    }
+&__button:hover{
+    background-color:$color-green;
+    color:$color-gwhite;
+}    
+&__button:active {
+    background-color: $color-dgrey;
+}
+}
