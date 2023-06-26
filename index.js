@@ -34,7 +34,6 @@ const btnFormNews = document.querySelector(".form-news__button"); //находи
 const errorMesForm = document.querySelector(".form-news__errorMessage"); //находим разметку, где будет отображаться сообщение об ошибке
 const resultFormNews = document.querySelector(".form-news__result"); //находим разметку, где будет отображаться сообщение c результатом
 
-
 btnFormNews.onclick = function(event){// вешаем событие на кнопку
   event.preventDefault(); //отменяем дефолтное submit у кнопки
   resultFormNews.innerHTML = " "; //очищаем поле с результатом
@@ -72,6 +71,44 @@ btnFormNews.onclick = function(event){// вешаем событие на кно
   }
 }
 //Конец код JS Анжелика
+
+// Safiullova / START 
+const btnProduct = document.querySelector(".nutrients__form-button");  // Кнопка поиска продукта по названию
+const productName = document.querySelector("#nutrients-form"); // Находим input в котором ввели название продукта
+const productCard = document.querySelector(".nutrients__card"); // Элемент для отрисовки карточки продукта
+const productCardError = document.querySelector(".nutrients__form-error"); // Элемент с сообщением об ошибке
+
+btnProduct.onclick = function (e) {  // фнкция будет отображать карточку продукта, который ввел пользователь
+  e.preventDefault(); // убираю submit
+  productCardError.innerHTML = " "; // очистка сообщения об ошибке
+  if (productName.value == 0) {  //проверка, если пользователь не ввел значение, появится сообщение
+    productCardError.innerHTML = "Please enter the product you want to know about";
+  } else {
+    fetch(
+      `https://api.edamam.com/api/food-database/v2/nutrients?app_id=828a8c08&app_key=5055def535cbc6e05c7aa923b552be6f`
+      
+    ) //обращаемся к API в соответствии с введенными пользователем параметрами для поиска - продукт и прием пищи
+      .then((response) => {
+        return response.json(); //преобразовываем данные в массив
+        
+      })
+      .then((ingredients) => {
+        console.log(ingredients.foodId)
+      //сюда разметку карточки
+      })
+      .catch((error) => {
+        //выводим сообщение об ошибке, если она возникла
+        productCardError.innerHTML = "Sorry, we couldn't find any data for this product. Please try again!";
+      })
+      .finally(() => {
+        // что- то еще сюда написать
+      });
+  
+  }
+  productName.value = " "; // очистка поля ввода продукта
+}
+
+// Safiullova / END 
 
 //Clifford / START
 

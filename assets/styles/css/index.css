@@ -668,6 +668,20 @@ body._lock {
     transform: rotate(360deg);
   }
 }
+<<<<<<< HEAD
+.nutrients__title {
+  text-align: center;
+}
+.nutrients__title-name {
+  font-family: "Yellowtail";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+  color: #7EB693;
+}
+.nutrients__title-h {
+=======
 .form-news {
   margin: 100px auto;
   padding: 55px;
@@ -676,18 +690,42 @@ body._lock {
   border-radius: 15px;
 }
 .form-news__title {
+>>>>>>> c2e7a189338da2dc291fa723bee5e7812e12ba6f
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
   line-height: 59px;
   color: #274C5B;
+<<<<<<< HEAD
+}
+
+.nutrients__form {
+  display: flex;
+  height: 450px;
+  background-image: url(/assets/images/nutrients-patterns.png), url(/assets/images/nutrients-backgr.png);
+  background-repeat: no-repeat;
+  justify-content: center;
+}
+.nutrients__form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.nutrients__form-input {
+  min-width: 450px;
+  width: 40%;
+  margin-top: 200px;
+  border-radius: 10px;
+  border: solid 2px #7EB693;
+=======
   margin-left: 50px;
   color: #f9f8f8;
 }
 .form-news__name {
   margin-top: 20px;
   margin-left: 50px;
+>>>>>>> c2e7a189338da2dc291fa723bee5e7812e12ba6f
   color: #274C5B;
   outline: none;
   font-family: "Roboto", sans-serif;
@@ -699,6 +737,11 @@ body._lock {
   width: 220px;
   border-radius: 10px;
   border: 1px solid #7EB693;
+<<<<<<< HEAD
+}
+.nutrients__form-error {
+  height: 25px;
+=======
   text-align: center;
 }
 .form-news__email {
@@ -739,12 +782,85 @@ body._lock {
   background-color: #525C60;
 }
 .form-news__text {
+>>>>>>> c2e7a189338da2dc291fa723bee5e7812e12ba6f
   font-family: "Yellowtail";
   font-style: italic;
   font-weight: 400;
   font-size: 36px;
   line-height: 49px;
   color: #7EB693;
+<<<<<<< HEAD
+  font-size: 20px;
+}
+.nutrients__form-button {
+  margin-top: 30px;
+  width: 200px;
+  height: 80px;
+  border-radius: 10px;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #274C5B;
+  color: #EFF6F1;
+  border-color: #274C5B;
+}
+.nutrients__form-button:hover {
+  background-color: #EFD372;
+}
+
+.nutrients__card {
+  border: solid 1px black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  width: 335px;
+  height: 605px;
+  border-radius: 10px;
+  background-color: #f9f8f8;
+}
+.nutrients__card-buttom {
+  width: 200px;
+  height: 80px;
+  border-radius: 10px;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #274C5B;
+  color: #EFF6F1;
+  border-color: #274C5B;
+  width: 96px;
+  height: 31px;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.nutrients__card-picture {
+  height: 225px;
+  width: 225px;
+  margin-left: 60px;
+  margin-right: auto;
+  border: solid 1px red;
+}
+.nutrients__card-title {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 29px;
+  color: #274C5B;
+  padding-left: 20px;
+}
+.nutrients__card-list {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 29px;
+  color: #274C5B;
+  list-style: none;
+  padding-left: 20px;
+=======
   margin-left: 200px;
   color: #f9f8f8;
 }
@@ -858,6 +974,7 @@ body._lock {
     margin-left: 10px;
     color: #f9f8f8;
   }
+>>>>>>> c2e7a189338da2dc291fa723bee5e7812e12ba6f
 }
 
 /*# sourceMappingURL=index.css.map */
