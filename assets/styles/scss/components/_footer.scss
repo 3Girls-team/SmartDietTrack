@@ -3,13 +3,12 @@ display: flex;
 margin: 10px;
 padding: 10px;
 justify-content: space-between;
-align-items: center;
 &__logo{
 width: 150px;
 }
 &__nav{
 width: 75vw;
-margin-right: 120px;
+margin-right: 90px;
 }
 &__nav-list{
 display: flex;

@@ -1,0 +1,132 @@
+.form-news{
+margin: 100px auto;
+padding: 55px;
+width: 70vw;
+background-image: url(../../images/imgnews.jpg);
+border-radius: 15px;
+&__title{
+@include heading-h2;
+margin-left: 50px;
+color: $color-gwhite;
+}
+
+&__name{
+margin-top: 20px;
+margin-left: 50px;
+color: $color-sgrey;
+@include input;
+text-align: center;
+}
+&__email{
+margin-left: 20px;
+color: $color-sgrey;
+@include input;
+text-align: center;
+}
+&__button{    
+@include buttonblue;
+margin-left: 30px;
+height: 63px;
+width: 224px;
+}
+&__button:hover{
+background-color:$color-green;
+color:$color-gwhite;
+}    
+&__button:active {
+background-color: $color-dgrey;
+}
+&__text{
+@include  title;
+margin-left: 200px;
+color: $color-gwhite;
+}
+&__textAdvice{
+@include  title;
+margin-left: 20px;
+color: $color-gwhite;
+}
+&__errorMesForm{
+@include  title;
+margin: 10px 40px;
+color: $color-gwhite;
+}
+}
+
+@media (max-width: 767px){
+
+.form-news{
+margin: 0px 0px;
+padding: 20px;
+width: 100%;
+border-radius: 0px;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 50% 50%;
+&__title{
+margin-left: 5px;
+font-size: 6vw;
+}
+&__name{
+margin-left: 5px;
+}
+&__email{
+margin-left: 5px;
+margin-top: 10px;
+}
+&__button{    
+margin-left: 5px;
+margin-top: 10px;
+}
+&__text{
+@include  title;
+margin-left: 10px;
+font-size: 5vw;
+color: $color-gwhite;
+}
+&__textAdvice{
+@include  title;
+margin-left: 10px;
+margin-bottom: 20px;
+font-size: 3vw;
+line-height: 10px;
+color: $color-gwhite;
+}
+&__errorMesForm{
+margin: 10px 30px;
+}
+}
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+.form-news{
+padding: 15px;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 50% 50%;
+&__set{
+display: flex;
+flex-direction: column;
+}
+&__title{
+margin-left: 5px;
+}
+&__name{
+margin-top: 10px;
+margin-left: 5px;
+}
+&__email{
+margin-top: 10px;
+margin-left: 5px;
+}
+&__button{  
+margin-top: 10px;  
+margin-left: 5px;
+}
+&__text{
+@include  title;
+margin-left: 10px;
+color: $color-gwhite;
+}
+}
+
+}
