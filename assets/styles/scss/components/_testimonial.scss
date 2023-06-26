@@ -25,6 +25,10 @@
   width: 9vw;
 }
 
+.testimonial__raiting {
+  padding-top: 10px;
+}
+
 .testimonial__text-p {
   @include text-p;
   width: 85%;

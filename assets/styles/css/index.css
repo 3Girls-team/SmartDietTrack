@@ -668,6 +668,10 @@ body._lock {
   width: 9vw;
 }
 
+.testimonial__raiting {
+  padding-top: 10px;
+}
+
 .testimonial__text-p {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
