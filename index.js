@@ -51,9 +51,7 @@ btnFormNews.onclick = function(event){// вешаем событие на кно
     .then((response) =>{
       return response.json();
     })
-    .then((data) =>{
-      console.log(data[0].text);
-  
+    .then((data) =>{  
       const pResultMessage =document.createElement('p');// создаем элемент p  срезультатом сообщения о регистрации
       pResultMessage.classList.add('form-news__text');// Добавляем ему класс
       pResultMessage.innerHTML=`${nameUser}, thank you for registering!`;//Записываем в разметку
@@ -69,8 +67,8 @@ btnFormNews.onclick = function(event){// вешаем событие на кно
       errorMesForm.innerHTML = `<p class="errorText">Sorry, there was an error during registration.Try again in a few minutes:(</p>`;
     });
     document.querySelector(".form-news__name").value =
-    "Your First Name"; //возвращаем начальное значение в инпут имени
-    document.querySelector(".form-news__email").value = "Your Email Address"; //возвращаем изначальное значение в инпут имейл
+    ""; //возвращаем начальное значение в инпут имени
+    document.querySelector(".form-news__email").value = ""; //возвращаем изначальное значение в инпут имейл
   }
 }
 //Конец код JS Анжелика
