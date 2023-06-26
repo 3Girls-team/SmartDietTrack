@@ -897,6 +897,7 @@ body._lock {
   }
 }
 .share-with-us {
+  width: 100%;
   background-image: url(../../images/share-with-us-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
