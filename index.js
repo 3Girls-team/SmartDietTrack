@@ -63,9 +63,14 @@ btnFormNews.onclick = function(event){// вешаем событие на кно
       const indexData = Math.floor(Math.random()*data.length)
       advice.innerHTML= `Advice of the day:" ${data[indexData].text}"`;
       resultFormNews.appendChild(advice);
-
-      
+    })
+    .catch((error) => {
+      //выводим сообщение об ошибке
+      errorMesForm.innerHTML = `<p class="errorText">Sorry, there was an error during registration.Try again in a few minutes:(</p>`;
     });
+    document.querySelector(".form-news__name").value =
+    "Your First Name"; //возвращаем начальное значение в инпут имени
+    document.querySelector(".form-news__email").value = "Your Email Address"; //возвращаем изначальное значение в инпут имейл
   }
 }
 //Конец код JS Анжелика
