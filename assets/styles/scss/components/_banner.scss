@@ -1,5 +1,5 @@
 .banner{
-background-image:url(/assets/images/bannerbackground.jpg);
+background-image:url(../../images/bannerbackground.jpg);
 padding: 50px;
 &__text{
 margin: 70px 100px 0px;
@@ -30,7 +30,7 @@ background-color:$color-gwhite;
 }
 @media (max-width: 767px) {
 .banner{
-background-image:url(/assets/images/backgroundadaptive.png);
+background-image:url(../../images/backgroundadaptive.png);
 padding: 5px;
 margin: 0 auto;
 background-size: 100% 100%;
@@ -59,7 +59,7 @@ font-size: 3vw;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
 .banner{
-background-image:url(/assets/images/bannerbackground.jpg);
+background-image:url(../../images/bannerbackground.jpg);
 padding: 5px;
 margin: 0 auto;
 background-size: 100% 100%;

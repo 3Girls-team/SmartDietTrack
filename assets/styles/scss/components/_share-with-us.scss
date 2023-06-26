@@ -1,0 +1,41 @@
+.share-with-us {
+  background-image: url(../../images/share-with-us-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.share-with-us__title {
+  @include title;
+}
+
+.share-with-us__heading-h2 {
+  @include heading-h2;
+}
+
+.share-with-us__input {
+  @include input;
+  margin-bottom: 30px;
+}
+.share-with-us__input_name {
+  width: 40%;
+}
+
+.share-with-us__input_comment {
+  width: 70%;
+}
+
+.share-with-us__btn {
+  @include buttonyellow;
+  height: 80px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.share-with-us__form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+}
