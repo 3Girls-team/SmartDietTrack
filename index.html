@@ -176,6 +176,44 @@
       </div>
     </section>
     <!-- Катя testimonial конец -->
+
+    <!-- START nutrients / Safiullova -->
+    <section class="nutrients">
+      <div class="nutrients__title">
+        <p class="nutrients__title-name">Nutrients</p>
+        <h2 class="nutrients__title-h">Learn information about nutrients of any products</h2>
+      </div>
+      <div class="nutrients__form">
+        <div class="nutrients__form-container">
+          <input type="text" class="nutrients__form-input" id="nutrients-form"
+            placeholder="Enter a product (for example: apple)">
+          <div class="nutrients__form-error"></div>
+          <button class="nutrients__form-button">Search
+            <!-- <img alt="searchImg" src="assets/styles/img/aerrow.png" class="imgSearch" /> -->
+          </button>
+        </div>
+      </div>
+      <div class="nutrients__card">
+        <!-- отрисовка карточки -->
+
+        <button class="nutrients__card-buttom"> Овощ</button>
+        <img class="nutrients__card-picture" src="assets/images/header-logo.svg" alt="product picture"></img>
+        <p class="nutrients__card-title">помидор, 100г</p>
+        <ul class="nutrients__card-list">
+          <li class="nutrients__card-list__item">1</li>
+          <li class="nutrients__card-list__item">2</li>
+          <li class="nutrients__card-list__item">3</li>
+          <li class="nutrients__card-list__item">4</li>
+          <li class="nutrients__card-list__item">5</li>
+          <li class="nutrients__card-list__item">6</li>
+          <li class="nutrients__card-list__item">7</li>
+        </ul>
+        <div id="edamam-badge" data-color="white"></div>   <!-- для отображения использования API -->
+      </div>
+    </section>
+    <!-- END nutrients / Safiullova -->
+
+    <section class="testimonial">Катя</section>
     <section class="calculator">Марина</section>
     <!--Clifford / START -->
     <div class="randomRecipe">
@@ -202,6 +240,16 @@
 
           <input type="text" class="form__inputs__product" placeholder="Please type in a product" />
         </div>
+        <button class="randomRecipe__form__button">
+          Search
+          <img alt="searchImg" src="./assets/styles/img/aerrow.png" class="imgSearch" />
+        </button>
+      </form>
+      <div class="randomRecipe__result">
+        <div class="result__spinner"></div>
+        <div class="input_error-message"></div>
+        <div class="errorMessage"></div>
+        <div class="result-display"></div>
       </div>
 
     <!--Clifford / END -->
@@ -218,11 +266,24 @@
       </div>
     </section>
     <!-- Катя share-with-us конец -->
+    <section class="share-with-us">Катя</section>
+
+    <!--Анжелика news начало-->
     <section class="form-news">
       <input class="form-news__name" type="text" id="" placeholder="Your First Name">
       <input class="form-news__email" type="email" id="" placeholder="Your Email Address">
       <button class="form-news__button" type="submit" id="">Subscribe</button>
+
+      <h2 class="form-news__title">Subscribe to our News!</h2>
+      <div class="form-news__set">
+        <input class="form-news__name" type="text" id="nameUser" placeholder="Your First Name">
+        <input class="form-news__email" type="email" id="email" placeholder="Your Email Address">
+        <button class="form-news__button" type="submit" id="btnForm">Subscribe</button>
+      </div>
+      <div class="form-news__result"></div>
+      <div class="form-news__errorMessage"></div>
     </section>
+    <!--Анжелика news конец-->
   </main>
   <footer class="footer">
     <img class="footer__logo" src="assets/images/header-logo.svg" alt="SmartDietTrack">
@@ -238,8 +299,7 @@
       </ul>
     </nav>
   </footer>
-
-
+  <script src="https://developer.edamam.com/attribution/badge.js"></script>  <!-- для отображения использования API -->
     <script src="index.js"></script>
     <script src="itc-slider.js" defer></script>
   </body>
