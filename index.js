@@ -1,5 +1,5 @@
 
-//Начало код Анжелика
+//Начало код JS Анжелика
 
 // Меню бургер
 const iconMenu= document.querySelector(".header__icon");
@@ -29,6 +29,48 @@ window.onclick=function(event){
     modalwindow.style.display="none"
   }
 }
+// Форма подписки(регистрация + пожелание на день из api при регистраци)
+const btnFormNews = document.querySelector(".form-news__button"); //находим кнопку в разметке ,записываем ее в переменную
+const errorMesForm = document.querySelector(".form-news__errorMessage"); //находим разметку, где будет отображаться сообщение об ошибке
+const resultFormNews = document.querySelector(".form-news__result"); //находим разметку, где будет отображаться сообщение c результатом
+
+btnFormNews.onclick = function(event){// вешаем событие на кнопку
+  event.preventDefault(); //отменяем дефолтное submit у кнопки
+  resultFormNews.innerHTML = " "; //очищаем поле с результатом
+  errorMesForm.innerHTML = " "; //очищаем поле с сообщением об ошибке
+  const nameUser = document.querySelector(".form-news__name").value;//находим значение инпута с именем ,записываем значение в переменную
+  const email = document.querySelector(".form-news__email").value;//находим значение инпута с email ,записываем значение в переменную
+ 
+  if(nameUser ==="" || email ===""){ //проверяем заполненность инпутов ,если хоть одно поле не заполнено 
+  errorMesForm.innerHTML="Please fill in your name and email for further registration";//выводим сообщение об ошибке
+  errorMesForm.classList.add('form-news__errorMesForm');
+  }
+  else{
+    fetch("https://type.fit/api/quotes")
+    .then((response) =>{
+      return response.json();
+    })
+    .then((data) =>{  
+      const pResultMessage =document.createElement('p');// создаем элемент p  срезультатом сообщения о регистрации
+      pResultMessage.classList.add('form-news__text');// Добавляем ему класс
+      pResultMessage.innerHTML=`${nameUser}, thank you for registering!`;//Записываем в разметку
+      resultFormNews.appendChild(pResultMessage);// Добавляем элемент в разметку
+      const advice= document.createElement('p');// создаем элемент p  срезультатом совета на день
+      advice.classList.add('form-news__textAdvice');// Добавляем ему класс
+      const indexData = Math.floor(Math.random()*data.length)
+      advice.innerHTML= `Advice of the day:" ${data[indexData].text}"`;
+      resultFormNews.appendChild(advice);
+    })
+    .catch((error) => {
+      //выводим сообщение об ошибке
+      errorMesForm.innerHTML = `<p class="errorText">Sorry, there was an error during registration.Try again in a few minutes:(</p>`;
+    });
+    document.querySelector(".form-news__name").value =
+    ""; //возвращаем начальное значение в инпут имени
+    document.querySelector(".form-news__email").value = ""; //возвращаем изначальное значение в инпут имейл
+  }
+}
+//Конец код JS Анжелика
 
 // Safiullova / START 
 const btnProduct = document.querySelector(".nutrients__form-button");  // Кнопка поиска продукта по названию
