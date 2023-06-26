@@ -762,5 +762,29 @@ body._lock {
     margin-top: 10px;
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .form-news {
+    padding: 15px;
+  }
+  .form-news__set {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-news__title {
+    margin-left: 5px;
+  }
+  .form-news__name {
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+  .form-news__email {
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+  .form-news__button {
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
