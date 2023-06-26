@@ -36,6 +36,11 @@ color:$color-gwhite;
 &__button:active {
 background-color: $color-dgrey;
 }
+&__text{
+    @include  title;
+    margin-left: 200px;
+    color: $color-gwhite;
+}
 }
 
 @media (max-width: 767px){
@@ -60,6 +65,11 @@ margin-top: 10px;
 margin-left: 5px;
 margin-top: 10px;
 }
+&__text{
+    @include  title;
+    margin-left: 10px;
+    font-size: 4vw;
+}
 }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -68,13 +78,10 @@ padding: 15px;
 &__set{
 display: flex;
 flex-direction: column;
-
 }
 &__title{
 margin-left: 5px;
-
 }
-
 &__name{
 margin-top: 10px;
 margin-left: 5px;
@@ -87,5 +94,11 @@ margin-left: 5px;
 margin-top: 10px;  
 margin-left: 5px;
 }
+&__text{
+    @include  title;
+    margin-left: 10px;
+    color: $color-gwhite;
 }
+}
+
 }

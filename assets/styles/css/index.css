@@ -738,6 +738,16 @@ body._lock {
 .form-news__button:active {
   background-color: #525C60;
 }
+.form-news__text {
+  font-family: "Yellowtail";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+  color: #7EB693;
+  margin-left: 200px;
+  color: #f9f8f8;
+}
 
 @media (max-width: 767px) {
   .form-news {
@@ -760,6 +770,16 @@ body._lock {
   .form-news__button {
     margin-left: 5px;
     margin-top: 10px;
+  }
+  .form-news__text {
+    font-family: "Yellowtail";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 49px;
+    color: #7EB693;
+    margin-left: 10px;
+    font-size: 4vw;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -784,6 +804,16 @@ body._lock {
   .form-news__button {
     margin-top: 10px;
     margin-left: 5px;
+  }
+  .form-news__text {
+    font-family: "Yellowtail";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 49px;
+    color: #7EB693;
+    margin-left: 10px;
+    color: #f9f8f8;
   }
 }
 

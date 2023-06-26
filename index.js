@@ -31,14 +31,18 @@ window.onclick=function(event){
 }
 // Форма подписки(регистрация + пожелание на день из api при регистраци)
 const btnFormNews = document.querySelector(".form-news__button"); //находим кнопку в разметке ,записываем ее в переменную
-const nameUser = document.querySelector(".form-news__name").value;//находим значение инпута с именем ,записываем значение в переменную
-const email = document.querySelector(".form-news__email").value;//находим значение инпута с email ,записываем значение в переменную
 const errorMesForm = document.querySelector(".form-news__errorMessage"); //находим разметку, где будет отображаться сообщение об ошибке
+const resultFormNews = document.querySelector(".form-news__result"); //находим разметку, где будет отображаться сообщение c результатом
+
 
 btnFormNews.onclick = function(event){// вешаем событие на кнопку
   event.preventDefault(); //отменяем дефолтное submit у кнопки
+  resultFormNews.innerHTML = " "; //очищаем поле с результатом
   errorMesForm.innerHTML = " "; //очищаем поле с сообщением об ошибке
-  if(nameUser =="" || email ==""){ //проверяем заполненность инпутов ,если хоть одно поле не заполнено 
+  const nameUser = document.querySelector(".form-news__name").value;//находим значение инпута с именем ,записываем значение в переменную
+  const email = document.querySelector(".form-news__email").value;//находим значение инпута с email ,записываем значение в переменную
+ 
+  if(nameUser ==="" || email ===""){ //проверяем заполненность инпутов ,если хоть одно поле не заполнено 
   errorMesForm.innerHTML="Please fill in your name and email for further registration";//выводим сообщение об ошибке
   }
   else{
@@ -48,12 +52,19 @@ btnFormNews.onclick = function(event){// вешаем событие на кно
     })
     .then((data) =>{
       console.log(data);
+  
+      const pResultMessage =document.createElement('p');
+      pResultMessage.classList.add('form-news__text');
+      pResultMessage.innerHTML=`${nameUser}, thank you for registering!`;
+      resultFormNews.appendChild(pResultMessage);
+      const advice= document.createElement('p');
+      advice.classList.add('form-news__textAdvice');
+      advice.innerHTML=data.text;
+      resultFormNews.appendChild(advice);
     });
   }
 }
-
-
-//Начало код JS Анжелика
+//Конец код JS Анжелика
 
 //Clifford / START
 
