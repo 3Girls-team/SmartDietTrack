@@ -631,11 +631,12 @@ body._lock {
   }
 }
 .testimonial {
-  border: 1px red solid;
   background-image: url(../../images/testimonial-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .testimonial__title {
@@ -656,10 +657,6 @@ body._lock {
   color: #274C5B;
 }
 
-.testimonial__raiting {
-  margin-top: 20px;
-}
-
 .testimonial__img {
   border-radius: 100%;
   overflow: hidden;
@@ -678,6 +675,9 @@ body._lock {
   font-size: 18px;
   line-height: 30px;
   color: #525C60;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .testimonial__heading-h6 {
@@ -689,6 +689,16 @@ body._lock {
   color: #274C5B;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .testimonial__img_size {
+    width: 20vw;
+  }
+}
+@media (max-width: 767px) {
+  .testimonial__img_size {
+    width: 27vw;
+  }
+}
 /**
  * ItcSlider
  * @version 1.0.1
@@ -699,7 +709,7 @@ body._lock {
  */
 .itc-slider {
   position: relative;
-  width: 70%;
+  width: 85%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -785,7 +795,6 @@ body._lock {
 
 /* индикаторы */
 .itc-slider-indicators {
-  position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
@@ -805,7 +814,7 @@ body._lock {
   margin-right: 3px;
   margin-left: 3px;
   text-indent: -999px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   background-clip: padding-box;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
@@ -813,5 +822,16 @@ body._lock {
 }
 
 .itc-slider-indicator-active {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #7eb693;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .itc-slider {
+    width: 90%;
+  }
+}
+@media (max-width: 767px) {
+  .itc-slider {
+    width: 95%;
+  }
 }/*# sourceMappingURL=index.css.map */

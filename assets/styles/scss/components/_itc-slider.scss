@@ -9,7 +9,7 @@
 
 .itc-slider {
   position: relative;
-  width: 70%;
+  width: 85%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -92,7 +92,6 @@
 
 /* индикаторы */
 .itc-slider-indicators {
-  position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
@@ -112,7 +111,7 @@
   margin-right: 3px;
   margin-left: 3px;
   text-indent: -999px;
-  background-color: rgb(255 255 255 / 50%);
+  background-color: rgb(0 0 0 / 30%);
   background-clip: padding-box;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
@@ -120,5 +119,17 @@
 }
 
 .itc-slider-indicator-active {
-  background-color: rgb(255 255 255 / 90%);
+  background-color: #7eb693;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .itc-slider {
+    width: 90%;
+  }
+}
+
+@media (max-width: 767px) {
+  .itc-slider {
+    width: 95%;
+  }
 }
