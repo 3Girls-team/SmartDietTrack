@@ -1,5 +1,5 @@
 
-//Начало код Анжелика
+//Начало код JS Анжелика
 
 // Меню бургер
 const iconMenu= document.querySelector(".header__icon");
@@ -29,14 +29,31 @@ window.onclick=function(event){
     modalwindow.style.display="none"
   }
 }
- 
- 
-    
+// Форма подписки(регистрация + пожелание на день из api при регистраци)
+const btnFormNews = document.querySelector(".form-news__button"); //находим кнопку в разметке ,записываем ее в переменную
+const nameUser = document.querySelector(".form-news__name").value;//находим значение инпута с именем ,записываем значение в переменную
+const email = document.querySelector(".form-news__email").value;//находим значение инпута с email ,записываем значение в переменную
+const errorMesForm = document.querySelector(".form-news__errorMessage"); //находим разметку, где будет отображаться сообщение об ошибке
+
+btnFormNews.onclick = function(event){// вешаем событие на кнопку
+  event.preventDefault(); //отменяем дефолтное submit у кнопки
+  errorMesForm.innerHTML = " "; //очищаем поле с сообщением об ошибке
+  if(nameUser =="" || email ==""){ //проверяем заполненность инпутов ,если хоть одно поле не заполнено 
+  errorMesForm.innerHTML="Please fill in your name and email for further registration";//выводим сообщение об ошибке
+  }
+  else{
+    fetch("https://type.fit/api/quotes")
+    .then((response) =>{
+      return response.json();
+    })
+    .then((data) =>{
+      console.log(data);
+    });
+  }
+}
 
 
-
-
-
+//Начало код JS Анжелика
 
 //Clifford / START
 
