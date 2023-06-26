@@ -277,7 +277,7 @@ body._lock {
     border-color: #EFD372;
     width: 100px;
     height: 40px;
-    font-size: 3vw;
+    font-size: 2vw;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -748,13 +748,36 @@ body._lock {
   margin-left: 200px;
   color: #f9f8f8;
 }
+.form-news__textAdvice {
+  font-family: "Yellowtail";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+  color: #7EB693;
+  margin-left: 20px;
+  color: #f9f8f8;
+}
+.form-news__errorMesForm {
+  font-family: "Yellowtail";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+  color: #7EB693;
+  margin: 10px 40px;
+  color: #f9f8f8;
+}
 
 @media (max-width: 767px) {
   .form-news {
     margin: 0px 0px;
-    padding: 15px;
+    padding: 20px;
     width: 100%;
     border-radius: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
   }
   .form-news__title {
     margin-left: 5px;
@@ -779,12 +802,32 @@ body._lock {
     line-height: 49px;
     color: #7EB693;
     margin-left: 10px;
-    font-size: 4vw;
+    font-size: 5vw;
+    color: #f9f8f8;
+  }
+  .form-news__textAdvice {
+    font-family: "Yellowtail";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 49px;
+    color: #7EB693;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    font-size: 3vw;
+    line-height: 10px;
+    color: #f9f8f8;
+  }
+  .form-news__errorMesForm {
+    margin: 10px 30px;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .form-news {
     padding: 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
   }
   .form-news__set {
     display: flex;

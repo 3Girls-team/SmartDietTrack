@@ -37,9 +37,19 @@ color:$color-gwhite;
 background-color: $color-dgrey;
 }
 &__text{
-    @include  title;
-    margin-left: 200px;
-    color: $color-gwhite;
+@include  title;
+margin-left: 200px;
+color: $color-gwhite;
+}
+&__textAdvice{
+@include  title;
+margin-left: 20px;
+color: $color-gwhite;
+}
+&__errorMesForm{
+@include  title;
+margin: 10px 40px;
+color: $color-gwhite;
 }
 }
 
@@ -47,9 +57,12 @@ background-color: $color-dgrey;
 
 .form-news{
 margin: 0px 0px;
-padding: 15px;
+padding: 20px;
 width: 100%;
 border-radius: 0px;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 50% 50%;
 &__title{
 margin-left: 5px;
 font-size: 6vw;
@@ -66,15 +79,30 @@ margin-left: 5px;
 margin-top: 10px;
 }
 &__text{
-    @include  title;
-    margin-left: 10px;
-    font-size: 4vw;
+@include  title;
+margin-left: 10px;
+font-size: 5vw;
+color: $color-gwhite;
+}
+&__textAdvice{
+@include  title;
+margin-left: 10px;
+margin-bottom: 20px;
+font-size: 3vw;
+line-height: 10px;
+color: $color-gwhite;
+}
+&__errorMesForm{
+margin: 10px 30px;
 }
 }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
 .form-news{
 padding: 15px;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 50% 50%;
 &__set{
 display: flex;
 flex-direction: column;
@@ -95,9 +123,9 @@ margin-top: 10px;
 margin-left: 5px;
 }
 &__text{
-    @include  title;
-    margin-left: 10px;
-    color: $color-gwhite;
+@include  title;
+margin-left: 10px;
+color: $color-gwhite;
 }
 }
 

@@ -44,6 +44,7 @@ btnFormNews.onclick = function(event){// вешаем событие на кно
  
   if(nameUser ==="" || email ===""){ //проверяем заполненность инпутов ,если хоть одно поле не заполнено 
   errorMesForm.innerHTML="Please fill in your name and email for further registration";//выводим сообщение об ошибке
+  errorMesForm.classList.add('form-news__errorMesForm');
   }
   else{
     fetch("https://type.fit/api/quotes")
@@ -51,16 +52,19 @@ btnFormNews.onclick = function(event){// вешаем событие на кно
       return response.json();
     })
     .then((data) =>{
-      console.log(data);
+      console.log(data[0].text);
   
-      const pResultMessage =document.createElement('p');
-      pResultMessage.classList.add('form-news__text');
-      pResultMessage.innerHTML=`${nameUser}, thank you for registering!`;
-      resultFormNews.appendChild(pResultMessage);
-      const advice= document.createElement('p');
-      advice.classList.add('form-news__textAdvice');
-      advice.innerHTML=data.text;
+      const pResultMessage =document.createElement('p');// создаем элемент p  срезультатом сообщения о регистрации
+      pResultMessage.classList.add('form-news__text');// Добавляем ему класс
+      pResultMessage.innerHTML=`${nameUser}, thank you for registering!`;//Записываем в разметку
+      resultFormNews.appendChild(pResultMessage);// Добавляем элемент в разметку
+      const advice= document.createElement('p');// создаем элемент p  срезультатом совета на день
+      advice.classList.add('form-news__textAdvice');// Добавляем ему класс
+      const indexData = Math.floor(Math.random()*data.length)
+      advice.innerHTML= `Advice of the day:" ${data[indexData].text}"`;
       resultFormNews.appendChild(advice);
+
+      
     });
   }
 }
