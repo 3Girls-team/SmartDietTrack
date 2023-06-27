@@ -77,7 +77,7 @@ const btnProduct = document.querySelector(".nutrients__form-button");  // Кно
 const productName = document.querySelector("#nutrients-form"); // Находим input в котором ввели название продукта
 const productCard = document.querySelector(".nutrients__card"); // Элемент для отрисовки карточки продукта
 const productCardError = document.querySelector(".nutrients__form-error"); // Элемент с сообщением об ошибке
-
+// добавляю строку для теста
 btnProduct.onclick = function (e) {  // фнкция будет отображать карточку продукта, который ввел пользователь
   e.preventDefault(); // убираю submit
   productCardError.innerHTML = " "; // очистка сообщения об ошибке
