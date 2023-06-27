@@ -432,12 +432,12 @@ body._lock {
   }
 }
 .randomRecipe {
-  width: 70%;
+  width: 70vw;
   margin-left: auto;
   margin-right: auto;
 }
 .randomRecipe__text {
-  width: 90%;
+  width: 100%;
 }
 @media (max-width: 828px) {
   .randomRecipe__text {
@@ -445,6 +445,7 @@ body._lock {
   }
 }
 .randomRecipe__text__title {
+  width: 100%;
   margin-bottom: -45px;
   font-family: "Yellowtail";
   font-style: italic;
@@ -484,23 +485,21 @@ body._lock {
   }
 }
 .randomRecipe__form__button {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 23px;
-  color: #274C5B;
-  height: 60px;
-  width: 120px;
+  width: 200px;
+  height: 80px;
   border-radius: 10px;
-  background-color: #f9f8f8;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #274C5B;
+  color: #EFF6F1;
+  border-color: #274C5B;
 }
 .randomRecipe__form__button:hover {
-  background-color: #7EB693;
-  color: #f9f8f8;
-}
-.randomRecipe__form__button:active {
-  background-color: #525C60;
+  background-color: #EFD372;
+  color: #274C5B;
+  border-color: #EFD372;
 }
 .randomRecipe__form .form__inputs__meal {
   color: #274C5B;
@@ -534,6 +533,9 @@ body._lock {
     margin-left: 0px;
     margin-top: 10px;
   }
+}
+.randomRecipe__form .form__inputs__product::-moz-placeholder {
+  color: #274C5B;
 }
 .randomRecipe__form .form__inputs__product::placeholder {
   color: #274C5B;
@@ -575,6 +577,7 @@ body._lock {
 
 .item__img {
   border-radius: 20px;
+  width: -moz-min-content;
   width: min-content;
 }
 
@@ -1009,6 +1012,4 @@ body._lock {
     margin-left: 10px;
     color: #f9f8f8;
   }
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
