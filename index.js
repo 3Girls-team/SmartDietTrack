@@ -77,7 +77,7 @@ const btnProduct = document.querySelector(".nutrients__form-button");  // Кно
 const productName = document.querySelector("#nutrients-form"); // Находим input в котором ввели название продукта
 const productCard = document.querySelector(".nutrients__card"); // Элемент для отрисовки карточки продукта
 const productCardError = document.querySelector(".nutrients__form-error"); // Элемент с сообщением об ошибке
-// добавляю строку для теста
+
 btnProduct.onclick = function (e) {  // фнкция будет отображать карточку продукта, который ввел пользователь
   e.preventDefault(); // убираю submit
   productCardError.innerHTML = " "; // очистка сообщения об ошибке
@@ -85,16 +85,22 @@ btnProduct.onclick = function (e) {  // фнкция будет отобража
     productCardError.innerHTML = "Please enter the product you want to know about";
   } else {
     fetch(
-      `https://api.edamam.com/api/food-database/v2/nutrients?app_id=828a8c08&app_key=5055def535cbc6e05c7aa923b552be6f`
-      
-    ) //обращаемся к API в соответствии с введенными пользователем параметрами для поиска - продукт и прием пищи
+      `https://api.edamam.com/api/food-database/v2/parser?app_id=99d8e87e&app_key=00390c7f538b7700bb34ee921fe04978&ingr=${productName.value}&nutrition-type=cooking`
+)//обращаемся к API в соответствии с введенными пользователем параметрами для поиска - продукт
       .then((response) => {
-        return response.json(); //преобразовываем данные в массив
-        
-      })
-      .then((ingredients) => {
-        console.log(ingredients.foodId)
-      //сюда разметку карточки
+    return response.json(); 
+  })
+      .then((data) => {
+        productCard.innerHTML = 
+`<img class="nutrients__card-picture" src="${data.hints[0].food.image}" alt="product picture" />
+<p class="nutrients__card-title">${data.hints[0].food.label}, 100г</p>
+<ul class="nutrients__card-list">
+  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.CHOCDF}</li>
+  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.ENERC_KCAL}</li>
+  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.FAT}</li>
+  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.FIBTG}</li>
+  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.PROCNT}</li>
+</ul>`
       })
       .catch((error) => {
         //выводим сообщение об ошибке, если она возникла
