@@ -9,6 +9,9 @@
     background-color:$color-yellow;
     color:$color-sgrey;
     border-color:$color-yellow;
+    &:hover{
+        background-color:$color-gwhite;                          
+        }
 }
 @mixin buttonblue {
 	width: 200px;
@@ -21,6 +24,11 @@
     background-color:$color-sgrey;
     color:$color-ggrey;
     border-color:$color-sgrey;
+    &:hover{
+        background-color:$color-yellow;   
+        color:$color-sgrey; 
+        border-color:$color-yellow;                      
+        }
 
 }
 
