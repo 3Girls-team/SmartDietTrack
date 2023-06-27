@@ -24,9 +24,9 @@ margin: 10px 100px 100px;
 
 @include buttonyellow;                              
 }
-&__button:hover{
-background-color:$color-gwhite;                          
-}
+// &__button:hover{
+// background-color:$color-gwhite;                          
+// }
 }
 @media (max-width: 767px) {
 .banner{

@@ -11,7 +11,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@300;400&family=Roboto:wght@300;400;700;900&family=Yellowtail&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="assets/normalize.css">
+  <link rel="stylesheet" href="assets/styles/css/normalize.css">
   <link rel="stylesheet" href="assets/styles/css/index.css" />
 
 </head>
@@ -76,8 +76,6 @@
       <button class="banner__button">Explore Now</button>
     </section>
     <!--Анжелика banner конец-->
-
-
     <!-- START nutrients / Safiullova -->
     <section class="nutrients">
       <div class="nutrients__title">
@@ -90,13 +88,12 @@
             placeholder="Enter a product (for example: apple)">
           <div class="nutrients__form-error"></div>
           <button class="nutrients__form-button">Search
-            <!-- <img alt="searchImg" src="assets/styles/img/aerrow.png" class="imgSearch" /> -->
+            <img alt="searchImg" src="assets/images/aerrow.png" class="imgSearch" />
           </button>
         </div>
       </div>
       <div class="nutrients__card">
         <!-- отрисовка карточки -->
-
         <button class="nutrients__card-buttom"> Овощ</button>
         <img class="nutrients__card-picture" src="assets/images/header-logo.svg" alt="product picture"></img>
         <p class="nutrients__card-title">помидор, 100г</p>
@@ -109,60 +106,56 @@
           <li class="nutrients__card-list__item">6</li>
           <li class="nutrients__card-list__item">7</li>
         </ul>
-        <div id="edamam-badge" data-color="white"></div>   <!-- для отображения использования API -->
+        <div id="edamam-badge" data-color="white"></div> <!-- для отображения использования API -->
       </div>
     </section>
     <!-- END nutrients / Safiullova -->
-
     <section class="testimonial">Катя</section>
+    <!--УДАЛЯЕШЬ СТРОЧКУ И ВСТАВЛЯЕШЬ СВОЙ КУСОК КОДА-->
     <section class="calculator">Марина</section>
+    <!--УДАЛЯЕШЬ СТРОЧКУ И ВСТАВЛЯЕШЬ СВОЙ КУСОК КОДА-->
     <!--Clifford / START -->
-    <div class="randomRecipe">
-      <div class="randomRecipe__text">
-        <p class="randomRecipe__text__title">Recipes</p>
-        <p class="randomRecipe__text__body">
-          Discover our wide selection of perfectly balanced and delicious
-          recipes
-        </p>
-      </div>
-      <form class="randomRecipe__form">
-        <div class="form__inputs">
-          <select id="select-meal" name="selectMeal" class="form__inputs__meal">
-            <option selected="true" disabled="disabled">
-              Please select meal type
-            </option>
-
-            <option value="breakfast">Breakfast</option>
-            <option value="lunch">Lunch</option>
-            <option value="dinner">Dinner</option>
-            <option value="snack">Snack</option>
-            <option value="teatime">Teatime</option>
-          </select>
-
-          <input type="text" class="form__inputs__product" placeholder="Please type in a product" />
+    <section class="recipes">
+      <div class="randomRecipe">
+        <div class="randomRecipe__text">
+          <p class="randomRecipe__text__title">Recipes</p>
+          <p class="randomRecipe__text__body">
+            Discover our wide selection of perfectly balanced and delicious
+            recipes
+          </p>
         </div>
-        <button class="randomRecipe__form__button">
-          Search
-          <img alt="searchImg" src="./assets/styles/img/aerrow.png" class="imgSearch" />
-        </button>
-      </form>
-      <div class="randomRecipe__result">
-        <div class="result__spinner"></div>
-        <div class="input_error-message"></div>
-        <div class="errorMessage"></div>
-        <div class="result-display"></div>
+        <form class="randomRecipe__form">
+          <div class="form__inputs">
+            <select id="select-meal" name="selectMeal" class="form__inputs__meal">
+              <option selected="true" disabled="disabled">
+                Please select meal type
+              </option>
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+              <option value="snack">Snack</option>
+              <option value="teatime">Teatime</option>
+            </select>
+            <input type="text" class="form__inputs__product" placeholder="Please type in a product" />
+          </div>
+          <button class="randomRecipe__form__button">
+            Search
+            <img alt="searchImg" src="assets/images/aerrow.png" class="imgSearch" />
+          </button>
+        </form>
+        <div class="randomRecipe__result">
+          <div class="result__spinner"></div>
+          <div class="input_error-message"></div>
+          <div class="errorMessage"></div>
+          <div class="result-display"></div>
+        </div>
       </div>
-    </div>
-
+    </section>
     <!--Clifford / END -->
     <section class="share-with-us">Катя</section>
-
+    <!--УДАЛЯЕШЬ СТРОЧКУ И ВСТАВЛЯЕШЬ СВОЙ КУСОК КОДА-->
     <!--Анжелика news начало-->
     <section class="form-news">
-      <input class="form-news__name" type="text" id="" placeholder="Your First Name">
-      <input class="form-news__email" type="email" id="" placeholder="Your Email Address">
-      <button class="form-news__button" type="submit" id="">Subscribe</button>
-
       <h2 class="form-news__title">Subscribe to our News!</h2>
       <div class="form-news__set">
         <input class="form-news__name" type="text" id="nameUser" placeholder="Your First Name">
@@ -175,7 +168,6 @@
     <!--Анжелика news конец-->
   </main>
   <footer class="footer">
-
     <img class="footer__logo" src="assets/images/header-logo.svg" alt="SmartDietTrack">
     <nav class="footer__nav">
       <ul class="footer__nav-list">
@@ -191,7 +183,7 @@
   </footer>
 
   <script src="index.js"></script>
-  <script src="https://developer.edamam.com/attribution/badge.js"></script>  <!-- для отображения использования API -->
+  <script src="https://developer.edamam.com/attribution/badge.js"></script> <!-- для отображения использования API -->
 </body>
 
 </html>
