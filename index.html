@@ -29,89 +29,83 @@
 
   <!--Девочки, подписываем свои рабочие области, начало/конец-->
 
-  <body>
-    <!--Анжелика модальное окно начало-->
-    <section class="modal-window">
-      <div class="modal-window__fon">
-        <button class="modal-window__button">Home</button>
-        <p class="modal-window__greeting">Welcome to SmartDietTrack</p>
-        <p class="modal-window__slogan">Eat smart - it’s easy and tasty!</p>
-        <p class="modal-window__description">
-          SmartDietTrack - an innovative platform for nutrition tracking and
-          achieving a healthy lifestyle! Discover your daily calorie, protein,
-          fat, and carbohydrate needs, monitor your diet, and receive
-          personalized nutritional recommendations. Our app offers a wide
-          selection of healthy recipes to help you adjust weight and reach your
-          fitness goals. Begin your journey to a better version of yourself with
-          SmartDietTrack!
-        </p>
+<body>
+  <!--Анжелика модальное окно начало-->
+  <section class="modal-window">
+    <div class="modal-window__fon">
+      <button class="modal-window__button">Home</button>
+      <p class="modal-window__greeting">Welcome to SmartDietTrack</p>
+      <p class="modal-window__slogan">Eat smart - it’s easy and tasty!</p>
+      <p class="modal-window__description">SmartDietTrack - an innovative platform for nutrition tracking and
+        achieving
+        a healthy lifestyle! Discover your daily calorie, protein, fat, and carbohydrate needs, monitor your diet,
+        and
+        receive personalized nutritional recommendations. Our app offers a wide selection of healthy recipes to help
+        you
+        adjust weight and reach your fitness goals. Begin your journey to a better version of yourself with
+        SmartDietTrack!</p>
+    </div>
+  </section>
+  <!--Анжелика модальное окно конец-->
+  <!--Анжелика header начало-->
+  <header class="header">
+    <img class="header__logo" src="assets/images/header-logo.svg" alt="SmartDietTrack">
+    <div class="header__icon">
+      <span></span>
+    </div>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__list-item"><a href="#about-us">About us</a></li>
+        <li class="header__list-item"><a href="#nutrients">Nutrients</a></li>
+        <li class="header__list-item"><a href="#testimonial">Testimonial</a></li>
+        <li class="header__list-item"><a href="#calculator"> Calorie Calculator</a></li>
+        <li class="header__list-item"><a href="#recipes">Recipes</a></li>
+        <li class="header__list-item"><a href="#share-with-us">Share with us</a></li>
+        <li class="header__list-item"><a href="#form-news">News</a></li>
+      </ul>
+    </nav>
+    <p class="header__text"> Hi,friend!</p>
+  </header>
+  <!--Анжелика header конец-->
+  <main>
+    <!--Анжелика banner начало-->
+    <section class="banner">
+      <p class="banner__text">Get Healthier and Happier with us Today!</p>
+      <h1 class="banner__title">Choose the best healthier way of life</h1>
+      <button class="banner__button">Explore Now</button>
+    </section>
+    <!--Анжелика banner конец-->
+    <!--Анжелика registration form начало-->
+    <section class="registration-form">
+      <img class="registration-form__img" src="assets/images/registrationPhoto.jpg" alt="imgRegistration">
+      <div class="registration-form__set">
+        <p class="registration-form__p">Please sign in to Calculate your Daily Calorie Needs and Get your
+          Personalized
+          Recipes</p>
+        <form class="registration-form__form">
+          <input class="registration-form__name" type="text" placeholder="Enter your name">
+          <input class="registration-form__password" type="password" placeholder="Enter Your Password">
+          <button class="registration-form__button" type="submit">Sign In
+            <img alt="searchImg" src="assets/images/aerrow.png" class="imgSearch" />
+          </button>
+        </form>
       </div>
     </section>
-    <!--Анжелика модальное окно конец-->
-    <!--Анжелика header начало-->
-    <header class="header">
-      <img
-        class="header__logo"
-        src="assets/images/header-logo.svg"
-        alt="SmartDietTrack"
-      />
-      <div class="header__icon">
-        <span></span>
+    <!--Анжеликаregistration form конец-->
+    <!-- START nutrients / Safiullova -->
+    <section class="nutrients">
+      <div class="nutrients__title">
+        <p class="nutrients__title-name">Nutrients</p>
+        <h2 class="nutrients__title-h">Learn information about nutrients of any products</h2>
       </div>
-      <nav class="header__nav">
-        <ul class="header__nav-list">
-          <li class="header__list-item"><a href="#about-us">About us</a></li>
-          <li class="header__list-item"><a href="#nutrients">Nutrients</a></li>
-          <li class="header__list-item">
-            <a href="#testimonial">Testimonial</a>
-          </li>
-          <li class="header__list-item">
-            <a href="#calculator"> Calorie Calculator</a>
-          </li>
-          <li class="header__list-item"><a href="#recipes">Recipes</a></li>
-          <li class="header__list-item">
-            <a href="#share-with-us">Share with us</a>
-          </li>
-          <li class="header__list-item"><a href="#form-news">News</a></li>
-        </ul>
-      </nav>
-      <p class="header__text">Hi,friend!</p>
-    </header>
-    <!--Анжелика header конец-->
-    <main>
-      <!--Анжелика banner начало-->
-      <section class="banner">
-        <p class="banner__text">Get Healthier and Happier with us Today!</p>
-        <h1 class="banner__title">Choose the best healthier way of life</h1>
-        <button class="banner__button">Explore Now</button>
-      </section>
-      <!--Анжелика banner конец-->
-      <!-- START nutrients / Safiullova -->
-      <section class="nutrients">
-        <div class="nutrients__title">
-          <p class="nutrients__title-name">Nutrients</p>
-          <h2 class="nutrients__title-h">
-            Learn information about nutrients of any products
-          </h2>
-        </div>
-        <div class="nutrients__form">
-          <div class="nutrients__form-container">
-            <input
-              type="text"
-              class="nutrients__form-input"
-              id="nutrients-form"
-              placeholder="Enter a product (for example: apple)"
-            />
-            <div class="nutrients__form-error"></div>
-            <button class="nutrients__form-button">
-              Search
-              <img
-                alt="searchImg"
-                src="assets/images/aerrow.png"
-                class="imgSearch"
-              />
-            </button>
-          </div>
+      <div class="nutrients__form">
+        <div class="nutrients__form-container">
+          <input type="text" class="nutrients__form-input" id="nutrients-form"
+            placeholder="Enter a product (for example: apple)">
+          <div class="nutrients__form-error"></div>
+          <button class="nutrients__form-button">Search
+            <img alt="searchImg" src="assets/images/aerrow.png" class="imgSearch" />
+          </button>
         </div>
         <div class="nutrients__card">
           <!-- отрисовка карточки -->

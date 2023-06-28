@@ -433,12 +433,12 @@ body._lock {
   }
 }
 .randomRecipe {
-  width: 70%;
+  width: 70vw;
   margin-left: auto;
   margin-right: auto;
 }
 .randomRecipe__text {
-  width: 90%;
+  width: 100%;
 }
 @media (max-width: 828px) {
   .randomRecipe__text {
@@ -446,6 +446,7 @@ body._lock {
   }
 }
 .randomRecipe__text__title {
+  width: 100%;
   margin-bottom: -45px;
   font-family: "Yellowtail";
   font-style: italic;
@@ -485,23 +486,21 @@ body._lock {
   }
 }
 .randomRecipe__form__button {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 23px;
-  color: #274C5B;
-  height: 60px;
-  width: 120px;
+  width: 200px;
+  height: 80px;
   border-radius: 10px;
-  background-color: #f9f8f8;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #274C5B;
+  color: #EFF6F1;
+  border-color: #274C5B;
 }
 .randomRecipe__form__button:hover {
-  background-color: #7EB693;
-  color: #f9f8f8;
-}
-.randomRecipe__form__button:active {
-  background-color: #525C60;
+  background-color: #EFD372;
+  color: #274C5B;
+  border-color: #EFD372;
 }
 .randomRecipe__form .form__inputs__meal {
   color: #274C5B;
@@ -1027,6 +1026,121 @@ body._lock {
     color: #7EB693;
     margin-left: 10px;
     color: #f9f8f8;
+  }
+}
+.registration-form {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px auto;
+  width: 80vw;
+}
+.registration-form__p {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: #525C60;
+  margin-left: 10px;
+}
+.registration-form__set {
+  display: flex;
+  flex-direction: column;
+}
+.registration-form__form {
+  display: flex;
+  flex-direction: column;
+}
+.registration-form__name {
+  margin-top: 20px;
+  margin-left: 10px;
+  color: #274C5B;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  height: 60px;
+  width: 220px;
+  border-radius: 10px;
+  border: 1px solid #7EB693;
+  text-align: center;
+}
+.registration-form__password {
+  margin-top: 20px;
+  margin-left: 10px;
+  color: #274C5B;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  height: 60px;
+  width: 220px;
+  border-radius: 10px;
+  border: 1px solid #7EB693;
+  text-align: center;
+}
+.registration-form__button {
+  width: 200px;
+  height: 80px;
+  border-radius: 10px;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #274C5B;
+  color: #EFF6F1;
+  border-color: #274C5B;
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 63px;
+  width: 224px;
+}
+.registration-form__button:hover {
+  background-color: #EFD372;
+  color: #274C5B;
+  border-color: #EFD372;
+}
+.registration-form__button:hover {
+  background-color: #7EB693;
+  color: #f9f8f8;
+}
+.registration-form__button:active {
+  background-color: #525C60;
+}
+.registration-form__text {
+  font-family: "Yellowtail";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+  color: #7EB693;
+  margin-left: 200px;
+  color: #f9f8f8;
+}
+
+@media (max-width: 767px) {
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 100px auto;
+    width: 80vw;
+  }
+  .registration-form__img {
+    margin: 0 auto;
+    width: 150px;
+  }
+  .registration-form__form {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .registration-form {
+    width: 90vw;
   }
 }
 .calculator {

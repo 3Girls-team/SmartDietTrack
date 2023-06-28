@@ -70,6 +70,16 @@ btnFormNews.onclick = function (event) {
     document.querySelector(".form-news__email").value = ""; //возвращаем изначальное значение в инпут имейл
   }
 };
+//Код для формы регистрации
+const registeringButton = document.querySelector(".registration-form__button"); //Находим кнопку на которое повесим событие
+const headerText = document.querySelector(".header__text"); //находим тег в котром перезапишем текст
+registeringButton.addEventListener("click", function (event) {
+  event.preventDefault(); // убираю дефолтное поведение submit
+  const nameRegistering = document.querySelector(
+    ".registration-form__name"
+  ).value; //Находим значение имени которое ввел пользователь
+  headerText.textContent = `Hi, ${nameRegistering}!`;
+});
 //Конец код JS Анжелика
 
 // Safiullova / START
@@ -146,24 +156,25 @@ btnRanRec.onclick = function (e) {
         return response.json(); //преобразовываем данные в массив
       })
       .then((data) => {
+        let i = Math.floor(Math.random() * data.hits.length); // задаем переменную для вычисления рандомного номера элемента массива
         // выводим необходимые нам данные из массива, создаем разметку для result__item
         resultDisplay.innerHTML = `<div class="result__item"><img src="${
-          data.hits[0].recipe.image
+          data.hits[i].recipe.image
         }" alt="recipeImage" class="item__img" /> 
         <div class="item__info">
         <div class="item__type">${
-          data.hits[0].recipe.dishType
+          data.hits[i].recipe.dishType
         }</div> <div class="item__diet">${
-          data.hits[0].recipe.dietLabels
-        } </div><div class="item__title">${data.hits[0].recipe.label}</div>
-        <div class="item__labels">${data.hits[0].recipe.healthLabels.join(
+          data.hits[i].recipe.dietLabels
+        } </div><div class="item__title">${data.hits[i].recipe.label}</div>
+        <div class="item__labels">${data.hits[i].recipe.healthLabels.join(
           ""
         )} </div>
-        <div class="item__ingredients">Ingredients: ${data.hits[0].recipe.ingredientLines.join(
-          ","
-        )} </div>
+        <div class="item__ingredients">Ingredients: ${data.hits[
+          i
+        ].recipe.ingredientLines.join(",")} </div>
         <a href="${
-          data.hits[0].recipe.url
+          data.hits[i].recipe.url
         }" class="item__prep">Preparation</a></div></div>`;
       })
       .catch((error) => {
