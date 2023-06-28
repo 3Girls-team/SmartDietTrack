@@ -84,8 +84,10 @@
       </div>
       <div class="nutrients__form">
         <div class="nutrients__form-container">
-          <input type="text" class="nutrients__form-input" id="nutrients-form"
+          <input type="text" class="nutrients__form-input" list="productsSelect"
             placeholder="Enter a product (for example: apple)">
+            <datalist id="productsSelect">
+            </datalist>
           <div class="nutrients__form-error"></div>
           <button class="nutrients__form-button">Search
             <img alt="searchImg" src="assets/images/aerrow.png" class="imgSearch" />
@@ -93,8 +95,6 @@
         </div>
       </div>
       <div class="nutrients__card">
-        <!-- отрисовка карточки -->
-        <!-- <button class="nutrients__card-buttom"> Овощ</button> -->
         <div class="nutrients__card-picture"></div>
         <p class="nutrients__card-title">Product, 100g</p>
         <div class="nutrients__card-line"></div>
@@ -105,7 +105,6 @@
           <li class="nutrients__card-list__item">total lipid</li>
           <li class="nutrients__card-list__item">carbohydrates</li>
           <li class="nutrients__card-list__item">fiber</li>
-          
         </ul>
         <ul class="nutrients__card-list" id="nutrientsValue">
           <li class="nutrients__card-list__item">0</li>

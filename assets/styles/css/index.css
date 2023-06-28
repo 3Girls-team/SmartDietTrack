@@ -640,7 +640,7 @@ body._lock {
   margin-right: auto;
   margin-top: 100px;
   width: 335px;
-  height: 605px;
+  height: fit-content;
   border-radius: 20px;
   box-shadow: 1px 1px #525C60, 1em 0 0.4em #525C60;
   background-color: #f9f8f8; }
@@ -698,6 +698,8 @@ body._lock {
     color: #274C5B;
     list-style: none;
     padding-inline-start: 0px; }
+  .nutrients__card #nutrientsValue {
+    text-align: end; }
 
 .form-news {
   margin: 100px auto;
