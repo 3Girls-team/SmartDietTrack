@@ -711,11 +711,17 @@ body._lock {
   line-height: 59px;
   color: #274C5B;
 }
+@media (max-width: 828px) {
+  .nutrients__title-h {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
 
 .nutrients__form {
   display: flex;
   height: 450px;
-  background-image: url(../../images/nutrients-patterns.png), url(../../assets/images/nutrients-backgr.png);
+  background-image: url(../../images/nutrients-patterns.png), url(../../images/nutrients-backgr.png);
   background-repeat: no-repeat;
   justify-content: center;
 }
@@ -725,7 +731,7 @@ body._lock {
   align-items: end;
 }
 .nutrients__form-input {
-  min-width: 450px;
+  min-width: 329px;
   width: 40%;
   margin-top: 200px;
   border-radius: 10px;
@@ -775,13 +781,13 @@ body._lock {
 }
 
 .nutrients__card {
-  border: solid 1px black;
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
   width: 335px;
-  height: 605px;
-  border-radius: 10px;
+  height: fit-content;
+  border-radius: 20px;
+  box-shadow: 1px 1px #525C60, 1em 0 0.4em #525C60;
   background-color: #f9f8f8;
 }
 .nutrients__card-buttom {
@@ -805,12 +811,19 @@ body._lock {
   color: #274C5B;
   border-color: #EFD372;
 }
+.nutrients__card-line {
+  width: 291px;
+  border: 2px solid #D4D4D4;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 .nutrients__card-picture {
-  height: 225px;
-  width: 225px;
-  margin-left: 60px;
-  margin-right: auto;
-  border: solid 1px rgb(32, 7, 71);
+  background-image: url(../../images/header-logo.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 335px;
+  height: 335px;
+  border-radius: 20px;
 }
 .nutrients__card-title {
   font-family: "Roboto", sans-serif;
@@ -821,6 +834,13 @@ body._lock {
   color: #274C5B;
   padding-left: 20px;
 }
+.nutrients__card-lists {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 30px;
+  margin-right: 30px;
+}
 .nutrients__card-list {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -829,7 +849,10 @@ body._lock {
   line-height: 29px;
   color: #274C5B;
   list-style: none;
-  padding-left: 20px;
+  padding-inline-start: 0px;
+}
+.nutrients__card #nutrientsValue {
+  text-align: end;
 }
 
 .form-news {

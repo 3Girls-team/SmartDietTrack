@@ -82,30 +82,59 @@ registeringButton.addEventListener("click", function (event) {
 });
 //Конец код JS Анжелика
 
-// Safiullova / START
-const btnProduct = document.querySelector(".nutrients__form-button"); // Кнопка поиска продукта по названию
-const productName = document.querySelector("#nutrients-form"); // Находим input в котором ввели название продукта
-const productCard = document.querySelector(".nutrients__card"); // Элемент для отрисовки карточки продукта
+// Safiullova / START 
+const btnProduct = document.querySelector(".nutrients__form-button");  // Кнопка поиска продукта по названию
+const productName = document.querySelector(".nutrients__form-input"); // Находим input в котором ввели название продукта
+const productCardPicture = document.querySelector(".nutrients__card-picture"); // Элемент для вставки изображения продукта
+const productCardTitle = document.querySelector(".nutrients__card-title"); // Элемент для вставки наименования продукта
+const productCardNutrientsValue = document.querySelector("#nutrientsValue"); // Элемент (список) для отображения количества веществ в продукте
 const productCardError = document.querySelector(".nutrients__form-error"); // Элемент с сообщением об ошибке
-// добавляю строку для теста
-btnProduct.onclick = function (e) {
-  // фнкция будет отображать карточку продукта, который ввел пользователь
+const productsSelectArr = document.querySelector("#productsSelect"); // Элемент выпадающего списка подсказок
+
+function autoComplete (e) { // функция автозаполнения поля ввода продукта
+  fetch (
+    `https://api.edamam.com/auto-complete?app_id=b44244ac&app_key=6c563eac886cc3efc770b33d53ad0838&q=${productName.value}`
+  )//обращаемся к API в соответствии с введенными пользователем символами в input
+  .then((response) => {
+    return response.json(); 
+  })
+  .then((data) => {
+let productsSelect = ""; // переменая для выпадающего списка
+for (let i=0; i<=data.length; i++) { // перебираю элементы массива совпадений из API
+  productsSelect += ` <option value="${data[i]}">` // создаю элементы выпадающего списка из массива
+};
+productsSelectArr.innerHTML = ` <datalist id="productsSelect"> 
+  ${productsSelect} </datalist>`; // создание списка подсказок
+  })
+}
+productName.addEventListener('input', autoComplete ); // слушатель события при вводе символов в Input
+
+btnProduct.onclick = function (e) {  // фнкция будет отображать карточку продукта, который ввел пользователь
   e.preventDefault(); // убираю submit
+  console.log(productName);
   productCardError.innerHTML = " "; // очистка сообщения об ошибке
-  if (productName.value == 0) {
-    //проверка, если пользователь не ввел значение, появится сообщение
-    productCardError.innerHTML =
-      "Please enter the product you want to know about";
+   if (productName.value == 0) {  //проверка, если пользователь не ввел значение, появится сообщение
+    productCardError.innerHTML = "Please enter the product you want to know about";
   } else {
     fetch(
-      `https://api.edamam.com/api/food-database/v2/nutrients?app_id=828a8c08&app_key=5055def535cbc6e05c7aa923b552be6f`
-    ) //обращаемся к API в соответствии с введенными пользователем параметрами для поиска - продукт и прием пищи
+      `https://api.edamam.com/api/food-database/v2/parser?app_id=99d8e87e&app_key=00390c7f538b7700bb34ee921fe04978&ingr=${productName.value}&nutrition-type=cooking`
+)//обращаемся к API в соответствии с введенными пользователем параметрами для поиска - продукт
       .then((response) => {
-        return response.json(); //преобразовываем данные в массив
-      })
-      .then((ingredients) => {
-        console.log(ingredients.foodId);
-        //сюда разметку карточки
+    return response.json(); 
+  })
+      .then((data) => {
+        productCardPicture.innerHTML =
+        `<img class="nutrients__card-picture" src="${data.hints[0].food.image}" alt="product picture" />`
+        productCardTitle.innerHTML = 
+`<p class="nutrients__card-title">${data.hints[0].food.label}, 100g</p>`;
+productCardNutrientsValue.innerHTML =
+`<ul class="nutrients__card-list"  id="nutrientsValue">
+  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.ENERC_KCAL.toFixed(1)}</li>
+  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.PROCNT.toFixed(1)}</li>
+  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.FAT.toFixed(1)}</li>
+  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.CHOCDF.toFixed(1)}</li>
+  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.FIBTG.toFixed(1)}</li>
+</ul>`
       })
       .catch((error) => {
         //выводим сообщение об ошибке, если она возникла
