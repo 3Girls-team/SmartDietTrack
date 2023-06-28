@@ -1,114 +1,115 @@
-
 //Начало код JS Анжелика
 
 // Меню бургер
-const iconMenu= document.querySelector(".header__icon");
-if(iconMenu){
-    const menuNav= document.querySelector(".header__nav"); 
+const iconMenu = document.querySelector(".header__icon");
+if (iconMenu) {
+  const menuNav = document.querySelector(".header__nav");
 
-    iconMenu.addEventListener('click', function(e){
-        document.body.classList.toggle('_lock');
-        iconMenu.classList.toggle('_active');
-        menuNav.classList.toggle('_active');
-    })
+  iconMenu.addEventListener("click", function (e) {
+    document.body.classList.toggle("_lock");
+    iconMenu.classList.toggle("_active");
+    menuNav.classList.toggle("_active");
+  });
 }
 //Открытие и закрытие модального окна
-const buttonOpen= document.querySelector(".banner__button");//ищем кнопку открытия модального окна
-const modalwindow= document.querySelector(".modal-window");//ищем модальное окно
-const bottonClose= document.querySelector(".modal-window__button");//ищем кнопку закрытия модального окна
+const buttonOpen = document.querySelector(".banner__button"); //ищем кнопку открытия модального окна
+const modalwindow = document.querySelector(".modal-window"); //ищем модальное окно
+const bottonClose = document.querySelector(".modal-window__button"); //ищем кнопку закрытия модального окна
 
-buttonOpen.onclick =function(){
-  modalwindow.style.display="block";
-}
+buttonOpen.onclick = function () {
+  modalwindow.style.display = "block";
+};
 
-bottonClose.onclick =function(){
-  modalwindow.style.display="none";
-}
-window.onclick=function(event){
-  if(event.target == modalwindow){
-    modalwindow.style.display="none"
+bottonClose.onclick = function () {
+  modalwindow.style.display = "none";
+};
+window.onclick = function (event) {
+  if (event.target == modalwindow) {
+    modalwindow.style.display = "none";
   }
-}
+};
 // Форма подписки(регистрация + пожелание на день из api при регистраци)
 const btnFormNews = document.querySelector(".form-news__button"); //находим кнопку в разметке ,записываем ее в переменную
 const errorMesForm = document.querySelector(".form-news__errorMessage"); //находим разметку, где будет отображаться сообщение об ошибке
 const resultFormNews = document.querySelector(".form-news__result"); //находим разметку, где будет отображаться сообщение c результатом
 
-btnFormNews.onclick = function(event){// вешаем событие на кнопку
+btnFormNews.onclick = function (event) {
+  // вешаем событие на кнопку
   event.preventDefault(); //отменяем дефолтное submit у кнопки
   resultFormNews.innerHTML = " "; //очищаем поле с результатом
   errorMesForm.innerHTML = " "; //очищаем поле с сообщением об ошибке
-  const nameUser = document.querySelector(".form-news__name").value;//находим значение инпута с именем ,записываем значение в переменную
-  const email = document.querySelector(".form-news__email").value;//находим значение инпута с email ,записываем значение в переменную
- 
-  if(nameUser ==="" || email ===""){ //проверяем заполненность инпутов ,если хоть одно поле не заполнено 
-  errorMesForm.innerHTML="Please fill in your name and email for further registration";//выводим сообщение об ошибке
-  errorMesForm.classList.add('form-news__errorMesForm');
-  }
-  else{
+  const nameUser = document.querySelector(".form-news__name").value; //находим значение инпута с именем ,записываем значение в переменную
+  const email = document.querySelector(".form-news__email").value; //находим значение инпута с email ,записываем значение в переменную
+
+  if (nameUser === "" || email === "") {
+    //проверяем заполненность инпутов ,если хоть одно поле не заполнено
+    errorMesForm.innerHTML =
+      "Please fill in your name and email for further registration"; //выводим сообщение об ошибке
+    errorMesForm.classList.add("form-news__errorMesForm");
+  } else {
     fetch("https://type.fit/api/quotes")
-    .then((response) =>{
-      return response.json();
-    })
-    .then((data) =>{  
-      const pResultMessage =document.createElement('p');// создаем элемент p  срезультатом сообщения о регистрации
-      pResultMessage.classList.add('form-news__text');// Добавляем ему класс
-      pResultMessage.innerHTML=`${nameUser}, thank you for registering!`;//Записываем в разметку
-      resultFormNews.appendChild(pResultMessage);// Добавляем элемент в разметку
-      const advice= document.createElement('p');// создаем элемент p  срезультатом совета на день
-      advice.classList.add('form-news__textAdvice');// Добавляем ему класс
-      const indexData = Math.floor(Math.random()*data.length)
-      advice.innerHTML= `Advice of the day:" ${data[indexData].text}"`;
-      resultFormNews.appendChild(advice);
-    })
-    .catch((error) => {
-      //выводим сообщение об ошибке
-      errorMesForm.innerHTML = `<p class="errorText">Sorry, there was an error during registration.Try again in a few minutes:(</p>`;
-    });
-    document.querySelector(".form-news__name").value =
-    ""; //возвращаем начальное значение в инпут имени
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        const pResultMessage = document.createElement("p"); // создаем элемент p  срезультатом сообщения о регистрации
+        pResultMessage.classList.add("form-news__text"); // Добавляем ему класс
+        pResultMessage.innerHTML = `${nameUser}, thank you for registering!`; //Записываем в разметку
+        resultFormNews.appendChild(pResultMessage); // Добавляем элемент в разметку
+        const advice = document.createElement("p"); // создаем элемент p  срезультатом совета на день
+        advice.classList.add("form-news__textAdvice"); // Добавляем ему класс
+        const indexData = Math.floor(Math.random() * data.length);
+        advice.innerHTML = `Advice of the day:" ${data[indexData].text}"`;
+        resultFormNews.appendChild(advice);
+      })
+      .catch((error) => {
+        //выводим сообщение об ошибке
+        errorMesForm.innerHTML = `<p class="errorText">Sorry, there was an error during registration.Try again in a few minutes:(</p>`;
+      });
+    document.querySelector(".form-news__name").value = ""; //возвращаем начальное значение в инпут имени
     document.querySelector(".form-news__email").value = ""; //возвращаем изначальное значение в инпут имейл
   }
-}
+};
 //Конец код JS Анжелика
 
-// Safiullova / START 
-const btnProduct = document.querySelector(".nutrients__form-button");  // Кнопка поиска продукта по названию
+// Safiullova / START
+const btnProduct = document.querySelector(".nutrients__form-button"); // Кнопка поиска продукта по названию
 const productName = document.querySelector("#nutrients-form"); // Находим input в котором ввели название продукта
 const productCard = document.querySelector(".nutrients__card"); // Элемент для отрисовки карточки продукта
 const productCardError = document.querySelector(".nutrients__form-error"); // Элемент с сообщением об ошибке
 // добавляю строку для теста
-btnProduct.onclick = function (e) {  // фнкция будет отображать карточку продукта, который ввел пользователь
+btnProduct.onclick = function (e) {
+  // фнкция будет отображать карточку продукта, который ввел пользователь
   e.preventDefault(); // убираю submit
   productCardError.innerHTML = " "; // очистка сообщения об ошибке
-  if (productName.value == 0) {  //проверка, если пользователь не ввел значение, появится сообщение
-    productCardError.innerHTML = "Please enter the product you want to know about";
+  if (productName.value == 0) {
+    //проверка, если пользователь не ввел значение, появится сообщение
+    productCardError.innerHTML =
+      "Please enter the product you want to know about";
   } else {
     fetch(
       `https://api.edamam.com/api/food-database/v2/nutrients?app_id=828a8c08&app_key=5055def535cbc6e05c7aa923b552be6f`
-      
     ) //обращаемся к API в соответствии с введенными пользователем параметрами для поиска - продукт и прием пищи
       .then((response) => {
         return response.json(); //преобразовываем данные в массив
-        
       })
       .then((ingredients) => {
-        console.log(ingredients.foodId)
-      //сюда разметку карточки
+        console.log(ingredients.foodId);
+        //сюда разметку карточки
       })
       .catch((error) => {
         //выводим сообщение об ошибке, если она возникла
-        productCardError.innerHTML = "Sorry, we couldn't find any data for this product. Please try again!";
+        productCardError.innerHTML =
+          "Sorry, we couldn't find any data for this product. Please try again!";
       })
       .finally(() => {
         // что- то еще сюда написать
       });
-  
   }
   productName.value = " "; // очистка поля ввода продукта
-}
+};
 
-// Safiullova / END 
+// Safiullova / END
 
 //Clifford / START
 
@@ -180,3 +181,108 @@ btnRanRec.onclick = function (e) {
 };
 
 //Clifford / END
+
+//Maryna / START
+
+// Получение значений элементов
+function calculateCalories() {
+  const age = Number(document.getElementById("age").value);
+  const gender = document.querySelector('input[name="gender"]:checked')?.value;
+  const weight = Number(document.getElementById("weight").value);
+  const height = Number(document.getElementById("height").value);
+  const activityLevel = document.getElementById("activity").value;
+  const goal = document.getElementById("goal").value;
+  const macronutrients = document.getElementById("macronutrients").value;
+  const loadingDiv = document.getElementById("loading");
+  const resultDiv = document.getElementById("result");
+  const errorDiv = document.getElementById("error");
+
+  // Сброс результатов и ошибок
+  resultDiv.textContent = "";
+  errorDiv.textContent = "";
+
+  // Проверка введенных значений
+  if (!age) {
+    errorDiv.textContent = "Ошибка: Заполните поле 'Age'";
+    return;
+  }
+  if (!gender) {
+    errorDiv.textContent = "Ошибка: Выберите поле 'Gender'";
+    return;
+  }
+  if (!weight || isNaN(weight) || weight < 40 || weight > 160) {
+    errorDiv.textContent = "Ошибка: Некорректное значение в поле 'Weight'";
+    return;
+  }
+  if (!height || isNaN(height) || height < 130 || height > 230) {
+    errorDiv.textContent = "Ошибка: Некорректное значение в поле 'Height'";
+    return;
+  }
+  if (!activityLevel) {
+    errorDiv.textContent = "Ошибка: Выберите значение в поле 'Activity Level'";
+    return;
+  }
+
+  // Показать сообщение о загрузке
+  loadingDiv.style.display = "block";
+
+  // Формирование URL запроса
+  //const baseUrl = "https://fitness-calculator.p.rapidapi.com";
+  const url = `https://fitness-calculator.p.rapidapi.com/dailycalorie?age=${age}&gender=${gender}&weight=${weight}&height=${height}&activitylevel=${activityLevel}`;
+
+  // Опции для запроса
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "a456518623msh308f85c8cdc0685p1504cejsn468aa2a2bb58",
+      "X-RapidAPI-Host": "fitness-calculator.p.rapidapi.com",
+    },
+  };
+
+  // Отправка запроса к API
+  fetch(url, options)
+    .then((response) => {
+      // Скрыть сообщение о загрузке
+      loadingDiv.style.display = "none";
+
+      if (!response.ok) {
+        throw new Error(response.statusText);
+      }
+
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data); // Выводим данные в консоль для отладки
+      const calorieResult = data.data?.BMR;
+
+      if (calorieResult) {
+        resultDiv.innerHTML = `Daily calorie: ${calorieResult}`;
+      } else {
+        errorDiv.innerHTML = "Ошибка: Неверный формат данных";
+      }
+    })
+    .catch((error) => {
+      // Скрыть сообщение о загрузке
+      loadingDiv.style.display = "none";
+
+      // Отобразить ошибку
+      if (error.message === "Failed to fetch") {
+        errorDiv.innerHTML = `Ошибка: ${error.message}`;
+      } else {
+        errorDiv.innerHTML = "Ошибка: 404  Not Found" + error.message;
+      }
+    })
+    .finally(() => {
+      // Сбросить сообщение о загрузке
+      loadingDiv.style.display = "none";
+    });
+}
+
+// Привязка функции calculateCalories к событию отправки формы
+const form = document.getElementById("calculatorForm");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  calculateCalories();
+});
+
+//Maryna / END

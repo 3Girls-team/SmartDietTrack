@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartDietTrack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@300;400&family=Roboto:wght@300;400;700;900&family=Yellowtail&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/css/normalize.css" />
+    <link rel="stylesheet" href="assets/styles/css/index.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SmartDietTrack</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@300;400&family=Roboto:wght@300;400;700;900&family=Yellowtail&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles/css/normalize.css">
-  <link rel="stylesheet" href="assets/styles/css/index.css" />
-
-</head>
-
-<!--Рекомендации по работе в проекте:
+  <!--Рекомендации по работе в проекте:
 (по этому списку буду проверять каждый блок)
 1.	Проверка блока в валидаторах.
 2.	У img развернутый alt.
@@ -28,162 +27,314 @@
 8.	Variables (переменные используем для шрифтов/повторяющихся цветов)
 9.  fonts используем для стилей заголовков-->
 
-<!--Девочки, подписываем свои рабочие области, начало/конец-->
+  <!--Девочки, подписываем свои рабочие области, начало/конец-->
 
-<body>
-  <!--Анжелика модальное окно начало-->
-  <section class="modal-window">
-    <div class="modal-window__fon">
-      <button class="modal-window__button">Home</button>
-      <p class="modal-window__greeting">Welcome to SmartDietTrack</p>
-      <p class="modal-window__slogan">Eat smart - it’s easy and tasty!</p>
-      <p class="modal-window__description">SmartDietTrack - an innovative platform for nutrition tracking and
-        achieving
-        a healthy lifestyle! Discover your daily calorie, protein, fat, and carbohydrate needs, monitor your diet,
-        and
-        receive personalized nutritional recommendations. Our app offers a wide selection of healthy recipes to help
-        you
-        adjust weight and reach your fitness goals. Begin your journey to a better version of yourself with
-        SmartDietTrack!</p>
-    </div>
-  </section>
-  <!--Анжелика модальное окно конец-->
-  <!--Анжелика header начало-->
-  <header class="header">
-    <img class="header__logo" src="assets/images/header-logo.svg" alt="SmartDietTrack">
-    <div class="header__icon">
-      <span></span>
-    </div>
-    <nav class="header__nav">
-      <ul class="header__nav-list">
-        <li class="header__list-item"><a href="#about-us">About us</a></li>
-        <li class="header__list-item"><a href="#nutrients">Nutrients</a></li>
-        <li class="header__list-item"><a href="#testimonial">Testimonial</a></li>
-        <li class="header__list-item"><a href="#calculator"> Calorie Calculator</a></li>
-        <li class="header__list-item"><a href="#recipes">Recipes</a></li>
-        <li class="header__list-item"><a href="#share-with-us">Share with us</a></li>
-        <li class="header__list-item"><a href="#form-news">News</a></li>
-      </ul>
-    </nav>
-    <p class="header__text"> Hi,friend!</p>
-  </header>
-  <!--Анжелика header конец-->
-  <main>
-    <!--Анжелика banner начало-->
-    <section class="banner">
-      <p class="banner__text">Get Healthier and Happier with us Today!</p>
-      <h1 class="banner__title">Choose the best healthier way of life</h1>
-      <button class="banner__button">Explore Now</button>
+  <body>
+    <!--Анжелика модальное окно начало-->
+    <section class="modal-window">
+      <div class="modal-window__fon">
+        <button class="modal-window__button">Home</button>
+        <p class="modal-window__greeting">Welcome to SmartDietTrack</p>
+        <p class="modal-window__slogan">Eat smart - it’s easy and tasty!</p>
+        <p class="modal-window__description">
+          SmartDietTrack - an innovative platform for nutrition tracking and
+          achieving a healthy lifestyle! Discover your daily calorie, protein,
+          fat, and carbohydrate needs, monitor your diet, and receive
+          personalized nutritional recommendations. Our app offers a wide
+          selection of healthy recipes to help you adjust weight and reach your
+          fitness goals. Begin your journey to a better version of yourself with
+          SmartDietTrack!
+        </p>
+      </div>
     </section>
-    <!--Анжелика banner конец-->
-    <!-- START nutrients / Safiullova -->
-    <section class="nutrients">
-      <div class="nutrients__title">
-        <p class="nutrients__title-name">Nutrients</p>
-        <h2 class="nutrients__title-h">Learn information about nutrients of any products</h2>
+    <!--Анжелика модальное окно конец-->
+    <!--Анжелика header начало-->
+    <header class="header">
+      <img
+        class="header__logo"
+        src="assets/images/header-logo.svg"
+        alt="SmartDietTrack"
+      />
+      <div class="header__icon">
+        <span></span>
       </div>
-      <div class="nutrients__form">
-        <div class="nutrients__form-container">
-          <input type="text" class="nutrients__form-input" id="nutrients-form"
-            placeholder="Enter a product (for example: apple)">
-          <div class="nutrients__form-error"></div>
-          <button class="nutrients__form-button">Search
-            <img alt="searchImg" src="assets/images/aerrow.png" class="imgSearch" />
-          </button>
-        </div>
-      </div>
-      <div class="nutrients__card">
-        <!-- отрисовка карточки -->
-        <button class="nutrients__card-buttom"> Овощ</button>
-        <img class="nutrients__card-picture" src="assets/images/header-logo.svg" alt="product picture" />
-        <p class="nutrients__card-title">помидор, 100г</p>
-        <ul class="nutrients__card-list">
-          <li class="nutrients__card-list__item">1</li>
-          <li class="nutrients__card-list__item">2</li>
-          <li class="nutrients__card-list__item">3</li>
-          <li class="nutrients__card-list__item">4</li>
-          <li class="nutrients__card-list__item">5</li>
-          <li class="nutrients__card-list__item">6</li>
-          <li class="nutrients__card-list__item">7</li>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__list-item"><a href="#about-us">About us</a></li>
+          <li class="header__list-item"><a href="#nutrients">Nutrients</a></li>
+          <li class="header__list-item">
+            <a href="#testimonial">Testimonial</a>
+          </li>
+          <li class="header__list-item">
+            <a href="#calculator"> Calorie Calculator</a>
+          </li>
+          <li class="header__list-item"><a href="#recipes">Recipes</a></li>
+          <li class="header__list-item">
+            <a href="#share-with-us">Share with us</a>
+          </li>
+          <li class="header__list-item"><a href="#form-news">News</a></li>
         </ul>
-        <div id="edamam-badge" data-color="white"></div> <!-- для отображения использования API -->
-      </div>
-    </section>
-    <!-- END nutrients / Safiullova -->
-    <section class="testimonial">Катя</section>
-    <!--УДАЛЯЕШЬ СТРОЧКУ И ВСТАВЛЯЕШЬ СВОЙ КУСОК КОДА-->
-    <section class="calculator">Марина</section>
-    <!--УДАЛЯЕШЬ СТРОЧКУ И ВСТАВЛЯЕШЬ СВОЙ КУСОК КОДА-->
-    <!--Clifford / START -->
-    <section class="recipes">
-      <div class="randomRecipe">
-        <div class="randomRecipe__text">
-          <p class="randomRecipe__text__title">Recipes</p>
-          <p class="randomRecipe__text__body">
-            Discover our wide selection of perfectly balanced and delicious
-            recipes
-          </p>
+      </nav>
+      <p class="header__text">Hi,friend!</p>
+    </header>
+    <!--Анжелика header конец-->
+    <main>
+      <!--Анжелика banner начало-->
+      <section class="banner">
+        <p class="banner__text">Get Healthier and Happier with us Today!</p>
+        <h1 class="banner__title">Choose the best healthier way of life</h1>
+        <button class="banner__button">Explore Now</button>
+      </section>
+      <!--Анжелика banner конец-->
+      <!-- START nutrients / Safiullova -->
+      <section class="nutrients">
+        <div class="nutrients__title">
+          <p class="nutrients__title-name">Nutrients</p>
+          <h2 class="nutrients__title-h">
+            Learn information about nutrients of any products
+          </h2>
         </div>
-        <form class="randomRecipe__form">
-          <div class="form__inputs">
-            <select id="select-meal" name="selectMeal" class="form__inputs__meal">
-              <option selected="true" disabled="disabled">
-                Please select meal type
-              </option>
-              <option value="breakfast">Breakfast</option>
-              <option value="lunch">Lunch</option>
-              <option value="dinner">Dinner</option>
-              <option value="snack">Snack</option>
-              <option value="teatime">Teatime</option>
-            </select>
-            <input type="text" class="form__inputs__product" placeholder="Please type in a product" />
+        <div class="nutrients__form">
+          <div class="nutrients__form-container">
+            <input
+              type="text"
+              class="nutrients__form-input"
+              id="nutrients-form"
+              placeholder="Enter a product (for example: apple)"
+            />
+            <div class="nutrients__form-error"></div>
+            <button class="nutrients__form-button">
+              Search
+              <img
+                alt="searchImg"
+                src="assets/images/aerrow.png"
+                class="imgSearch"
+              />
+            </button>
           </div>
-          <button class="randomRecipe__form__button">
-            Search
-            <img alt="searchImg" src="assets/images/aerrow.png" class="imgSearch" />
-          </button>
-        </form>
-        <div class="randomRecipe__result">
-          <div class="result__spinner"></div>
-          <div class="input_error-message"></div>
-          <div class="errorMessage"></div>
-          <div class="result-display"></div>
         </div>
-      </div>
-    </section>
-    <!--Clifford / END -->
-    <section class="share-with-us">Катя</section>
-    <!--УДАЛЯЕШЬ СТРОЧКУ И ВСТАВЛЯЕШЬ СВОЙ КУСОК КОДА-->
-    <!--Анжелика news начало-->
-    <section class="form-news">
-      <h2 class="form-news__title">Subscribe to our News!</h2>
-      <div class="form-news__set">
-        <input class="form-news__name" type="text" id="nameUser" placeholder="Your First Name">
-        <input class="form-news__email" type="email" id="email" placeholder="Your Email Address">
-        <button class="form-news__button" type="submit" id="btnForm">Subscribe</button>
-      </div>
-      <div class="form-news__result"></div>
-      <div class="form-news__errorMessage"></div>
-    </section>
-    <!--Анжелика news конец-->
-  </main>
-  <footer class="footer">
-    <img class="footer__logo" src="assets/images/header-logo.svg" alt="SmartDietTrack">
-    <nav class="footer__nav">
-      <ul class="footer__nav-list">
-        <li class="footer__list-item"><a href="#about-us">About us</a></li>
-        <li class="footer__list-item"><a href="#nutrients">Nutrients</a></li>
-        <li class="footer__list-item"><a href="#testimonial">Testimonial</a></li>
-        <li class="footer__list-item"><a href="#calculator"> Calorie Calculator</a></li>
-        <li class="footer__list-item"><a href="#recipes">Recipes</a></li>
-        <li class="footer__list-item"><a href="#share-with-us">Share with us</a></li>
-        <li class="footer__list-item"><a href="#form-news">News</a></li>
-      </ul>
-    </nav>
-  </footer>
+        <div class="nutrients__card">
+          <!-- отрисовка карточки -->
+          <button class="nutrients__card-buttom">Овощ</button>
+          <img
+            class="nutrients__card-picture"
+            src="assets/images/header-logo.svg"
+            alt="product picture"
+          />
+          <p class="nutrients__card-title">помидор, 100г</p>
+          <ul class="nutrients__card-list">
+            <li class="nutrients__card-list__item">1</li>
+            <li class="nutrients__card-list__item">2</li>
+            <li class="nutrients__card-list__item">3</li>
+            <li class="nutrients__card-list__item">4</li>
+            <li class="nutrients__card-list__item">5</li>
+            <li class="nutrients__card-list__item">6</li>
+            <li class="nutrients__card-list__item">7</li>
+          </ul>
+          <div id="edamam-badge" data-color="white"></div>
+          <!-- для отображения использования API -->
+        </div>
+      </section>
+      <!-- END nutrients / Safiullova -->
+      <section class="testimonial">Катя</section>
 
-  <script src="index.js"></script>
-  <script src="https://developer.edamam.com/attribution/badge.js"></script> <!-- для отображения использования API -->
-</body>
+      <!--MARYNA START-->
+      <section class="calculator">
+        <div class="calculatorCalorie">
+          <div class="calculatorCalorie__text">
+            <p class="calculatorCalorie__text-title">Calorie Calculator</p>
+            <p class="calculatorCalorie__text-body">
+              Use the calorie calculator to estimate the number of daily calories your body needs to lose, gain or maintain your current weight in just one click 
+            </p>
+          </div>
+        <form class="calculatorForm" id="calculatorForm">
+          <div class="calculatorForm__inputs">
+            <label for="age">Age (years):</label>
+          <input type="number" id="age" required />
+          <br />
 
+          <label for="weight">Weight (kg):</label>
+          <input type="number" id="weight" required />
+          <br />
+
+          <label for="height">Height (cm):</label>
+          <input type="number" id="height" required />
+          <br />
+
+          <label for="gender">Gender:</label>
+          <input type="radio" id="male" name="gender" value="male" required />
+          <label for="male">Male</label>
+          <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="female"
+            required
+          />
+          <label for="female">Female</label>
+          <br />
+          </div>
+          
+          <div class="calculatorForm__options">
+            <label for="goal">Goal:</label>
+          <select id="goal" required>
+            <option value="maintain">Weight Maintenance</option>
+            <option value="mildlose">Mild weight loss</option>
+            <option value="weightlose">Weight loss</option>
+            <option value="extremelose">Extreme weight loss</option>
+            <option value="mildgain">Mild weight gain</option>
+            <option value="weightgain">Weight gain</option>
+            <option value="extremegain">Extreme weight gain</option>
+          </select>
+          <br />
+
+          <label for="macronutrients">Macro nutrients:</label>
+          <select id="macronutrients" required>
+            <option value="balanced">balanced</option>
+            <option value="lowfat">lowfat</option>
+            <option value="lowcarbs">lowcarbs</option>
+            <option value="highprotein">highprotein</option>
+          </select>
+          <br />
+
+          <label for="activity">Activity Level:</label>
+          <select id="activity" required>
+            <option value="level_1">Sedentary: no exercise</option>
+            <option value="level_2">Sedentary: little exercise</option>
+            <option value="level_3">Exercise 1-3 times/week</option>
+            <option value="level_4">Exercise 3-4 times/week</option>
+            <option value="level_5">
+              Daily exercise or intense exercise 4-5 times/week
+            </option>
+            <option value="level_6">Intense exercise 6-7 times/week</option>
+            <option value="level_7">
+              Very intense exercise daily, or physical job
+            </option>
+          </select>
+          <br />
+          <button type="submit" class="calculatorForm__options-btn"><img
+            src="assets/images/aerrow.png"
+            alt="submithImg"
+            class="imgSubmit"
+          />
+          Calculate
+        </button>  
+        
+          </div>
+        </form>
+        <div id="loading" style="display: none">
+          <div class="loader"></div>
+          <p>Loading...</p>
+        </div>
+        <div id="result"></div>
+        <div class="error" id="error"></div>
+      </section>
+      <!--MARYNA  END-->
+
+      <!--Clifford / START -->
+      <section class="recipes">
+        <div class="randomRecipe">
+          <div class="randomRecipe__text">
+            <p class="randomRecipe__text__title">Recipes</p>
+            <p class="randomRecipe__text__body">
+              Discover our wide selection of perfectly balanced and delicious
+              recipes
+            </p>
+          </div>
+          <form class="randomRecipe__form">
+            <div class="form__inputs">
+              <select
+                id="select-meal"
+                name="selectMeal"
+                class="form__inputs__meal"
+              >
+                <option selected="true" disabled="disabled">
+                  Please select meal type
+                </option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="snack">Snack</option>
+                <option value="teatime">Teatime</option>
+              </select>
+              <input
+                type="text"
+                class="form__inputs__product"
+                placeholder="Please type in a product"
+              />
+            </div>
+            <button class="randomRecipe__form__button">
+              Search
+              <img
+                alt="searchImg"
+                src="assets/images/aerrow.png"
+                class="imgSearch"
+              />
+            </button>
+          </form>
+          <div class="randomRecipe__result">
+            <div class="result__spinner"></div>
+            <div class="input_error-message"></div>
+            <div class="errorMessage"></div>
+            <div class="result-display"></div>
+          </div>
+        </div>
+      </section>
+      <!--Clifford / END -->
+      <section class="share-with-us">Катя</section>
+      <!--УДАЛЯЕШЬ СТРОЧКУ И ВСТАВЛЯЕШЬ СВОЙ КУСОК КОДА-->
+      <!--Анжелика news начало-->
+      <section class="form-news">
+        <h2 class="form-news__title">Subscribe to our News!</h2>
+        <div class="form-news__set">
+          <input
+            class="form-news__name"
+            type="text"
+            id="nameUser"
+            placeholder="Your First Name"
+          />
+          <input
+            class="form-news__email"
+            type="email"
+            id="email"
+            placeholder="Your Email Address"
+          />
+          <button class="form-news__button" type="submit" id="btnForm">
+            Subscribe
+          </button>
+        </div>
+        <div class="form-news__result"></div>
+        <div class="form-news__errorMessage"></div>
+      </section>
+      <!--Анжелика news конец-->
+    </main>
+    <footer class="footer">
+      <img
+        class="footer__logo"
+        src="assets/images/header-logo.svg"
+        alt="SmartDietTrack"
+      />
+      <nav class="footer__nav">
+        <ul class="footer__nav-list">
+          <li class="footer__list-item"><a href="#about-us">About us</a></li>
+          <li class="footer__list-item"><a href="#nutrients">Nutrients</a></li>
+          <li class="footer__list-item">
+            <a href="#testimonial">Testimonial</a>
+          </li>
+          <li class="footer__list-item">
+            <a href="#calculator"> Calorie Calculator</a>
+          </li>
+          <li class="footer__list-item"><a href="#recipes">Recipes</a></li>
+          <li class="footer__list-item">
+            <a href="#share-with-us">Share with us</a>
+          </li>
+          <li class="footer__list-item"><a href="#form-news">News</a></li>
+        </ul>
+      </nav>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
+    <!-- для отображения использования API -->
+  </body>
 </html>
