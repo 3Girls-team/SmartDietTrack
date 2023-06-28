@@ -7,6 +7,10 @@
 
     &-h {
         @include heading-h2 ;
+        @media (max-width: 828px) {
+            font-size: 30px;
+            line-height: 37px;
+                  }
     }
 }
 
@@ -24,7 +28,7 @@
     }
 
     &-input {
-        min-width: 450px;
+        min-width: 329px;
         width: 40%;
         margin-top: 200px;
         border-radius: 10px;
