@@ -69,7 +69,15 @@ btnFormNews.onclick = function (event) {
     document.querySelector(".form-news__name").value = ""; //возвращаем начальное значение в инпут имени
     document.querySelector(".form-news__email").value = ""; //возвращаем изначальное значение в инпут имейл
   }
-};
+}
+//Код для формы регистрации
+  const registeringButton =document.querySelector(".registration-form__button");//Находим кнопку на которое повесим событие
+  const headerText =document.querySelector(".header__text");//находим тег в котром перезапишем текст
+  registeringButton.addEventListener('click', function(event){
+    event.preventDefault(); // убираю дефолтное поведение submit
+    const nameRegistering =document.querySelector(".registration-form__name").value;//Находим значение имени которое ввел пользователь
+    headerText.textContent =`Hi, ${nameRegistering}!`;
+      });
 //Конец код JS Анжелика
 
 // Safiullova / START
