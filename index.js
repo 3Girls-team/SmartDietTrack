@@ -75,13 +75,15 @@ btnFormNews.onclick = function(event){// вешаем событие на кно
 // Safiullova / START 
 const btnProduct = document.querySelector(".nutrients__form-button");  // Кнопка поиска продукта по названию
 const productName = document.querySelector("#nutrients-form"); // Находим input в котором ввели название продукта
-const productCard = document.querySelector(".nutrients__card"); // Элемент для отрисовки карточки продукта
+const productCardPicture = document.querySelector(".nutrients__card-picture"); // Элемент для отрисовки карточки продукта
+const productCardTitle = document.querySelector(".nutrients__card-title");
+const productCardNutrientsValue = document.querySelector("#nutrientsValue"); 
 const productCardError = document.querySelector(".nutrients__form-error"); // Элемент с сообщением об ошибке
-
+console.log(productCardPicture);
 btnProduct.onclick = function (e) {  // фнкция будет отображать карточку продукта, который ввел пользователь
   e.preventDefault(); // убираю submit
   productCardError.innerHTML = " "; // очистка сообщения об ошибке
-  if (productName.value == 0) {  //проверка, если пользователь не ввел значение, появится сообщение
+   if (productName.value == 0) {  //проверка, если пользователь не ввел значение, появится сообщение
     productCardError.innerHTML = "Please enter the product you want to know about";
   } else {
     fetch(
@@ -91,15 +93,17 @@ btnProduct.onclick = function (e) {  // фнкция будет отобража
     return response.json(); 
   })
       .then((data) => {
-        productCard.innerHTML = 
-`<img class="nutrients__card-picture" src="${data.hints[0].food.image}" alt="product picture" />
-<p class="nutrients__card-title">${data.hints[0].food.label}, 100г</p>
-<ul class="nutrients__card-list">
-  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.CHOCDF}</li>
+        productCardPicture.innerHTML =
+        `<img class="nutrients__card-picture" src="${data.hints[0].food.image}" alt="product picture" />`
+        productCardTitle.innerHTML = 
+`<p class="nutrients__card-title">${data.hints[0].food.label}, 100g</p>`;
+productCardNutrientsValue.innerHTML =
+`<ul class="nutrients__card-list"  id="nutrientsValue">
   <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.ENERC_KCAL}</li>
-  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.FAT}</li>
-  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.FIBTG}</li>
   <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.PROCNT}</li>
+  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.FAT}</li>
+  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.CHOCDF}</li>
+  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.FIBTG}</li>
 </ul>`
       })
       .catch((error) => {
@@ -109,7 +113,6 @@ btnProduct.onclick = function (e) {  // фнкция будет отобража
       .finally(() => {
         // что- то еще сюда написать
       });
-  
   }
   productName.value = " "; // очистка поля ввода продукта
 }
