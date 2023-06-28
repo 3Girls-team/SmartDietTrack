@@ -1,12 +1,13 @@
-@import 'vars';
-@import 'fonts';
-@import 'mixins';
-@import 'components/footer';
-@import 'components/header';
-@import 'components/banner';
-@import 'components/modal';
-@import 'components/randomRecipe';
-@import 'components/nutrients';
-@import 'components/formNews';
-@import 'components/registrationForm';
-// В ЭТОМ ФАЙЛЕ ПОДКЛЮЧАТЬ СВОЮ СТРАНИЧКУ СТИЛЕЙ С НОВОЙ СТРОКИ, НЕ ВКЛИНИВАТЬ МЕЖДУ 
+@import "vars";
+@import "fonts";
+@import "mixins";
+@import "components/footer";
+@import "components/header";
+@import "components/banner";
+@import "components/modal";
+@import "components/randomRecipe";
+@import "components/nutrients";
+@import "components/formNews";
+@import "components/registrationForm";
+@import "components/calculator";
+// В ЭТОМ ФАЙЛЕ ПОДКЛЮЧАТЬ СВОЮ СТРАНИЧКУ СТИЛЕЙ С НОВОЙ СТРОКИ, НЕ ВКЛИНИВАТЬ МЕЖДУ

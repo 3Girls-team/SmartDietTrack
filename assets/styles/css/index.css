@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .footer {
   display: flex;
   margin: 10px;
@@ -125,8 +126,8 @@ body._lock {
     cursor: pointer;
   }
   .header__icon span,
-  .header__icon::before,
-  .header__icon::after {
+.header__icon::before,
+.header__icon::after {
     left: 0;
     position: absolute;
     height: 10%;
@@ -135,7 +136,7 @@ body._lock {
     background-color: #274C5B;
   }
   .header__icon::before,
-  .header__icon::after {
+.header__icon::after {
     content: "";
   }
   .header__icon::before {
@@ -534,6 +535,12 @@ body._lock {
     margin-top: 10px;
   }
 }
+.randomRecipe__form .form__inputs__product::-moz-placeholder {
+  color: #274C5B;
+}
+.randomRecipe__form .form__inputs__product:-ms-input-placeholder {
+  color: #274C5B;
+}
 .randomRecipe__form .form__inputs__product::placeholder {
   color: #274C5B;
 }
@@ -574,6 +581,8 @@ body._lock {
 
 .item__img {
   border-radius: 20px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
 }
 
@@ -659,10 +668,20 @@ body._lock {
   border-right: 3px solid #EFD372;
   border-top: 3px solid transparent;
   border-radius: 50%;
-  animation: spinner 1s linear infinite;
+  -webkit-animation: spinner 1s linear infinite;
+          animation: spinner 1s linear infinite;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
+}
+
+@-webkit-keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes spinner {
@@ -1147,5 +1166,150 @@ body._lock {
     width: 90vw;
   }
 }
+.calculator {
+  background-color: #274c5b;
+  width: 100%;
+  padding-top: 45px;
+}
 
-/*# sourceMappingURL=index.css.map */
+.calculatorCalorie {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.calculatorCalorie__text {
+  width: 90%;
+}
+@media (max-width: 828px) {
+  .calculatorCalorie__text {
+    width: 100%;
+  }
+}
+.calculatorCalorie__text-title {
+  margin-bottom: -45px;
+  font-family: "Yellowtail";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+  color: #7EB693;
+}
+@media (max-width: 828px) {
+  .calculatorCalorie__text-title {
+    margin-bottom: -35px;
+    font-size: 20px;
+  }
+}
+.calculatorCalorie__text-body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 59px;
+  color: #274C5B;
+  color: #f9f8f8;
+}
+@media (max-width: 828px) {
+  .calculatorCalorie__text-body {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.calculatorForm {
+  margin: 25px 0;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: baseline;
+  gap: 150px;
+  color: #f9f8f8;
+}
+
+label {
+  display: inline-block;
+  width: 50px;
+  min-height: 20px;
+  margin: 15px;
+}
+
+input[type=number] {
+  max-width: 80px;
+}
+
+input[type=text],
+select {
+  width: 230px;
+}
+
+input[type=submit] {
+  margin-left: 150px;
+}
+
+.calculatorForm__options-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #dbe430;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn::after {
+  content: "\f178"; /* Юникод символ для иконки стрелки вправо */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-left: 5px;
+}
+
+#result {
+  margin-top: 20px;
+}
+
+#loading,
+#result,
+#error {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 30px;
+}
+
+.loading {
+  font-weight: bold;
+}
+
+#error {
+  color: red;
+  font-size: 30px;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+  margin: 20px auto;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=index.css.map */

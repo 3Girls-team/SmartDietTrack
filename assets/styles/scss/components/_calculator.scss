@@ -1,0 +1,118 @@
+.calculator {
+  background-color: #274c5b;
+  width: 100%;
+  padding-top: 45px;
+}
+.calculatorCalorie {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__text {
+    width: 90%;
+    @media (max-width: 828px) {
+      width: 100%;
+    }
+    &-title {
+      margin-bottom: -45px;
+      @include title;
+      @media (max-width: 828px) {
+        margin-bottom: -35px;
+        font-size: 20px;
+      }
+    }
+    &-body {
+      @include heading-h2;
+      color: $color-gwhite;
+      @media (max-width: 828px) {
+        font-size: 30px;
+        line-height: 37px;
+      }
+    }
+  }
+}
+
+.calculatorForm {
+  margin: 25px 0;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: baseline;
+  gap: 150px;
+  color: $color-gwhite;
+}
+
+label {
+  display: inline-block;
+  width: 50px;
+  min-height: 20px;
+  margin: 15px;
+}
+
+input[type="number"] {
+  max-width: 80px;
+}
+
+input[type="text"],
+select {
+  width: 230px;
+}
+
+input[type="submit"] {
+  margin-left: 150px;
+}
+
+.calculatorForm__options-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #dbe430;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn::after {
+  content: "\f178"; /* Юникод символ для иконки стрелки вправо */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-left: 5px;
+}
+
+#result {
+  margin-top: 20px;
+}
+
+#loading,
+#result,
+#error {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 30px;
+}
+
+.loading {
+  font-weight: bold;
+}
+#error {
+  color: red;
+  font-size: 30px;
+}
+.loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+  margin: 20px auto;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
