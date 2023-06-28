@@ -363,7 +363,7 @@ body._lock {
       font-size: 2vw;
       line-height: 9px; } }
 .randomRecipe {
-  width: 70%;
+  width: 70vw;
   margin-left: auto;
   margin-right: auto; }
   .randomRecipe__text {

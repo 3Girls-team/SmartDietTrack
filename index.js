@@ -1,75 +1,83 @@
-
 //Начало код JS Анжелика
 
 // Меню бургер
-const iconMenu= document.querySelector(".header__icon");
-if(iconMenu){
-    const menuNav= document.querySelector(".header__nav"); 
+const iconMenu = document.querySelector(".header__icon");
+if (iconMenu) {
+  const menuNav = document.querySelector(".header__nav");
 
-    iconMenu.addEventListener('click', function(e){
-        document.body.classList.toggle('_lock');
-        iconMenu.classList.toggle('_active');
-        menuNav.classList.toggle('_active');
-    })
+  iconMenu.addEventListener("click", function (e) {
+    document.body.classList.toggle("_lock");
+    iconMenu.classList.toggle("_active");
+    menuNav.classList.toggle("_active");
+  });
 }
 //Открытие и закрытие модального окна
-const buttonOpen= document.querySelector(".banner__button");//ищем кнопку открытия модального окна
-const modalwindow= document.querySelector(".modal-window");//ищем модальное окно
-const bottonClose= document.querySelector(".modal-window__button");//ищем кнопку закрытия модального окна
+const buttonOpen = document.querySelector(".banner__button"); //ищем кнопку открытия модального окна
+const modalwindow = document.querySelector(".modal-window"); //ищем модальное окно
+const bottonClose = document.querySelector(".modal-window__button"); //ищем кнопку закрытия модального окна
 
-buttonOpen.onclick =function(){
-  modalwindow.style.display="block";
-}
+buttonOpen.onclick = function () {
+  modalwindow.style.display = "block";
+};
 
-bottonClose.onclick =function(){
-  modalwindow.style.display="none";
-}
-window.onclick=function(event){
-  if(event.target == modalwindow){
-    modalwindow.style.display="none"
+bottonClose.onclick = function () {
+  modalwindow.style.display = "none";
+};
+window.onclick = function (event) {
+  if (event.target == modalwindow) {
+    modalwindow.style.display = "none";
   }
-}
+};
 // Форма подписки(регистрация + пожелание на день из api при регистраци)
 const btnFormNews = document.querySelector(".form-news__button"); //находим кнопку в разметке ,записываем ее в переменную
 const errorMesForm = document.querySelector(".form-news__errorMessage"); //находим разметку, где будет отображаться сообщение об ошибке
 const resultFormNews = document.querySelector(".form-news__result"); //находим разметку, где будет отображаться сообщение c результатом
 
-btnFormNews.onclick = function(event){// вешаем событие на кнопку
+btnFormNews.onclick = function (event) {
+  // вешаем событие на кнопку
   event.preventDefault(); //отменяем дефолтное submit у кнопки
   resultFormNews.innerHTML = " "; //очищаем поле с результатом
   errorMesForm.innerHTML = " "; //очищаем поле с сообщением об ошибке
-  const nameUser = document.querySelector(".form-news__name").value;//находим значение инпута с именем ,записываем значение в переменную
-  const email = document.querySelector(".form-news__email").value;//находим значение инпута с email ,записываем значение в переменную
- 
-  if(nameUser ==="" || email ===""){ //проверяем заполненность инпутов ,если хоть одно поле не заполнено 
-  errorMesForm.innerHTML="Please fill in your name and email for further registration";//выводим сообщение об ошибке
-  errorMesForm.classList.add('form-news__errorMesForm');
-  }
-  else{
+  const nameUser = document.querySelector(".form-news__name").value; //находим значение инпута с именем ,записываем значение в переменную
+  const email = document.querySelector(".form-news__email").value; //находим значение инпута с email ,записываем значение в переменную
+
+  if (nameUser === "" || email === "") {
+    //проверяем заполненность инпутов ,если хоть одно поле не заполнено
+    errorMesForm.innerHTML =
+      "Please fill in your name and email for further registration"; //выводим сообщение об ошибке
+    errorMesForm.classList.add("form-news__errorMesForm");
+  } else {
     fetch("https://type.fit/api/quotes")
-    .then((response) =>{
-      return response.json();
-    })
-    .then((data) =>{  
-      const pResultMessage =document.createElement('p');// создаем элемент p  срезультатом сообщения о регистрации
-      pResultMessage.classList.add('form-news__text');// Добавляем ему класс
-      pResultMessage.innerHTML=`${nameUser}, thank you for registering!`;//Записываем в разметку
-      resultFormNews.appendChild(pResultMessage);// Добавляем элемент в разметку
-      const advice= document.createElement('p');// создаем элемент p  срезультатом совета на день
-      advice.classList.add('form-news__textAdvice');// Добавляем ему класс
-      const indexData = Math.floor(Math.random()*data.length)
-      advice.innerHTML= `Advice of the day:" ${data[indexData].text}"`;
-      resultFormNews.appendChild(advice);
-    })
-    .catch((error) => {
-      //выводим сообщение об ошибке
-      errorMesForm.innerHTML = `<p class="errorText">Sorry, there was an error during registration.Try again in a few minutes:(</p>`;
-    });
-    document.querySelector(".form-news__name").value =
-    ""; //возвращаем начальное значение в инпут имени
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        const pResultMessage = document.createElement("p"); // создаем элемент p  срезультатом сообщения о регистрации
+        pResultMessage.classList.add("form-news__text"); // Добавляем ему класс
+        pResultMessage.innerHTML = `${nameUser}, thank you for registering!`; //Записываем в разметку
+        resultFormNews.appendChild(pResultMessage); // Добавляем элемент в разметку
+        const advice = document.createElement("p"); // создаем элемент p  срезультатом совета на день
+        advice.classList.add("form-news__textAdvice"); // Добавляем ему класс
+        const indexData = Math.floor(Math.random() * data.length);
+        advice.innerHTML = `Advice of the day:" ${data[indexData].text}"`;
+        resultFormNews.appendChild(advice);
+      })
+      .catch((error) => {
+        //выводим сообщение об ошибке
+        errorMesForm.innerHTML = `<p class="errorText">Sorry, there was an error during registration.Try again in a few minutes:(</p>`;
+      });
+    document.querySelector(".form-news__name").value = ""; //возвращаем начальное значение в инпут имени
     document.querySelector(".form-news__email").value = ""; //возвращаем изначальное значение в инпут имейл
   }
 }
+//Код для формы регистрации
+  const registeringButton =document.querySelector(".registration-form__button");//Находим кнопку на которое повесим событие
+  const headerText =document.querySelector(".header__text");//находим тег в котром перезапишем текст
+  registeringButton.addEventListener('click', function(event){
+    event.preventDefault(); // убираю дефолтное поведение submit
+    const nameRegistering =document.querySelector(".registration-form__name").value;//Находим значение имени которое ввел пользователь
+    headerText.textContent =`Hi, ${nameRegistering}!`;
+      });
 //Конец код JS Анжелика
 
 // Safiullova / START 
@@ -128,16 +136,17 @@ productCardNutrientsValue.innerHTML =
       })
       .catch((error) => {
         //выводим сообщение об ошибке, если она возникла
-        productCardError.innerHTML = "Sorry, we couldn't find any data for this product. Please try again!";
+        productCardError.innerHTML =
+          "Sorry, we couldn't find any data for this product. Please try again!";
       })
       .finally(() => {
         // что- то еще сюда написать
       });
   }
   productName.value = " "; // очистка поля ввода продукта
-}
+};
 
-// Safiullova / END 
+// Safiullova / END
 
 //Clifford / START
 
@@ -174,24 +183,25 @@ btnRanRec.onclick = function (e) {
         return response.json(); //преобразовываем данные в массив
       })
       .then((data) => {
+        let i = Math.floor(Math.random() * data.hits.length); // задаем переменную для вычисления рандомного номера элемента массива
         // выводим необходимые нам данные из массива, создаем разметку для result__item
         resultDisplay.innerHTML = `<div class="result__item"><img src="${
-          data.hits[0].recipe.image
+          data.hits[i].recipe.image
         }" alt="recipeImage" class="item__img" /> 
         <div class="item__info">
         <div class="item__type">${
-          data.hits[0].recipe.dishType
+          data.hits[i].recipe.dishType
         }</div> <div class="item__diet">${
-          data.hits[0].recipe.dietLabels
-        } </div><div class="item__title">${data.hits[0].recipe.label}</div>
-        <div class="item__labels">${data.hits[0].recipe.healthLabels.join(
+          data.hits[i].recipe.dietLabels
+        } </div><div class="item__title">${data.hits[i].recipe.label}</div>
+        <div class="item__labels">${data.hits[i].recipe.healthLabels.join(
           ""
         )} </div>
-        <div class="item__ingredients">Ingredients: ${data.hits[0].recipe.ingredientLines.join(
-          ","
-        )} </div>
+        <div class="item__ingredients">Ingredients: ${data.hits[
+          i
+        ].recipe.ingredientLines.join(",")} </div>
         <a href="${
-          data.hits[0].recipe.url
+          data.hits[i].recipe.url
         }" class="item__prep">Preparation</a></div></div>`;
       })
       .catch((error) => {
