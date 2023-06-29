@@ -53,7 +53,7 @@ SmartDietTrack представляет собой учебный проект, 
 * HTML5
 * SASS, CSS
 * GitHub
-* APIs (https://fitness-calculator.p.rapidapi.com, https://www.edamam.com/,   https://type.fit/api/quotes)
+* APIs (https://fitness-calculator.p.rapidapi.com, https://www.edamam.com/,   https://type.fit/api/quotes). Все API, применяемые в работе, используются исключительно в целях обучения и не используется в корпоративных целях.
 
 
 
