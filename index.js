@@ -82,8 +82,8 @@ registeringButton.addEventListener("click", function (event) {
 });
 //Конец код JS Анжелика
 
-// Safiullova / START 
-const btnProduct = document.querySelector(".nutrients__form-button");  // Кнопка поиска продукта по названию
+// Safiullova / START
+const btnProduct = document.querySelector(".nutrients__form-button"); // Кнопка поиска продукта по названию
 const productName = document.querySelector(".nutrients__form-input"); // Находим input в котором ввели название продукта
 const productCardPicture = document.querySelector(".nutrients__card-picture"); // Элемент для вставки изображения продукта
 const productCardTitle = document.querySelector(".nutrients__card-title"); // Элемент для вставки наименования продукта
@@ -91,50 +91,62 @@ const productCardNutrientsValue = document.querySelector("#nutrientsValue"); // 
 const productCardError = document.querySelector(".nutrients__form-error"); // Элемент с сообщением об ошибке
 const productsSelectArr = document.querySelector("#productsSelect"); // Элемент выпадающего списка подсказок
 
-function autoComplete (e) { // функция автозаполнения поля ввода продукта
-  fetch (
+function autoComplete(e) {
+  // функция автозаполнения поля ввода продукта
+  fetch(
     `https://api.edamam.com/auto-complete?app_id=b44244ac&app_key=6c563eac886cc3efc770b33d53ad0838&q=${productName.value}`
-  )//обращаемся к API в соответствии с введенными пользователем символами в input
-  .then((response) => {
-    return response.json(); 
-  })
-  .then((data) => {
-let productsSelect = ""; // переменая для выпадающего списка
-for (let i=0; i<=data.length; i++) { // перебираю элементы массива совпадений из API
-  productsSelect += ` <option value="${data[i]}">` // создаю элементы выпадающего списка из массива
-};
-productsSelectArr.innerHTML = ` <datalist id="productsSelect"> 
+  ) //обращаемся к API в соответствии с введенными пользователем символами в input
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      let productsSelect = ""; // переменая для выпадающего списка
+      for (let i = 0; i <= data.length; i++) {
+        // перебираю элементы массива совпадений из API
+        productsSelect += ` <option value="${data[i]}">`; // создаю элементы выпадающего списка из массива
+      }
+      productsSelectArr.innerHTML = ` <datalist id="productsSelect"> 
   ${productsSelect} </datalist>`; // создание списка подсказок
-  })
+    });
 }
-productName.addEventListener('input', autoComplete ); // слушатель события при вводе символов в Input
+productName.addEventListener("input", autoComplete); // слушатель события при вводе символов в Input
 
-btnProduct.onclick = function (e) {  // фнкция будет отображать карточку продукта, который ввел пользователь
+btnProduct.onclick = function (e) {
+  // фнкция будет отображать карточку продукта, который ввел пользователь
   e.preventDefault(); // убираю submit
   console.log(productName);
   productCardError.innerHTML = " "; // очистка сообщения об ошибке
-   if (productName.value == 0) {  //проверка, если пользователь не ввел значение, появится сообщение
-    productCardError.innerHTML = "Please enter the product you want to know about";
+  if (productName.value == 0) {
+    //проверка, если пользователь не ввел значение, появится сообщение
+    productCardError.innerHTML =
+      "Please enter the product you want to know about";
   } else {
     fetch(
       `https://api.edamam.com/api/food-database/v2/parser?app_id=99d8e87e&app_key=00390c7f538b7700bb34ee921fe04978&ingr=${productName.value}&nutrition-type=cooking`
-)//обращаемся к API в соответствии с введенными пользователем параметрами для поиска - продукт
+    ) //обращаемся к API в соответствии с введенными пользователем параметрами для поиска - продукт
       .then((response) => {
-    return response.json(); 
-  })
+        return response.json();
+      })
       .then((data) => {
-        productCardPicture.innerHTML =
-        `<img class="nutrients__card-picture" src="${data.hints[0].food.image}" alt="product picture" />`
-        productCardTitle.innerHTML = 
-`<p class="nutrients__card-title">${data.hints[0].food.label}, 100g</p>`;
-productCardNutrientsValue.innerHTML =
-`<ul class="nutrients__card-list"  id="nutrientsValue">
-  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.ENERC_KCAL.toFixed(1)}</li>
-  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.PROCNT.toFixed(1)}</li>
-  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.FAT.toFixed(1)}</li>
-  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.CHOCDF.toFixed(1)}</li>
-  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.FIBTG.toFixed(1)}</li>
-</ul>`
+        productCardPicture.innerHTML = `<img class="nutrients__card-picture" src="${data.hints[0].food.image}" alt="product picture" />`;
+        productCardTitle.innerHTML = `<p class="nutrients__card-title">${data.hints[0].food.label}, 100g</p>`;
+        productCardNutrientsValue.innerHTML = `<ul class="nutrients__card-list"  id="nutrientsValue">
+  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.ENERC_KCAL.toFixed(
+    1
+  )}</li>
+  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.PROCNT.toFixed(
+    1
+  )}</li>
+  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.FAT.toFixed(
+    1
+  )}</li>
+  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.CHOCDF.toFixed(
+    1
+  )}</li>
+  <li class="nutrients__card-list__item">${data.hints[0].food.nutrients.FIBTG.toFixed(
+    1
+  )}</li>
+</ul>`;
       })
       .catch((error) => {
         //выводим сообщение об ошибке, если она возникла
@@ -243,23 +255,23 @@ function calculateCalories() {
 
   // Проверка введенных значений
   if (!age) {
-    errorDiv.textContent = "Ошибка: Заполните поле 'Age'";
+    errorDiv.textContent = "Error: Fill in the 'Age' field";
     return;
   }
   if (!gender) {
-    errorDiv.textContent = "Ошибка: Выберите поле 'Gender'";
+    errorDiv.textContent = "Error: Select field 'Gender'";
     return;
   }
   if (!weight || isNaN(weight) || weight < 40 || weight > 160) {
-    errorDiv.textContent = "Ошибка: Некорректное значение в поле 'Weight'";
+    errorDiv.textContent = "Error: Incorrect value in the 'Weight' field";
     return;
   }
   if (!height || isNaN(height) || height < 130 || height > 230) {
-    errorDiv.textContent = "Ошибка: Некорректное значение в поле 'Height'";
+    errorDiv.textContent = "Error: Incorrect value in the 'Height' field";
     return;
   }
   if (!activityLevel) {
-    errorDiv.textContent = "Ошибка: Выберите значение в поле 'Activity Level'";
+    errorDiv.textContent = "Error: Select field 'Activity Level'";
     return;
   }
 
@@ -298,7 +310,7 @@ function calculateCalories() {
       if (calorieResult) {
         resultDiv.innerHTML = `Daily calorie: ${calorieResult}`;
       } else {
-        errorDiv.innerHTML = "Ошибка: Неверный формат данных";
+        errorDiv.innerHTML = "Error: Invalid data format";
       }
     })
     .catch((error) => {
@@ -307,9 +319,9 @@ function calculateCalories() {
 
       // Отобразить ошибку
       if (error.message === "Failed to fetch") {
-        errorDiv.innerHTML = `Ошибка: ${error.message}`;
+        errorDiv.innerHTML = `Error: ${error.message}`;
       } else {
-        errorDiv.innerHTML = "Ошибка: 404  Not Found" + error.message;
+        errorDiv.innerHTML = "Error: 404  Not Found" + error.message;
       }
     })
     .finally(() => {

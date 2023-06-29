@@ -148,17 +148,18 @@
       <form class="calculatorForm" id="calculatorForm">
         <div class="calculatorForm__inputs">
           <label for="age">Age (years):</label>
-        <input type="number" id="age" required />
+        <input type="number" class="calculatorForm__inputs-age" id="age" required />
         <br />
 
         <label for="weight">Weight (kg):</label>
-        <input type="number" id="weight" required />
+        <input type="number" class="calculatorForm__inputs-weight" id="weight" required />
         <br />
 
         <label for="height">Height (cm):</label>
-        <input type="number" id="height" required />
+        <input type="number" class="calculatorForm__inputs-height" id="height" required />
         <br />
 
+        <div class="calculatorForm__inputs-gender">
         <label for="gender">Gender:</label>
         <input type="radio" id="male" name="gender" value="male" required />
         <label for="male">Male</label>
@@ -171,10 +172,12 @@
         />
         <label for="female">Female</label>
         <br />
+      </div>
         </div>
         
         <div class="calculatorForm__options">
-          <label for="goal">Goal:</label>
+          <div class="calculatorForm__options-goal">
+          <label for="goal">Your goal:</label>
         <select id="goal" required>
           <option value="maintain">Weight Maintenance</option>
           <option value="mildlose">Mild weight loss</option>
@@ -185,7 +188,8 @@
           <option value="extremegain">Extreme weight gain</option>
         </select>
         <br />
-
+      </div>
+      <div class="calculatorForm__options-macronutrients">
         <label for="macronutrients">Macro nutrients:</label>
         <select id="macronutrients" required>
           <option value="balanced">balanced</option>
@@ -194,7 +198,8 @@
           <option value="highprotein">highprotein</option>
         </select>
         <br />
-
+      </div>
+      <div class="calculatorForm__options-activity">
         <label for="activity">Activity Level:</label>
         <select id="activity" required>
           <option value="level_1">Sedentary: no exercise</option>
@@ -210,6 +215,8 @@
           </option>
         </select>
         <br />
+      </div>
+      
         <button type="submit" class="calculatorForm__options-btn"><img
           src="assets/images/aerrow.png"
           alt="submithImg"
@@ -217,15 +224,16 @@
         />
         Calculate
       </button>  
-      
         </div>
       </form>
-      <div id="loading" style="display: none">
-        <div class="loader"></div>
+      <div class="loading" id="loading" style="display: none">
+        <div class="calculatorCalorie__loader"></div>
         <p>Loading...</p>
       </div>
-      <div id="result"></div>
-      <div class="error" id="error"></div>
+      <div class="calculatorCalorie__result">
+        <div id="result"></div>
+      <div class="calculatorCalorie__error" id="error"></div>
+      </div>
     </section>
     <!--MARYNA  END-->
     <!--Clifford / START -->

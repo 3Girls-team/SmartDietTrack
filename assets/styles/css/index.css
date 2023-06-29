@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .footer {
   display: flex;
   margin: 10px;
@@ -785,6 +784,8 @@ body._lock {
   margin-right: auto;
   margin-top: 100px;
   width: 335px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   border-radius: 20px;
   box-shadow: 1px 1px #525C60, 1em 0 0.4em #525C60;
@@ -849,7 +850,8 @@ body._lock {
   line-height: 29px;
   color: #274C5B;
   list-style: none;
-  padding-inline-start: 0px;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
 }
 .nutrients__card #nutrientsValue {
   text-align: end;
@@ -1219,81 +1221,333 @@ body._lock {
 .calculatorForm {
   margin: 25px 0;
   padding-bottom: 50px;
+  width: 95%;
   display: flex;
   align-items: baseline;
-  gap: 150px;
+  justify-content: space-around;
   color: #f9f8f8;
+}
+@media (max-width: 659px) {
+  .calculatorForm {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+@media (max-width: 659px) {
+  .calculatorForm__inputs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.calculatorForm__inputs-age {
+  color: #274C5B;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  height: 60px;
+  width: 220px;
+  border-radius: 10px;
+  border: 1px solid #7EB693;
+}
+@media (max-width: 1142px) {
+  .calculatorForm__inputs-age {
+    display: grid;
+  }
+}
+@media (max-width: 659px) {
+  .calculatorForm__inputs-age {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+.calculatorForm__inputs-weight {
+  color: #274C5B;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  height: 60px;
+  width: 220px;
+  border-radius: 10px;
+  border: 1px solid #7EB693;
+}
+@media (max-width: 1142px) {
+  .calculatorForm__inputs-weight {
+    display: grid;
+  }
+}
+@media (max-width: 659px) {
+  .calculatorForm__inputs-weight {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+.calculatorForm__inputs-height {
+  color: #274C5B;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  height: 60px;
+  width: 220px;
+  border-radius: 10px;
+  border: 1px solid #7EB693;
+}
+@media (max-width: 1142px) {
+  .calculatorForm__inputs-height {
+    display: grid;
+  }
+}
+@media (max-width: 659px) {
+  .calculatorForm__inputs-height {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 793px) {
+  .calculatorForm__inputs-gender {
+    display: flex;
+  }
+}
+.calculatorForm__options {
+  color: #274C5B;
+}
+@media (max-width: 793px) {
+  .calculatorForm__options {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: flex-end;
+    align-items: stretch;
+    width: 84%;
+  }
+}
+@media (max-width: 659px) {
+  .calculatorForm__options {
+    width: 84%;
+    display: flex;
+    align-items: center;
+  }
+}
+.calculatorForm__options-goal {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media (max-width: 1142px) {
+  .calculatorForm__options-goal {
+    display: grid;
+  }
+}
+@media (max-width: 793px) {
+  .calculatorForm__options-goal {
+    font-size: 16px;
+  }
+}
+@media (max-width: 659px) {
+  .calculatorForm__options-goal {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+.calculatorForm__options-macronutrients {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media (max-width: 1142px) {
+  .calculatorForm__options-macronutrients {
+    display: grid;
+  }
+}
+@media (max-width: 793px) {
+  .calculatorForm__options-macronutrients {
+    font-size: 16px;
+  }
+}
+@media (max-width: 659px) {
+  .calculatorForm__options-macronutrients {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+.calculatorForm__options-activity {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: #525C60;
+}
+@media (max-width: 1142px) {
+  .calculatorForm__options-activity {
+    display: grid;
+  }
+}
+@media (max-width: 793px) {
+  .calculatorForm__options-activity {
+    font-size: 16px;
+  }
+}
+@media (max-width: 659px) {
+  .calculatorForm__options-activity {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+.calculatorForm__options-btn {
+  width: 200px;
+  height: 80px;
+  border-radius: 10px;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #EFD372;
+  color: #274C5B;
+  border-color: #EFD372;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.calculatorForm__options-btn:hover {
+  background-color: #f9f8f8;
+}
+@media (max-width: 1142px) {
+  .calculatorForm__options-btn {
+    font-size: 18px;
+    height: 65px;
+    width: 230px;
+    margin-top: 90px;
+  }
+}
+@media (max-width: 793px) {
+  .calculatorForm__options-btn {
+    font-size: 16px;
+    max-width: 230px;
+    height: 55px;
+    margin-top: 50px;
+  }
 }
 
 label {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: #525C60;
   display: inline-block;
-  width: 50px;
-  min-height: 20px;
-  margin: 15px;
+  font-size: 22px;
+  margin: 25px;
+  color: #f9f8f8;
 }
-
-input[type=number] {
-  max-width: 80px;
+@media (max-width: 1142px) {
+  label {
+    font-size: 18px;
+  }
+}
+@media (max-width: 793px) {
+  label {
+    font-size: 16px;
+  }
 }
 
 input[type=text],
 select {
-  width: 230px;
-}
-
-input[type=submit] {
-  margin-left: 150px;
-}
-
-.calculatorForm__options-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  background-color: #dbe430;
-  color: #333;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.btn::after {
-  content: "\f178"; /* Юникод символ для иконки стрелки вправо */
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  margin-left: 5px;
-}
-
-#result {
-  margin-top: 20px;
+  color: #274C5B;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  height: 60px;
+  width: 220px;
+  border-radius: 10px;
+  border: 1px solid #7EB693;
 }
 
 #loading,
 #result,
 #error {
   text-align: center;
-  margin-top: 50px;
   font-size: 30px;
+  padding-bottom: 60px;
+}
+@media (max-width: 793px) {
+  #loading,
+#result,
+#error {
+    font-size: 18px;
+    padding-bottom: 30px;
+  }
 }
 
 .loading {
-  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: #525C60;
+  color: #f9f8f8;
+}
+@media (max-width: 793px) {
+  .loading {
+    font-size: 18px;
+  }
 }
 
-#error {
-  color: red;
+.calculatorCalorie__result {
   font-size: 30px;
+  margin-bottom: 40px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: #525C60;
+  color: #f9f8f8;
+}
+@media (max-width: 793px) {
+  .calculatorCalorie__result {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
 }
 
-.loader {
+.calculatorCalorie__loader {
   border: 8px solid #f3f3f3;
   border-radius: 50%;
   border-top: 8px solid #3498db;
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   -webkit-animation: spin 2s linear infinite;
           animation: spin 2s linear infinite;
   margin: 20px auto;
+}
+@media (max-width: 793px) {
+  .calculatorCalorie__loader {
+    width: 40px;
+    height: 40px;
+    margin: 10px auto;
+  }
 }
 
 @-webkit-keyframes spin {
