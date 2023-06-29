@@ -1,11 +1,20 @@
 # SmartDietTrack
 Eat smart - it’s easy and tasty! :)
 
+/ ссылка на сайт /
+
+### Описание веб-сайта
+
 SmartDietTrack представляет собой учебный проект, веб-сайт для получения информации об основных питательных веществах продуктов, подсчета дневной нормы калорий, а также поиска полезных сбалансированных рецептов. 
 Задачей проекта было создание функционального, интерактивного сайта с обязательным применением HTML, SASS, JavaScript, API. 
 Веб сайт используется исключительно в целях обучения и не используется в корпоративных целях.
 
-/ ссылка на сайт /
+Веб-сайт был создан в рамках практической проектной работы в школе IT Girls. Дизайн сайта был разработан командой на основе макета  из фигмы. 
+Макет веб-сайта https://www.figma.com/file/FBaI8hSPn5Exv6TCKNzXxh/Healthy-Eating-Template?type=design&node-id=1-430&mode=design&t=YPWvXlBIFaEtEXLM-0
+
+Основа для макета - дизайн в свободном доступе https://www.figma.com/file/NzUxmldLBgTid1UN0AiwJF/Agriculture-Webflow-Website-Template-(Community)?type=design&node-id=2-9967&mode=design&t=26za1y9YxPiBUaVe-0)
+
+Сайт состоит из одной страницы, а также содержит модальное окно. Сайт адаптирован под разные размеры экрана (телефон, планшет, компьютер).
 
 ### Проектная команда
 
@@ -15,14 +24,7 @@ SmartDietTrack представляет собой учебный проект, 
 * Mарина Овчаренко (https://github.com/Mmaryna68)
 * Екатерина Григас (https://github.com/grigaskate)
 
-### Описание веб-сайта
 
-Веб-сайт был создан в рамках практической проектной работы в школе IT Girls. Дизайн сайта был разработан командой на основе макета  из фигмы. 
-Макет веб-сайта https://www.figma.com/file/FBaI8hSPn5Exv6TCKNzXxh/Healthy-Eating-Template?type=design&node-id=1-430&mode=design&t=YPWvXlBIFaEtEXLM-0
-
-Основа для макета - дизайн в свободном доступе https://www.figma.com/file/NzUxmldLBgTid1UN0AiwJF/Agriculture-Webflow-Website-Template-(Community)?type=design&node-id=2-9967&mode=design&t=26za1y9YxPiBUaVe-0)
-
-Сайт состоит из одной страницы, а также содержит модальное окно. Сайт адаптирован под разные размеры экрана (телефон, планшет, компьютер).
 
 ### Структура сайта
 
