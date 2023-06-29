@@ -66,9 +66,9 @@ GitHub ссылка на проект https://github.com/3Girls-team/SmartDietT
 
 3)Js код находится в файле index.js
 
-4) Js код для слайдера с отзывами находится в папке itc-slider.js
+4)Js код для слайдера с отзывами находится в папке itc-slider.js
 
-3) Путь к файлам Sass: SmartDietTrack/assets/styles/scss/components/
+5)Путь к файлам Sass: SmartDietTrack/assets/styles/scss/components/
 
 * стили для header страницы (_header.scss)
 * стили для блока Баннер (_banner.scss)
@@ -81,12 +81,12 @@ GitHub ссылка на проект https://github.com/3Girls-team/SmartDietT
 * стили для блока с формой подписки (_formNews.scss)
 * cтили для footer (_footer.scss)
 
-4)Текстовые стили находятся в папке SmartDietTrack/assets/styles/scss/_fonts.scss
+6)Текстовые стили находятся в папке SmartDietTrack/assets/styles/scss/_fonts.scss
 
-5)Стили для кнопок и полей ввода находятся в папке SmartDietTrack/assets/styles/scss/_mixins.scss
+7)Стили для кнопок и полей ввода находятся в папке SmartDietTrack/assets/styles/scss/_mixins.scss
 
-6)Стили для разных цветов находятся в папке SmartDietTrack/assets/styles/scss/_vars.scss
+8)Стили для разных цветов находятся в папке SmartDietTrack/assets/styles/scss/_vars.scss
 
-7)Все файлы со стилями собираются и импортируются в файле SmartDietTrack/assets/styles/scss/index.scss
+9)Все файлы со стилями собираются и импортируются в файле SmartDietTrack/assets/styles/scss/index.scss
 
-8)Используемые изображения находятся в файле SmartDietTrack/assets/images
+10)Используемые изображения находятся в файле SmartDietTrack/assets/images
