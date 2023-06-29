@@ -126,8 +126,8 @@ body._lock {
     cursor: pointer;
   }
   .header__icon span,
-  .header__icon::before,
-  .header__icon::after {
+.header__icon::before,
+.header__icon::after {
     left: 0;
     position: absolute;
     height: 10%;
@@ -136,7 +136,7 @@ body._lock {
     background-color: #274C5B;
   }
   .header__icon::before,
-  .header__icon::after {
+.header__icon::after {
     content: "";
   }
   .header__icon::before {
@@ -543,6 +543,9 @@ body._lock {
 .randomRecipe__form .form__inputs__product::-moz-placeholder {
   color: #274C5B;
 }
+.randomRecipe__form .form__inputs__product:-ms-input-placeholder {
+  color: #274C5B;
+}
 .randomRecipe__form .form__inputs__product::placeholder {
   color: #274C5B;
 }
@@ -583,6 +586,7 @@ body._lock {
 
 .item__img {
   border-radius: 20px;
+  width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
 }
@@ -669,10 +673,20 @@ body._lock {
   border-right: 3px solid #EFD372;
   border-top: 3px solid transparent;
   border-radius: 50%;
-  animation: spinner 1s linear infinite;
+  -webkit-animation: spinner 1s linear infinite;
+          animation: spinner 1s linear infinite;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
+}
+
+@-webkit-keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes spinner {
@@ -776,6 +790,7 @@ body._lock {
   margin-right: auto;
   margin-top: 100px;
   width: 335px;
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   border-radius: 20px;
@@ -1284,8 +1299,18 @@ input[type=submit] {
   border-top: 8px solid #3498db;
   width: 30px;
   height: 30px;
-  animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
   margin: 20px auto;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {
@@ -1294,5 +1319,221 @@ input[type=submit] {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+.testimonial {
+  background-image: url(../../images/testimonial-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  margin-top: 50px;
+}
+
+.testimonial__title {
+  font-family: "Yellowtail";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+  color: #7EB693;
+}
+
+.testimonial__heading-h2 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 59px;
+  color: #274C5B;
+}
+@media (max-width: 828px) {
+  .testimonial__heading-h2 {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.testimonial__img {
+  border-radius: 100%;
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.testimonial__img_size {
+  width: 9vw;
+}
+
+.testimonial__raiting {
+  padding-top: 10px;
+}
+
+.testimonial__text-p {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #525C60;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonial__heading-h6 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 29px;
+  color: #274C5B;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .testimonial__img_size {
+    width: 20vw;
+  }
+}
+@media (max-width: 767px) {
+  .testimonial__img_size {
+    width: 27vw;
+  }
+}
+/**
+ * ItcSlider
+ * @version 1.0.1
+ * @author https://github.com/itchief
+ * @copyright Alexander Maltsev 2020 - 2023
+ * @license MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
+ * @tutorial https://itchief.ru/javascript/slider
+ */
+.itc-slider {
+  position: relative;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.itc-slider-wrapper {
+  overflow: hidden;
+  background-color: rgba(255, 255, 0, 0);
+}
+
+.itc-slider-items {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.itc-slider-transition-none {
+  transition: none;
+}
+
+.itc-slider-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  will-change: transform;
+}
+
+/* кнопки влево и вправо */
+.itc-slider-btn {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.itc-slider-btn-hide {
+  display: none;
+}
+
+.itc-slider-btn-prev {
+  left: 0;
+}
+
+.itc-slider-btn-next {
+  right: 0;
+}
+
+.itc-slider-btn:hover,
+.itc-slider-btn:focus {
+  color: #fff;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.3);
+  outline: 0;
+}
+
+.itc-slider-btn::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.itc-slider-btn-prev::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.itc-slider-btn-next::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+/* индикаторы */
+.itc-slider-indicators {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  margin: 0 15%;
+  padding-left: 0;
+  list-style: none;
+}
+
+.itc-slider-indicator {
+  flex: 0 1 auto;
+  box-sizing: content-box;
+  width: 30px;
+  height: 5px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-clip: padding-box;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  cursor: pointer;
+}
+
+.itc-slider-indicator-active {
+  background-color: #7eb693;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .itc-slider {
+    width: 90%;
+  }
+}
+@media (max-width: 767px) {
+  .itc-slider {
+    width: 95%;
   }
 }/*# sourceMappingURL=index.css.map */
