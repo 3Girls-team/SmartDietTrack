@@ -134,7 +134,97 @@
       </div>
     </section>
     <!-- END nutrients / Safiullova -->
-    <section class="testimonial">Катя</section>
+    <!-- Катя testimonial начало -->
+    <section class="testimonial">
+      <p class="testimonial__title">Testimonial</p>
+      <p class="testimonial__heading-h2">What Our Members Saying?</p>
+      <div
+        class="itc-slider"
+        data-slider="itc-slider"
+        data-loop="false"
+        data-autoplay="false"
+      >
+        <div class="itc-slider-wrapper">
+          <div class="itc-slider-items">
+            <div class="itc-slider-item">
+              <div class="review">
+                <img
+                  src="assets/images/testimonial-avatar4.jpg"
+                  alt="avatar"
+                  class="testimonial__img_size testimonial__img"
+                />
+                <div class="testimonial__raiting">
+                  <img
+                    src="assets/images/testimonial-5stars.svg"
+                    alt="raiting five stars"
+                  />
+                </div>
+                <p class="testimonial__text-p">
+                  Useful website, thanks. I use it when I don't know what to cook.
+                  Recipes are delicious and variety. It doesn't take much time to cook. It is very important when you work, study, have children.
+                </p>
+                <div class="testimonial__heading-h6">Sara Taylor</div>
+                <div class="testimonial__text-p">Consumer</div>
+              </div>
+            </div>
+            <div class="itc-slider-item">
+              <div class="review">
+                <img
+                  src="assets/images/testimonial-avatar2.jpg"
+                  alt="avatar"
+                  class="testimonial__img_size testimonial__img"
+                />
+                <div class="testimonial__raiting">
+                  <img
+                    src="assets/images/testimonial-5stars.svg"
+                    alt="raiting five stars"
+                  />
+                </div>
+                <p class="testimonial__text-p">
+                  I have lost 3 kg. No diets, no fasting. This is very important for me, for my health. I will continue to use the website. Cooking is a pleasure.  Thank you!
+                </p>
+                <div class="testimonial__heading-h6">Irma Bell</div>
+                <div class="testimonial__text-p">Consumer</div>
+              </div>
+            </div>
+            <div class="itc-slider-item">
+              <div class="review">
+                <img
+                  src="assets/images/testimonial-avatar3.jpg"
+                  alt="avatar"
+                  class="testimonial__img_size testimonial__img"
+                />
+                <div class="testimonial__raiting">
+                  <img
+                    src="assets/images/testimonial-5stars.svg"
+                    alt="raiting five stars"
+                  />
+                </div>
+                <p class="testimonial__text-p">
+                  I take care of my health. This site is a godsend for me. Everything is very accessible and understandable. How many calories should I eat today. It's nice to have the recipes right away.
+                </p>
+                <div class="testimonial__heading-h6">Connie Lane</div>
+                <div class="testimonial__text-p">Consumer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Кнопки для перехода к предыдущему и следующему слайду -->
+        <button class="itc-slider-btn itc-slider-btn-prev"></button>
+        <button class="itc-slider-btn itc-slider-btn-next"></button>
+        <div>
+          <ol class="itc-slider-indicators">
+            <!-- data-slide-to="0" – для перехода к 1 слайду -->
+            <li class="itc-slider-indicator" data-slide-to="0"></li>
+            <!-- data-slide-to="1" – для перехода к 2 слайду -->
+            <li class="itc-slider-indicator" data-slide-to="1"></li>
+            <!-- data-slide-to="2" – для перехода к 3 слайду -->
+            <li class="itc-slider-indicator" data-slide-to="2"></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <!-- Катя testimonial конец -->
     <!--УДАЛЯЕШЬ СТРОЧКУ И ВСТАВЛЯЕШЬ СВОЙ КУСОК КОДА-->
     <!--MARYNA START-->
     <section class="calculator">
@@ -273,7 +363,19 @@
         </div>
       </section>
       <!--Clifford / END -->
-      <section class="share-with-us">Катя</section>
+      <!-- Катя share-with-us начало -->
+      <section class="share-with-us">
+        <p class="share-with-us__title">Share with us</p>
+        <p class="share-with-us__heading-h2">We want to hear from you!</p>
+        <form class="share-with-us__form">
+          <input class="share-with-us__input share-with-us__input_name" type="text" name="share-with-us__input_name" placeholder="You First and Last Name">
+          <input class="share-with-us__input share-with-us__input_comment" type="text" name="share-with-us__input_comment" placeholder="Leave your comment here">
+          <div class="share-with-us__error"></div>
+          <div class="share-with-us__gratitude"></div>
+          <button class="share-with-us__btn">Submit</button>
+        </form>
+      </section>
+    <!-- Катя share-with-us конец -->
       <!--УДАЛЯЕШЬ СТРОЧКУ И ВСТАВЛЯЕШЬ СВОЙ КУСОК КОДА-->
       <!--Анжелика news начало-->
       <section class="form-news">
@@ -324,8 +426,9 @@
         </ul>
       </nav>
     </footer>
-
+    
     <script src="index.js"></script>
+    <script src="itc-slider.js" defer></script>
     <script src="https://developer.edamam.com/attribution/badge.js"></script>
     <!-- для отображения использования API -->
   </body>
