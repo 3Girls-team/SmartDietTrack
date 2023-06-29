@@ -338,3 +338,27 @@ form.addEventListener("submit", function (event) {
 });
 
 //Maryna / END
+
+//Начало код JS Катя блок share-with-us
+const shareWithUsBtn = document.querySelector(".share-with-us__btn"); //находим кнопку в разметке ,записываем ее в переменную
+const shareWithUsError = document.querySelector(".share-with-us__error"); //находим разметку, где будет отображаться сообщение об ошибке
+const shareWithUsGratitude =document.querySelector(".share-with-us__gratitude"); ////находим разметку, где будет отображаться сообщение о благодароности за отзыв
+const shareWithUsName = document.querySelector(".share-with-us__input_name");//находим поле share-with-us__input_name
+const shareWithUsComment = document.querySelector(".share-with-us__input_comment"); //находим поле share-with-us__input_comment
+
+// вешаем событие на кнопку
+shareWithUsBtn.addEventListener("click", (event) => {
+event.preventDefault(); //отменяем дефолтное submit у кнопки
+//проверяем заполненность инпутов ,если хоть одно поле не заполнено
+if (shareWithUsName.value === "" || shareWithUsComment.value === "") {
+shareWithUsError.innerHTML =`Please fill in the fields your name and comment`; //выводим сообщение об ошибке
+shareWithUsGratitude.innerHTML=""
+}
+//если поля заполнены
+else {
+  shareWithUsGratitude.innerHTML = `Thanks for your comment!`; //выводим сообщение благодарности
+  shareWithUsError.innerHTML ="";
+}
+document.querySelector(".share-with-us__form").reset();
+});
+//Конец код JS Катя
