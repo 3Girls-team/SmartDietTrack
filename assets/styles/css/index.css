@@ -1,9 +1,18 @@
 @charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: yellowgreen;
+}
+
 .footer {
   display: flex;
-  margin: 10px;
   padding: 10px;
   justify-content: space-between;
+  background-color: #274C5B;
+  color: #f9f8f8;
 }
 .footer__logo {
   width: 150px;
@@ -19,13 +28,13 @@
   margin-top: 25px;
   padding: 25px;
 }
-.footer__list-item a {
+.footer__list-item, .footer__list-item a {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 23px;
-  color: #274C5B;
+  color: #f9f8f8;
   text-decoration: none;
 }
 .footer__list-item :hover {
@@ -126,8 +135,8 @@ body._lock {
     cursor: pointer;
   }
   .header__icon span,
-.header__icon::before,
-.header__icon::after {
+  .header__icon::before,
+  .header__icon::after {
     left: 0;
     position: absolute;
     height: 10%;
@@ -136,7 +145,7 @@ body._lock {
     background-color: #274C5B;
   }
   .header__icon::before,
-.header__icon::after {
+  .header__icon::after {
     content: "";
   }
   .header__icon::before {
@@ -540,12 +549,6 @@ body._lock {
     margin-top: 10px;
   }
 }
-.randomRecipe__form .form__inputs__product::-moz-placeholder {
-  color: #274C5B;
-}
-.randomRecipe__form .form__inputs__product:-ms-input-placeholder {
-  color: #274C5B;
-}
 .randomRecipe__form .form__inputs__product::placeholder {
   color: #274C5B;
 }
@@ -586,8 +589,6 @@ body._lock {
 
 .item__img {
   border-radius: 20px;
-  width: -webkit-min-content;
-  width: -moz-min-content;
   width: min-content;
 }
 
@@ -673,20 +674,10 @@ body._lock {
   border-right: 3px solid #EFD372;
   border-top: 3px solid transparent;
   border-radius: 50%;
-  -webkit-animation: spinner 1s linear infinite;
-          animation: spinner 1s linear infinite;
+  animation: spinner 1s linear infinite;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
-}
-
-@-webkit-keyframes spinner {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes spinner {
@@ -698,7 +689,7 @@ body._lock {
   }
 }
 .nutrients__title {
-  text-align: center;
+  margin-left: 10vw;
 }
 .nutrients__title-name {
   font-family: "Yellowtail";
@@ -707,6 +698,7 @@ body._lock {
   font-size: 36px;
   line-height: 49px;
   color: #7EB693;
+  margin: 0px;
 }
 .nutrients__title-h {
   font-family: "Roboto", sans-serif;
@@ -715,6 +707,7 @@ body._lock {
   font-size: 50px;
   line-height: 59px;
   color: #274C5B;
+  margin-top: 2vw;
 }
 @media (max-width: 828px) {
   .nutrients__title-h {
@@ -788,10 +781,8 @@ body._lock {
 .nutrients__card {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 20px;
   width: 335px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   border-radius: 20px;
   box-shadow: 1px 1px #525C60, 1em 0 0.4em #525C60;
@@ -856,8 +847,7 @@ body._lock {
   line-height: 29px;
   color: #274C5B;
   list-style: none;
-  -webkit-padding-start: 0px;
-          padding-inline-start: 0px;
+  padding-inline-start: 0px;
 }
 .nutrients__card #nutrientsValue {
   text-align: end;
@@ -1299,18 +1289,8 @@ input[type=submit] {
   border-top: 8px solid #3498db;
   width: 30px;
   height: 30px;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
   margin: 20px auto;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes spin {
@@ -1434,10 +1414,7 @@ input[type=submit] {
 .itc-slider-item {
   flex: 0 0 100%;
   max-width: 100%;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   will-change: transform;
 }
 
@@ -1536,4 +1513,6 @@ input[type=submit] {
   .itc-slider {
     width: 95%;
   }
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */
