@@ -255,23 +255,23 @@ function calculateCalories() {
 
   // Проверка введенных значений
   if (!age) {
-    errorDiv.textContent = "Ошибка: Заполните поле 'Age'";
+    errorDiv.textContent = "Error: Fill in the 'Age' field";
     return;
   }
   if (!gender) {
-    errorDiv.textContent = "Ошибка: Выберите поле 'Gender'";
+    errorDiv.textContent = "Error: Select field 'Gender'";
     return;
   }
   if (!weight || isNaN(weight) || weight < 40 || weight > 160) {
-    errorDiv.textContent = "Ошибка: Некорректное значение в поле 'Weight'";
+    errorDiv.textContent = "Error: Incorrect value in the 'Weight' field";
     return;
   }
   if (!height || isNaN(height) || height < 130 || height > 230) {
-    errorDiv.textContent = "Ошибка: Некорректное значение в поле 'Height'";
+    errorDiv.textContent = "Error: Incorrect value in the 'Height' field";
     return;
   }
   if (!activityLevel) {
-    errorDiv.textContent = "Ошибка: Выберите значение в поле 'Activity Level'";
+    errorDiv.textContent = "Error: Select field 'Activity Level'";
     return;
   }
 
@@ -310,7 +310,7 @@ function calculateCalories() {
       if (calorieResult) {
         resultDiv.innerHTML = `Daily calorie: ${calorieResult}`;
       } else {
-        errorDiv.innerHTML = "Ошибка: Неверный формат данных";
+        errorDiv.innerHTML = "Error: Invalid data format";
       }
     })
     .catch((error) => {
@@ -319,9 +319,9 @@ function calculateCalories() {
 
       // Отобразить ошибку
       if (error.message === "Failed to fetch") {
-        errorDiv.innerHTML = `Ошибка: ${error.message}`;
+        errorDiv.innerHTML = `Error: ${error.message}`;
       } else {
-        errorDiv.innerHTML = "Ошибка: 404  Not Found" + error.message;
+        errorDiv.innerHTML = "Error: 404  Not Found" + error.message;
       }
     })
     .finally(() => {
