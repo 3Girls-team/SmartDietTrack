@@ -126,8 +126,8 @@ body._lock {
     cursor: pointer;
   }
   .header__icon span,
-.header__icon::before,
-.header__icon::after {
+  .header__icon::before,
+  .header__icon::after {
     left: 0;
     position: absolute;
     height: 10%;
@@ -136,7 +136,7 @@ body._lock {
     background-color: #274C5B;
   }
   .header__icon::before,
-.header__icon::after {
+  .header__icon::after {
     content: "";
   }
   .header__icon::before {
@@ -434,8 +434,7 @@ body._lock {
 }
 .randomRecipe {
   width: 70vw;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 150px;
 }
 .randomRecipe__text {
   width: 100%;
@@ -482,7 +481,8 @@ body._lock {
 @media (max-width: 828px) {
   .randomRecipe__form {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 .randomRecipe__form__button {
@@ -501,6 +501,11 @@ body._lock {
   background-color: #EFD372;
   color: #274C5B;
   border-color: #EFD372;
+}
+@media (max-width: 828px) {
+  .randomRecipe__form__button {
+    margin-top: 10px;
+  }
 }
 .randomRecipe__form .form__inputs__meal {
   color: #274C5B;
@@ -536,9 +541,6 @@ body._lock {
   }
 }
 .randomRecipe__form .form__inputs__product::-moz-placeholder {
-  color: #274C5B;
-}
-.randomRecipe__form .form__inputs__product:-ms-input-placeholder {
   color: #274C5B;
 }
 .randomRecipe__form .form__inputs__product::placeholder {
@@ -581,7 +583,6 @@ body._lock {
 
 .item__img {
   border-radius: 20px;
-  width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
 }
@@ -668,20 +669,10 @@ body._lock {
   border-right: 3px solid #EFD372;
   border-top: 3px solid transparent;
   border-radius: 50%;
-  -webkit-animation: spinner 1s linear infinite;
-          animation: spinner 1s linear infinite;
+  animation: spinner 1s linear infinite;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
-}
-
-@-webkit-keyframes spinner {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes spinner {
@@ -785,6 +776,7 @@ body._lock {
   margin-right: auto;
   margin-top: 100px;
   width: 335px;
+  height: -moz-fit-content;
   height: fit-content;
   border-radius: 20px;
   box-shadow: 1px 1px #525C60, 1em 0 0.4em #525C60;
@@ -849,7 +841,8 @@ body._lock {
   line-height: 29px;
   color: #274C5B;
   list-style: none;
-  padding-inline-start: 0px;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
 }
 .nutrients__card #nutrientsValue {
   text-align: end;
@@ -1291,18 +1284,8 @@ input[type=submit] {
   border-top: 8px solid #3498db;
   width: 30px;
   height: 30px;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
   margin: 20px auto;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes spin {
