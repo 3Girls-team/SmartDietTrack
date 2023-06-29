@@ -9,11 +9,11 @@ SmartDietTrack представляет собой учебный проект, 
 
 ### Проектная команда
 
-Екатерина Сафиуллова (https://github.com/Safiullova)
-Анжелика (https://github.com/AnzhelikaMullova) 
-Анастасия Клиффорд (https://github.com/nastyaclifford)
-Mарина Овчаренко (https://github.com/Mmaryna68)
-Екатерина Григас (https://github.com/grigaskate)
+* Екатерина Сафиуллова (https://github.com/Safiullova)
+* Анжелика (https://github.com/AnzhelikaMullova) 
+* Анастасия Клиффорд (https://github.com/nastyaclifford)
+* Mарина Овчаренко (https://github.com/Mmaryna68)
+* Екатерина Григас (https://github.com/grigaskate)
 
 ### Описание веб-сайта
 
@@ -47,11 +47,11 @@ SmartDietTrack представляет собой учебный проект, 
 
 ### При создании сайта использовались следующие технологии и инструменты
 
-JavaScript
-HTML5
-SASS, CSS
-GitHub
-APIs (https://fitness-calculator.p.rapidapi.com, https://www.edamam.com/,   https://type.fit/api/quotes)
+* JavaScript
+* HTML5
+* SASS, CSS
+* GitHub
+* APIs (https://fitness-calculator.p.rapidapi.com, https://www.edamam.com/,   https://type.fit/api/quotes)
 
 
 
@@ -70,16 +70,16 @@ GitHub ссылка на проект https://github.com/3Girls-team/SmartDietT
 
 3) Путь к файлам Sass: SmartDietTrack/assets/styles/scss/components/
 
-стили для header страницы (_header.scss)
-стили для блока Баннер (_banner.scss)
-стили для модального окна (_modal.scss)
-стили для формы регистрации (_registrationForm.scss)
-стили для блока с выводом питательных веществ о продуктах (_nutrients.scss)
-стили для блока отзывы (_itc-slider.scss, _testimonial.scss)
-стили для блока калькулятор калорий (_calculator.scss)
-стили для блока с выводом рецептов (_randomRecipe.scss)
-стили для блока с формой подписки (_formNews.scss)
-cтили для footer (_footer.scss)
+* стили для header страницы (_header.scss)
+* стили для блока Баннер (_banner.scss)
+* стили для модального окна (_modal.scss)
+* стили для формы регистрации (_registrationForm.scss)
+* стили для блока с выводом питательных веществ о продуктах (_nutrients.scss)
+* стили для блока отзывы (_itc-slider.scss, _testimonial.scss)
+* стили для блока калькулятор калорий (_calculator.scss)
+* стили для блока с выводом рецептов (_randomRecipe.scss)
+* стили для блока с формой подписки (_formNews.scss)
+* cтили для footer (_footer.scss)
 
 4)Текстовые стили находятся в папке SmartDietTrack/assets/styles/scss/_fonts.scss
 
