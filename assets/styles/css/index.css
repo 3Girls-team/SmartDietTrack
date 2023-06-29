@@ -1514,5 +1514,134 @@ input[type=submit] {
     width: 95%;
   }
 }
+.share-with-us {
+  width: 100%;
+  background-image: url(../../images/share-with-us-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.share-with-us__title {
+  font-family: "Yellowtail";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+  color: #7EB693;
+}
+
+.share-with-us__heading-h2 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 59px;
+  color: #274C5B;
+}
+@media (max-width: 828px) {
+  .share-with-us__heading-h2 {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.share-with-us__input {
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  height: 60px;
+  width: 220px;
+  border-radius: 10px;
+  border: 1px solid #7EB693;
+  min-height: 60px;
+}
+
+.share-with-us__input_name {
+  min-width: 40%;
+  margin-bottom: 30px;
+}
+
+.share-with-us__input_comment {
+  min-width: 70%;
+  margin-bottom: 20px;
+}
+
+.share-with-us__btn {
+  width: 200px;
+  height: 80px;
+  border-radius: 10px;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #EFD372;
+  color: #274C5B;
+  border-color: #EFD372;
+  height: 80px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.share-with-us__btn:hover {
+  background-color: #f9f8f8;
+}
+
+.share-with-us__btn:hover {
+  background-color: #EFD372;
+}
+
+.share-with-us__form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+}
+
+.share-with-us__error {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 18px;
+  color: rgb(163, 29, 29);
+}
+
+.share-with-us__gratitude {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 18px;
+  color: #234530;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .share-with-us__input_name {
+    min-width: 60%;
+  }
+  .share-with-us__input_comment {
+    min-width: 90%;
+  }
+}
+@media (max-width: 767px) {
+  .share-with-us__input_name {
+    min-width: 95%;
+  }
+  .share-with-us__input_comment {
+    min-width: 95%;
+  }
+  .share-with-us__btn {
+    height: 63px;
+  }
+  .share-with-us__heading-h2 {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
