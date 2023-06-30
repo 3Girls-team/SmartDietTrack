@@ -1,7 +1,7 @@
 # SmartDietTrack
 Eat smart - it’s easy and tasty! :)
 
-/ ссылка на сайт /
+/ https://3girls-team.github.io/SmartDietTrack/ /
 
 ### Описание веб-сайта
 
