@@ -1,14 +1,18 @@
 .footer{
 display: flex;
-margin: 10px;
-padding: 10px;
+// margin: 10px;
+padding: 2%;
 justify-content: space-between;
+align-items: center;
+background-color: $color-sgrey;
+color: $color-gwhite;
 &__logo{
-width: 150px;
+height: 100px;
+margin-right: 2%;
 }
 &__nav{
 width: 75vw;
-margin-right: 90px;
+// margin-right: 90px;
 }
 &__nav-list{
 display: flex;
@@ -17,13 +21,13 @@ list-style: none;
 margin-top: 25px;
 padding: 25px; 
 }
-&__list-item a{
+&__list-item, &__list-item a {
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 700;
 font-size: 20px;
 line-height: 23px;
-color: $color-sgrey;
+color: $color-gwhite;;
 text-decoration: none;
 }
 &__list-item :hover{
