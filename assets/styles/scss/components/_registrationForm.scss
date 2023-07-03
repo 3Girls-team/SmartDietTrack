@@ -1,7 +1,8 @@
 .registration-form{
 display: flex;
 justify-content: space-between;
-margin: 100px auto;
+margin: 50px auto;
+padding: 10px;
 width: 80vw;
 &__p{
 @include text-list;
@@ -58,7 +59,7 @@ color: $color-gwhite;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-margin: 100px auto;
+margin: 10vw auto;
 width: 80vw;
 &__img{
 margin: 0 auto;
