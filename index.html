@@ -1,33 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SmartDietTrack</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@300;400&family=Roboto:wght@300;400;700;900&family=Yellowtail&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/styles/css/normalize.css" />
-    <link rel="stylesheet" href="assets/styles/css/index.css" />
-  </head>
 
-  <!--Рекомендации по работе в проекте:
-(по этому списку буду проверять каждый блок)
-1.	Проверка блока в валидаторах.
-2.	У img развернутый alt.
-3.	Фото называем с маленькой буквы, в названии нет пробелов и русских букв.
-4.	Сжимаем картинки сразу TinyPNG – Compress WebP, PNG and JPEG images intelligently (сайт)
-5.	В генераторе https://yoksel.github.io/html-tree/ можно проверять правильность названия классов в своем блоке по БЭМ
-6.	Сразу прописываем свои стили в media
-7.	Желательно проверять сразу блоки на переполнение текста
-8.	Variables (переменные используем для шрифтов/повторяющихся цветов)
-9.  fonts используем для стилей заголовков-->
-
-  <!--Девочки, подписываем свои рабочие области, начало/конец-->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartDietTrack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@300;400&family=Roboto:wght@300;400;700;900&family=Yellowtail&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles/css/normalize.css" />
+  <link rel="stylesheet" href="assets/styles/css/index.css" />
+</head>
 
 <body>
   <!--Анжелика модальное окно начало-->
@@ -69,7 +55,7 @@
   <!--Анжелика header конец-->
   <main>
     <!--Анжелика banner начало-->
-    <section class="banner">
+    <section class="banner" id="about-us">
       <p class="banner__text">Get Healthier and Happier with us Today!</p>
       <h1 class="banner__title">Choose the best healthier way of life</h1>
       <button class="banner__button">Explore Now</button>
@@ -93,7 +79,7 @@
     </section>
     <!--Анжеликаregistration form конец-->
     <!-- START nutrients / Safiullova -->
-    <section class="nutrients">
+    <section class="nutrients" id="nutrients">
       <div class="nutrients__title">
         <p class="nutrients__title-name">Nutrients</p>
         <h2 class="nutrients__title-h">Learn information about nutrients of any products</h2>
@@ -102,8 +88,8 @@
         <div class="nutrients__form-container">
           <input type="text" class="nutrients__form-input" list="productsSelect"
             placeholder="Enter a product (for example: apple)">
-            <datalist id="productsSelect">
-            </datalist>
+          <datalist id="productsSelect">
+          </datalist>
           <div class="nutrients__form-error"></div>
           <button class="nutrients__form-button">Search
             <img alt="searchImg" src="assets/images/aerrow.png" class="imgSearch" />
@@ -115,53 +101,44 @@
         <p class="nutrients__card-title">Product, 100g</p>
         <div class="nutrients__card-line"></div>
         <div class="nutrients__card-lists">
-        <ul class="nutrients__card-list">
-          <li class="nutrients__card-list__item">calories</li>
-          <li class="nutrients__card-list__item">protein</li>
-          <li class="nutrients__card-list__item">total lipid</li>
-          <li class="nutrients__card-list__item">carbohydrates</li>
-          <li class="nutrients__card-list__item">fiber</li>
-        </ul>
-        <ul class="nutrients__card-list" id="nutrientsValue">
-          <li class="nutrients__card-list__item">0</li>
-          <li class="nutrients__card-list__item">0</li>
-          <li class="nutrients__card-list__item">0</li>
-          <li class="nutrients__card-list__item">0</li>
-          <li class="nutrients__card-list__item">0</li>
-        </ul>
-      </div>
-        <div id="edamam-badge" data-color="white" style="justify-content: end;"></div> <!-- для отображения использования API -->
+          <ul class="nutrients__card-list">
+            <li class="nutrients__card-list__item">calories</li>
+            <li class="nutrients__card-list__item">protein</li>
+            <li class="nutrients__card-list__item">total lipid</li>
+            <li class="nutrients__card-list__item">carbohydrates</li>
+            <li class="nutrients__card-list__item">fiber</li>
+          </ul>
+          <ul class="nutrients__card-list" id="nutrientsValue">
+            <li class="nutrients__card-list__item">0</li>
+            <li class="nutrients__card-list__item">0</li>
+            <li class="nutrients__card-list__item">0</li>
+            <li class="nutrients__card-list__item">0</li>
+            <li class="nutrients__card-list__item">0</li>
+          </ul>
+        </div>
+        <div id="edamam-badge" data-color="white" style="justify-content: end;"></div>
+        <!-- для отображения использования API -->
       </div>
     </section>
     <!-- END nutrients / Safiullova -->
     <!-- Катя testimonial начало -->
-    <section class="testimonial">
+    <section class="testimonial" id="testimonial">
       <p class="testimonial__title">Testimonial</p>
       <p class="testimonial__heading-h2">What Our Members Saying?</p>
-      <div
-        class="itc-slider"
-        data-slider="itc-slider"
-        data-loop="false"
-        data-autoplay="false"
-      >
+      <div class="itc-slider" data-slider="itc-slider" data-loop="false" data-autoplay="false">
         <div class="itc-slider-wrapper">
           <div class="itc-slider-items">
             <div class="itc-slider-item">
               <div class="review">
-                <img
-                  src="assets/images/testimonial-avatar4.jpg"
-                  alt="avatar"
-                  class="testimonial__img_size testimonial__img"
-                />
+                <img src="assets/images/testimonial-avatar4.jpg" alt="avatar"
+                  class="testimonial__img_size testimonial__img" />
                 <div class="testimonial__raiting">
-                  <img
-                    src="assets/images/testimonial-5stars.svg"
-                    alt="raiting five stars"
-                  />
+                  <img src="assets/images/testimonial-5stars.svg" alt="raiting five stars" />
                 </div>
                 <p class="testimonial__text-p">
                   Useful website, thanks. I use it when I don't know what to cook.
-                  Recipes are delicious and variety. It doesn't take much time to cook. It is very important when you work, study, have children.
+                  Recipes are delicious and variety. It doesn't take much time to cook. It is very important when you
+                  work, study, have children.
                 </p>
                 <div class="testimonial__heading-h6">Sara Taylor</div>
                 <div class="testimonial__text-p">Consumer</div>
@@ -169,19 +146,14 @@
             </div>
             <div class="itc-slider-item">
               <div class="review">
-                <img
-                  src="assets/images/testimonial-avatar2.jpg"
-                  alt="avatar"
-                  class="testimonial__img_size testimonial__img"
-                />
+                <img src="assets/images/testimonial-avatar2.jpg" alt="avatar"
+                  class="testimonial__img_size testimonial__img" />
                 <div class="testimonial__raiting">
-                  <img
-                    src="assets/images/testimonial-5stars.svg"
-                    alt="raiting five stars"
-                  />
+                  <img src="assets/images/testimonial-5stars.svg" alt="raiting five stars" />
                 </div>
                 <p class="testimonial__text-p">
-                  I have lost 3 kg. No diets, no fasting. This is very important for me, for my health. I will continue to use the website. Cooking is a pleasure.  Thank you!
+                  I have lost 3 kg. No diets, no fasting. This is very important for me, for my health. I will continue
+                  to use the website. Cooking is a pleasure. Thank you!
                 </p>
                 <div class="testimonial__heading-h6">Irma Bell</div>
                 <div class="testimonial__text-p">Consumer</div>
@@ -189,19 +161,14 @@
             </div>
             <div class="itc-slider-item">
               <div class="review">
-                <img
-                  src="assets/images/testimonial-avatar3.jpg"
-                  alt="avatar"
-                  class="testimonial__img_size testimonial__img"
-                />
+                <img src="assets/images/testimonial-avatar3.jpg" alt="avatar"
+                  class="testimonial__img_size testimonial__img" />
                 <div class="testimonial__raiting">
-                  <img
-                    src="assets/images/testimonial-5stars.svg"
-                    alt="raiting five stars"
-                  />
+                  <img src="assets/images/testimonial-5stars.svg" alt="raiting five stars" />
                 </div>
                 <p class="testimonial__text-p">
-                  I take care of my health. This site is a godsend for me. Everything is very accessible and understandable. How many calories should I eat today. It's nice to have the recipes right away.
+                  I take care of my health. This site is a godsend for me. Everything is very accessible and
+                  understandable. How many calories should I eat today. It's nice to have the recipes right away.
                 </p>
                 <div class="testimonial__heading-h6">Connie Lane</div>
                 <div class="testimonial__text-p">Consumer</div>
@@ -225,14 +192,14 @@
       </div>
     </section>
     <!-- Катя testimonial конец -->
-    <!--УДАЛЯЕШЬ СТРОЧКУ И ВСТАВЛЯЕШЬ СВОЙ КУСОК КОДА-->
     <!--MARYNA START-->
-    <section class="calculator">
+    <section class="calculator" id="calculator">
       <div class="calculatorCalorie">
         <div class="calculatorCalorie__text">
           <p class="calculatorCalorie__text-title">Calorie Calculator</p>
           <p class="calculatorCalorie__text-body">
-            Use the calorie calculator to estimate the number of daily calories your body needs to lose, gain or maintain your current weight in just one click 
+            Use the calorie calculator to estimate the number of daily calories your body needs to lose, gain or
+            maintain your current weight in just one click
           </p>
         </div>
       <form class="calculatorForm" id="calculatorForm">
@@ -240,15 +207,12 @@
           <label for="age">Age (years):</label>
         <input type="number" class="calculatorForm__inputs-age" id="age" required />
         <br />
-
         <label for="weight">Weight (kg):</label>
         <input type="number" class="calculatorForm__inputs-weight" id="weight" required />
         <br />
-
         <label for="height">Height (cm):</label>
         <input type="number" class="calculatorForm__inputs-height" id="height" required />
         <br />
-
         <div class="calculatorForm__inputs-gender">
         <label for="gender">Gender:</label>
         <input type="radio" id="male" name="gender" value="male" required />
@@ -264,7 +228,6 @@
         <br />
       </div>
         </div>
-        
         <div class="calculatorForm__options">
           <div class="calculatorForm__options-goal">
           <label for="goal">Your goal:</label>
@@ -306,7 +269,6 @@
         </select>
         <br />
       </div>
-      
         <button type="submit" class="calculatorForm__options-btn"><img
           src="assets/images/aerrow.png"
           alt="submithImg"
@@ -324,10 +286,11 @@
         <div id="result"></div>
       <div class="calculatorCalorie__error" id="error"></div>
       </div>
+    </div>
     </section>
     <!--MARYNA  END-->
     <!--Clifford / START -->
-    <section class="recipes">
+    <section class="recipes" id="recipes">
       <div class="randomRecipe">
         <div class="randomRecipe__text">
           <p class="randomRecipe__text__title">Recipes</p>
@@ -361,75 +324,65 @@
           <div class="errorMessage"></div>
           <div class="result-display"></div>
         </div>
-      </section>
-      <!--Clifford / END -->
-      <!-- Катя share-with-us начало -->
-      <section class="share-with-us">
-        <p class="share-with-us__title">Share with us</p>
-        <p class="share-with-us__heading-h2">We want to hear from you!</p>
-        <form class="share-with-us__form">
-          <input class="share-with-us__input share-with-us__input_name" type="text" name="share-with-us__input_name" placeholder="You First and Last Name">
-          <input class="share-with-us__input share-with-us__input_comment" type="text" name="share-with-us__input_comment" placeholder="Leave your comment here">
-          <div class="share-with-us__error"></div>
-          <div class="share-with-us__gratitude"></div>
-          <button class="share-with-us__btn">Submit</button>
-        </form>
-      </section>
+    </section>
+    <!--Clifford / END -->
+    <!-- Катя share-with-us начало -->
+    <section class="share-with-us">
+      <p class="share-with-us__title">Share with us</p>
+      <p class="share-with-us__heading-h2">We want to hear from you!</p>
+      <form class="share-with-us__form">
+        <input class="share-with-us__input share-with-us__input_name" type="text" name="share-with-us__input_name"
+          placeholder="You First and Last Name">
+        <input class="share-with-us__input share-with-us__input_comment" type="text" name="share-with-us__input_comment"
+          placeholder="Leave your comment here">
+        <div class="share-with-us__error"></div>
+        <div class="share-with-us__gratitude"></div>
+        <button class="share-with-us__btn">Submit</button>
+      </form>
+    </section>
     <!-- Катя share-with-us конец -->
-      <!--УДАЛЯЕШЬ СТРОЧКУ И ВСТАВЛЯЕШЬ СВОЙ КУСОК КОДА-->
-      <!--Анжелика news начало-->
-      <section class="form-news">
-        <h2 class="form-news__title">Subscribe to our News!</h2>
-        <div class="form-news__set">
-          <input
-            class="form-news__name"
-            type="text"
-            id="nameUser"
-            placeholder="Your First Name"
-          />
-          <input
-            class="form-news__email"
-            type="email"
-            id="email"
-            placeholder="Your Email Address"
-          />
-          <button class="form-news__button" type="submit" id="btnForm">
-            Subscribe
-          </button>
-        </div>
-        <div class="form-news__result"></div>
-        <div class="form-news__errorMessage"></div>
-      </section>
-      <!--Анжелика news конец-->
-    </main>
-    <footer class="footer">
-      <img
-        class="footer__logo"
-        src="assets/images/header-logo.svg"
-        alt="SmartDietTrack"
-      />
-      <nav class="footer__nav">
-        <ul class="footer__nav-list">
-          <li class="footer__list-item"><a href="#about-us">About us</a></li>
-          <li class="footer__list-item"><a href="#nutrients">Nutrients</a></li>
-          <li class="footer__list-item">
-            <a href="#testimonial">Testimonial</a>
-          </li>
-          <li class="footer__list-item">
-            <a href="#calculator"> Calorie Calculator</a>
-          </li>
-          <li class="footer__list-item"><a href="#recipes">Recipes</a></li>
-          <li class="footer__list-item">
-            <a href="#share-with-us">Share with us</a>
-          </li>
-          <li class="footer__list-item"><a href="#form-news">News</a></li>
-        </ul>
-      </nav>
-    </footer>
-    
-    <script src="index.js"></script>
-    <script src="itc-slider.js" defer></script>
-    <script src="https://developer.edamam.com/attribution/badge.js"></script>
-    <!-- для отображения использования API -->
-  </body>
+    <!--Анжелика news начало-->
+    <section class="form-news" id="form-news">
+      <h2 class="form-news__title">Subscribe to our News!</h2>
+      <div class="form-news__set">
+        <input class="form-news__name" type="text" id="nameUser" placeholder="Your First Name" />
+        <input class="form-news__email" type="email" id="email" placeholder="Your Email Address" />
+        <button class="form-news__button" type="submit" id="btnForm">
+          Subscribe
+        </button>
+      </div>
+      <div class="form-news__result"></div>
+      <div class="form-news__errorMessage"></div>
+    </section>
+    <!--Анжелика news конец-->
+  </main>
+  <footer class="footer">
+    <img class="footer__logo" src="assets/images/smartdiettrack-low-resolution-logo-color-on-transparent-background.png" alt="SmartDietTrack" />
+    <nav class="footer__nav">
+      <ul class="footer__nav-list">
+        <li class="footer__list-item"><a href="#about-us">About us</a></li>
+        <li class="footer__list-item"><a href="#nutrients">Nutrients</a></li>
+        <li class="footer__list-item">
+          <a href="#testimonial">Testimonial</a>
+        </li>
+        <li class="footer__list-item">
+          <a href="#calculator"> Calorie Calculator</a>
+        </li>
+        <li class="footer__list-item"><a href="#recipes">Recipes</a></li>
+        <li class="footer__list-item">
+          <a href="#share-with-us">Share with us</a>
+        </li>
+        <li class="footer__list-item"><a href="#form-news">News</a></li>
+      </ul>
+      <ul class="footer__nav-list">
+        <li class="footer__list-item">POWERED BY:</li>
+        <li class="footer__list-item"><a href=" https://www.edamam.com/" target="_blank">Edamam.com</a></li>
+        <li class="footer__list-item"><a href="https://rapidapi.com" target="_blank">Rapidapi.com</a></li>
+        <li class="footer__list-item"><a href="https://type.fit/api/quotes" target="_blank">Quotes</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="index.js"></script>
+  <script src="itc-slider.js" defer></script>
+</body>
 </html>

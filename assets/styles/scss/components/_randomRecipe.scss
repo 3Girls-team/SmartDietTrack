@@ -1,6 +1,6 @@
 .randomRecipe{
     width:70vw;
-    margin-left: 150px;
+    margin-left: 10vw;
     
 &__text{
     width:100%;
@@ -14,7 +14,6 @@
         @media (max-width: 828px) {
             margin-bottom: -35px;
             font-size: 20px;
- 
         }
     }
     &__body{
@@ -44,11 +43,11 @@
                 @include input;
             }
             &__product{
-                margin-left: 10px;
+                // margin-left: 10px;
                 color: $color-sgrey;
                 @include input;
                 @media (max-width: 828px) {
-                margin-left: 0px;
+                // margin-left: 0px;
                 margin-top: 10px;
                 }
             }
@@ -56,7 +55,6 @@
                 color: $color-sgrey;
                 
               }
-              
         }
 }}
 
@@ -141,7 +139,6 @@
     from {
         transform: rotate(0deg);
     }
- 
     to {
         transform: rotate(360deg);
     }

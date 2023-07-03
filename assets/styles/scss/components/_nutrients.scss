@@ -1,12 +1,14 @@
 .nutrients__title {
-    text-align: center;
+    margin-left: 10vw;
 
     &-name {
         @include title ;
+        margin: 0px;
     }
 
     &-h {
         @include heading-h2 ;
+        margin-top: 2vw;
         @media (max-width: 828px) {
             font-size: 30px;
             line-height: 37px;
@@ -55,7 +57,7 @@
 .nutrients__card {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    margin-top: 20px;
     width: 335px;
     height: fit-content;
     border-radius: 20px;
