@@ -19,7 +19,9 @@
   <!--Анжелика модальное окно начало-->
   <section class="modal-window">
     <div class="modal-window__fon">
-      <button class="modal-window__button">Home</button>
+      <button class="modal-window__button">Home
+        <img alt="searchImg" src="assets/images/aerrow.png" class="imgSearch" />
+      </button>
       <p class="modal-window__greeting">Welcome to SmartDietTrack</p>
       <p class="modal-window__slogan">Eat smart - it’s easy and tasty!</p>
       <p class="modal-window__description">SmartDietTrack - an innovative platform for nutrition tracking and
@@ -58,7 +60,9 @@
     <section class="banner" id="about-us">
       <p class="banner__text">Get Healthier and Happier with us Today!</p>
       <h1 class="banner__title">Choose the best healthier way of life</h1>
-      <button class="banner__button">Explore Now</button>
+      <button class="banner__button">Explore Now
+        <img alt="searchImg" src="assets/images/aerrow.png" class="imgSearch" />
+      </button>
     </section>
     <!--Анжелика banner конец-->
     <!--Анжелика registration form начало-->
@@ -202,91 +206,82 @@
             maintain your current weight in just one click
           </p>
         </div>
-      <form class="calculatorForm" id="calculatorForm">
-        <div class="calculatorForm__inputs">
-          <label for="age">Age (years):</label>
-        <input type="number" class="calculatorForm__inputs-age" id="age" required />
-        <br />
-        <label for="weight">Weight (kg):</label>
-        <input type="number" class="calculatorForm__inputs-weight" id="weight" required />
-        <br />
-        <label for="height">Height (cm):</label>
-        <input type="number" class="calculatorForm__inputs-height" id="height" required />
-        <br />
-        <div class="calculatorForm__inputs-gender">
-        <label for="gender">Gender:</label>
-        <input type="radio" id="male" name="gender" value="male" required />
-        <label for="male">Male</label>
-        <input
-          type="radio"
-          id="female"
-          name="gender"
-          value="female"
-          required
-        />
-        <label for="female">Female</label>
-        <br />
-      </div>
+        <form class="calculatorForm" id="calculatorForm">
+          <div class="calculatorForm__inputs">
+            <label for="age">Age (years):</label>
+            <input type="number" class="calculatorForm__inputs-age" id="age" required />
+            <br />
+            <label for="weight">Weight (kg):</label>
+            <input type="number" class="calculatorForm__inputs-weight" id="weight" required />
+            <br />
+            <label for="height">Height (cm):</label>
+            <input type="number" class="calculatorForm__inputs-height" id="height" required />
+            <br />
+            <div class="calculatorForm__inputs-gender">
+              <label for="gender">Gender:</label>
+              <input type="radio" id="male" name="gender" value="male" required />
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="female" required />
+              <label for="female">Female</label>
+              <br />
+            </div>
+          </div>
+          <div class="calculatorForm__options">
+            <div class="calculatorForm__options-goal">
+              <label for="goal">Your goal:</label>
+              <select id="goal" required>
+                <option value="maintain">Weight Maintenance</option>
+                <option value="mildlose">Mild weight loss</option>
+                <option value="weightlose">Weight loss</option>
+                <option value="extremelose">Extreme weight loss</option>
+                <option value="mildgain">Mild weight gain</option>
+                <option value="weightgain">Weight gain</option>
+                <option value="extremegain">Extreme weight gain</option>
+              </select>
+              <br />
+            </div>
+            <div class="calculatorForm__options-macronutrients">
+              <label for="macronutrients">Macro nutrients:</label>
+              <select id="macronutrients" required>
+                <option value="balanced">balanced</option>
+                <option value="lowfat">lowfat</option>
+                <option value="lowcarbs">lowcarbs</option>
+                <option value="highprotein">highprotein</option>
+              </select>
+              <br />
+            </div>
+            <div class="calculatorForm__options-activity">
+              <label for="activity">Activity Level:</label>
+              <select id="activity" required>
+                <option value="level_1">Sedentary: no exercise</option>
+                <option value="level_2">Sedentary: little exercise</option>
+                <option value="level_3">Exercise 1-3 times/week</option>
+                <option value="level_4">Exercise 3-4 times/week</option>
+                <option value="level_5">
+                  Daily exercise or intense exercise 4-5 times/week
+                </option>
+                <option value="level_6">Intense exercise 6-7 times/week</option>
+                <option value="level_7">
+                  Very intense exercise daily, or physical job
+                </option>
+              </select>
+              <br />
+            </div>
+            <button type="submit" class="calculatorForm__options-btn"><img src="assets/images/aerrow.png"
+                alt="submithImg" class="imgSubmit" />
+              Calculate
+            </button>
+          </div>
+        </form>
+        <div class="loading" id="loading" style="display: none">
+          <div class="calculatorCalorie__loader"></div>
+          <p>Loading...</p>
         </div>
-        <div class="calculatorForm__options">
-          <div class="calculatorForm__options-goal">
-          <label for="goal">Your goal:</label>
-        <select id="goal" required>
-          <option value="maintain">Weight Maintenance</option>
-          <option value="mildlose">Mild weight loss</option>
-          <option value="weightlose">Weight loss</option>
-          <option value="extremelose">Extreme weight loss</option>
-          <option value="mildgain">Mild weight gain</option>
-          <option value="weightgain">Weight gain</option>
-          <option value="extremegain">Extreme weight gain</option>
-        </select>
-        <br />
-      </div>
-      <div class="calculatorForm__options-macronutrients">
-        <label for="macronutrients">Macro nutrients:</label>
-        <select id="macronutrients" required>
-          <option value="balanced">balanced</option>
-          <option value="lowfat">lowfat</option>
-          <option value="lowcarbs">lowcarbs</option>
-          <option value="highprotein">highprotein</option>
-        </select>
-        <br />
-      </div>
-      <div class="calculatorForm__options-activity">
-        <label for="activity">Activity Level:</label>
-        <select id="activity" required>
-          <option value="level_1">Sedentary: no exercise</option>
-          <option value="level_2">Sedentary: little exercise</option>
-          <option value="level_3">Exercise 1-3 times/week</option>
-          <option value="level_4">Exercise 3-4 times/week</option>
-          <option value="level_5">
-            Daily exercise or intense exercise 4-5 times/week
-          </option>
-          <option value="level_6">Intense exercise 6-7 times/week</option>
-          <option value="level_7">
-            Very intense exercise daily, or physical job
-          </option>
-        </select>
-        <br />
-      </div>
-        <button type="submit" class="calculatorForm__options-btn"><img
-          src="assets/images/aerrow.png"
-          alt="submithImg"
-          class="imgSubmit"
-        />
-        Calculate
-      </button>  
+        <div class="calculatorCalorie__result">
+          <div id="result"></div>
+          <div class="calculatorCalorie__error" id="error"></div>
         </div>
-      </form>
-      <div class="loading" id="loading" style="display: none">
-        <div class="calculatorCalorie__loader"></div>
-        <p>Loading...</p>
       </div>
-      <div class="calculatorCalorie__result">
-        <div id="result"></div>
-      <div class="calculatorCalorie__error" id="error"></div>
-      </div>
-    </div>
     </section>
     <!--MARYNA  END-->
     <!--Clifford / START -->
@@ -337,7 +332,9 @@
           placeholder="Leave your comment here">
         <div class="share-with-us__error"></div>
         <div class="share-with-us__gratitude"></div>
-        <button class="share-with-us__btn">Submit</button>
+        <button class="share-with-us__btn">Submit
+          <img alt="searchImg" src="assets/images/aerrow.png" class="imgSearch" />
+        </button>
       </form>
     </section>
     <!-- Катя share-with-us конец -->
@@ -349,6 +346,7 @@
         <input class="form-news__email" type="email" id="email" placeholder="Your Email Address" />
         <button class="form-news__button" type="submit" id="btnForm">
           Subscribe
+          <img alt="searchImg" src="assets/images/aerrow.png" class="imgSearch" />
         </button>
       </div>
       <div class="form-news__result"></div>
@@ -357,7 +355,8 @@
     <!--Анжелика news конец-->
   </main>
   <footer class="footer">
-    <img class="footer__logo" src="assets/images/smartdiettrack-low-resolution-logo-color-on-transparent-background.png" alt="SmartDietTrack" />
+    <img class="footer__logo" src="assets/images/smartdiettrack-low-resolution-logo-color-on-transparent-background.png"
+      alt="SmartDietTrack" />
     <nav class="footer__nav">
       <ul class="footer__nav-list">
         <li class="footer__list-item"><a href="#about-us">About us</a></li>
@@ -385,4 +384,5 @@
   <script src="index.js"></script>
   <script src="itc-slider.js" defer></script>
 </body>
+
 </html>
