@@ -64,7 +64,7 @@ btnFormNews.onclick = function (event) {
       })
       .catch((error) => {
         //выводим сообщение об ошибке
-        errorMesForm.innerHTML = `<p class="errorText">Sorry, there was an error during registration.Try again in a few minutes:(</p>`;
+        errorMesForm.innerHTML = `<p class="errorText">Sorry, there was an error during registration.Try again in a few minutes: ${error}</p>`;
       });
     document.querySelector(".form-news__name").value = ""; //возвращаем начальное значение в инпут имени
     document.querySelector(".form-news__email").value = ""; //возвращаем изначальное значение в инпут имейл
