@@ -10,7 +10,17 @@ if (iconMenu) {
     iconMenu.classList.toggle("_active");
     menuNav.classList.toggle("_active");
   });
+  menuNav.addEventListener("click", function (e) {
+    document.body.classList.toggle("_lock");
+    iconMenu.classList.toggle("_active");
+    menuNav.classList.toggle("_active");
+  });
 }
+menuNav.addEventListener("click", function (e) {
+  document.body.classList.toggle("_lock");
+  iconMenu.classList.toggle("_active");
+  menuNav.classList.toggle("_active");
+});
 //Открытие и закрытие модального окна
 const buttonOpen = document.querySelector(".banner__button"); //ищем кнопку открытия модального окна
 const modalwindow = document.querySelector(".modal-window"); //ищем модальное окно
