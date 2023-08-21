@@ -2,8 +2,9 @@
 
 // Меню бургер
 const iconMenu = document.querySelector(".header__icon");
+const menuNav = document.querySelector(".header__nav");
 if (iconMenu) {
-  const menuNav = document.querySelector(".header__nav");
+  // const menuNav = document.querySelector(".header__nav");
 
   iconMenu.addEventListener("click", function (e) {
     document.body.classList.toggle("_lock");
@@ -11,16 +12,16 @@ if (iconMenu) {
     menuNav.classList.toggle("_active");
   });
   menuNav.addEventListener("click", function (e) {
-    document.body.classList.toggle("_lock");
+    document.body.classList.remove("_lock");
     iconMenu.classList.toggle("_active");
     menuNav.classList.toggle("_active");
   });
 }
-menuNav.addEventListener("click", function (e) {
-  document.body.classList.toggle("_lock");
-  iconMenu.classList.toggle("_active");
-  menuNav.classList.toggle("_active");
-});
+// menuNav.addEventListener("click", function (e) {
+//   document.body.classList.toggle("_lock");
+//   iconMenu.classList.toggle("_active");
+//   menuNav.classList.toggle("_active");
+// });
 //Открытие и закрытие модального окна
 const buttonOpen = document.querySelector(".banner__button"); //ищем кнопку открытия модального окна
 const modalwindow = document.querySelector(".modal-window"); //ищем модальное окно
@@ -163,9 +164,9 @@ btnProduct.onclick = function (e) {
         productCardError.innerHTML =
           "Sorry, we couldn't find any data for this product. Please try again!";
       })
-      .finally(() => {
-        // что- то еще сюда написать
-      });
+      // .finally(() => {
+      //   // что- то еще сюда написать
+      // });
   }
   productName.value = " "; // очистка поля ввода продукта
 };
