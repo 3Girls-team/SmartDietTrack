@@ -3,6 +3,46 @@ Eat smart - it’s easy and tasty! :)
 
 / https://3girls-team.github.io/SmartDietTrack/ /
 
+## Website Design
+https://www.figma.com/file/FBaI8hSPn5Exv6TCKNzXxh/Healthy-Eating-Template?type=design&node-id=1-430&mode=design&t=YPWvXlBIFaEtEXLM-0
+
+Design was developed using a free Figma template https://www.figma.com/file/NzUxmldLBgTid1UN0AiwJF/Agriculture-Webflow-Website-Template-(Community)?type=design&node-id=2-9967&mode=design&t=26za1y9YxPiBUaVe-0
+
+## Website Description
+
+SmartDietTrack is a website for getting information about key nutrients in foods, calculating your daily calorie intake, and finding healthy, balanced recipes.
+The goal of the project was to create a functional, interactive website built on HTML, SASS, JavaScript, API.
+The website is used for educational purposes only and is not used for commercial purposes.
+
+It is a single page website with a modal window. 
+
+
+## Technologies & tools 
+
+* JavaScript
+* HTML5
+* SASS, CSS
+* GitHub
+* APIs (https://fitness-calculator.p.rapidapi.com, https://www.edamam.com/,   https://type.fit/api/quotes). All APIs used at work are used solely for educational purposes and are not used for commercial purposes.
+
+
+## Set up instruction
+
+git clone https://github.com/3Girls-team/SmartDietTrack/tree/MASTER
+
+## Thanks to all contributors! 
+
+[![Contributors](https://contrib.rocks/image?repo=3Girls-team/SmartDietTrack)](https://github.com/3Girls-team/SmartDietTrack/graphs/contributors)
+
+
+
+
+
+# SmartDietTrack
+Eat smart - it’s easy and tasty! :)
+
+/ https://3girls-team.github.io/SmartDietTrack/ /
+
 ### Описание веб-сайта
 
 SmartDietTrack представляет собой учебный проект, веб-сайт для получения информации об основных питательных веществах продуктов, подсчета дневной нормы калорий, а также поиска полезных сбалансированных рецептов. 
