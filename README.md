@@ -14,7 +14,7 @@ SmartDietTrack is a website for getting information about key nutrients in foods
 The goal of the project was to create a functional, interactive website built on HTML, SASS, JavaScript, API.
 The website is used for educational purposes only and is not used for commercial purposes.
 
-It is a single page website with a modal window. 
+It is a single page website with a modal box. 
 
 
 ## Technologies & tools 
