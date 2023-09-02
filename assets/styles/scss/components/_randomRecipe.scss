@@ -6,7 +6,7 @@
     width:100%;
     @media (max-width: 828px) {
         width:100%
-              }
+    }
     &__title {
         width:100%;
         margin-bottom: -45px;
@@ -21,8 +21,10 @@
         @media (max-width: 828px) {
             font-size: 30px;
             line-height: 37px;
-                  }
-    }}
+        }
+    }
+}
+
 &__form{
     display:flex;
     justify-content: space-between;
@@ -30,12 +32,12 @@
         display:flex;
         flex-direction: column;
         align-items: flex-start;
-              }
+    }
     &__button{    
         @include buttonblue;
         @media (max-width: 828px) {
             margin-top: 10px;
-                  }
+        }
         }
         .form__inputs{
             &__meal{
@@ -43,24 +45,21 @@
                 @include input;
             }
             &__product{
-                // margin-left: 10px;
                 color: $color-sgrey;
                 @include input;
                 @media (max-width: 828px) {
-                // margin-left: 0px;
                 margin-top: 10px;
                 }
             }
             &__product::placeholder {
                 color: $color-sgrey;
-                
-              }
+            }
         }
-}}
+    }
+}
 
 .input_error-message,.errorText{
-    @include title;
-    font-size: 20px;
+    @include text-error;
 }
 
 .result__item{
@@ -70,7 +69,7 @@
     align-items: center;
     @media (max-width: 970px) {
         width: 100%;
-        }
+    }
 }
 .item__info{
     border-radius: 20px;
@@ -86,7 +85,7 @@
     width:min-content;
 }
 .item__title{
-    @include heading-h6;
+    @include heading-h3;
 }
 .item__diet{
     @include text-p;
@@ -105,7 +104,7 @@
     @media (max-width: 970px) {
         font-size: 10px;
         line-height: 15px;
-        }
+    }
 }
 
 .item__ingredients{

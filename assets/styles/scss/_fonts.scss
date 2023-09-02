@@ -25,34 +25,16 @@ color: $color-green;
     color: $color-sgrey;
 }
 
+@mixin text-error {
+    font-family: "Yellowtail";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 49px;
+    color: $color-green;
+}
+
 @mixin heading-h3 {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 47px;
-    color: $color-sgrey;
-}
-
-@mixin heading-h4 {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 35px;
-    line-height: 41px;
-    color: $color-sgrey;
-}
-
-@mixin heading-h5 {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 30px;
-    line-height: 35px;
-    color: $color-sgrey;
-}
-
-@mixin heading-h6 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 800;
@@ -79,18 +61,6 @@ color: $color-green;
     color: $color-dgrey;
     }
 
-
-
-@mixin text-Quotes {
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 33px;
-    text-align: center;
-    color: $color-sgrey;
-}
-
 @mixin text-button {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
@@ -99,7 +69,3 @@ color: $color-green;
     line-height: 23px;
     color: $color-sgrey;
 }
-
-
- 
-

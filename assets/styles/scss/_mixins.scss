@@ -11,7 +11,7 @@
     border-color:$color-yellow;
     &:hover{
         background-color:$color-gwhite;                          
-        }
+    }
 }
 @mixin buttonblue {
 	width: 200px;
@@ -28,21 +28,7 @@
         background-color:$color-yellow;   
         color:$color-sgrey; 
         border-color:$color-yellow;                      
-        }
-
-}
-
-@mixin button {
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
-    color: $color-sgrey;
-    height: 60px;
-    width: 120px;
-    border-radius: 10px;
-    background-color: $color-gwhite;
+    }
 }
 
 @mixin input{

@@ -16,8 +16,7 @@
 </head>
 
 <body>
-  <!--Анжелика модальное окно начало-->
-  <section class="modal-window">
+  <div class="modal-window">
     <div class="modal-window__fon">
       <button class="modal-window__button">Home
         <img alt="searchImg" src="assets/images/aerrow.png" class="imgSearch" />
@@ -33,9 +32,7 @@
         adjust weight and reach your fitness goals. Begin your journey to a better version of yourself with
         SmartDietTrack!</p>
     </div>
-  </section>
-  <!--Анжелика модальное окно конец-->
-  <!--Анжелика header начало-->
+  </div>
   <header class="header">
     <img class="header__logo" src="assets/images/header-logo.svg" alt="SmartDietTrack">
     <div class="header__icon">
@@ -54,9 +51,7 @@
     </nav>
     <p class="header__text"> Hi,friend!</p>
   </header>
-  <!--Анжелика header конец-->
   <main>
-    <!--Анжелика banner начало-->
     <section class="banner" id="about-us">
       <p class="banner__text">Get Healthier and Happier with us Today!</p>
       <h1 class="banner__title">Choose the best healthier way of life</h1>
@@ -64,9 +59,7 @@
         <img alt="searchImg" src="assets/images/aerrow.png" class="imgSearch" />
       </button>
     </section>
-    <!--Анжелика banner конец-->
-    <!--Анжелика registration form начало-->
-    <section class="registration-form">
+    <div class="registration-form">
       <img class="registration-form__img" src="assets/images/registrationPhoto.jpg" alt="imgRegistration">
       <div class="registration-form__set">
         <p class="registration-form__p">Please sign in to Calculate your Daily Calorie Needs and Get your
@@ -80,9 +73,7 @@
           </button>
         </form>
       </div>
-    </section>
-    <!--Анжеликаregistration form конец-->
-    <!-- START nutrients / Safiullova -->
+    </div>
     <section class="nutrients" id="nutrients">
       <div class="nutrients__title">
         <p class="nutrients__title-name">Nutrients</p>
@@ -121,14 +112,11 @@
           </ul>
         </div>
         <div id="edamam-badge" data-color="white" style="justify-content: end;"></div>
-        <!-- для отображения использования API -->
       </div>
     </section>
-    <!-- END nutrients / Safiullova -->
-    <!-- Катя testimonial начало -->
     <section class="testimonial" id="testimonial">
       <p class="testimonial__title">Testimonial</p>
-      <p class="testimonial__heading-h2">What Our Members Saying?</p>
+      <h2 class="testimonial__heading-h2">What Our Members Saying?</h2>
       <div class="itc-slider" data-slider="itc-slider" data-loop="false" data-autoplay="false">
         <div class="itc-slider-wrapper">
           <div class="itc-slider-items">
@@ -180,31 +168,25 @@
             </div>
           </div>
         </div>
-        <!-- Кнопки для перехода к предыдущему и следующему слайду -->
         <button class="itc-slider-btn itc-slider-btn-prev"></button>
         <button class="itc-slider-btn itc-slider-btn-next"></button>
         <div>
           <ol class="itc-slider-indicators">
-            <!-- data-slide-to="0" – для перехода к 1 слайду -->
             <li class="itc-slider-indicator" data-slide-to="0"></li>
-            <!-- data-slide-to="1" – для перехода к 2 слайду -->
             <li class="itc-slider-indicator" data-slide-to="1"></li>
-            <!-- data-slide-to="2" – для перехода к 3 слайду -->
             <li class="itc-slider-indicator" data-slide-to="2"></li>
           </ol>
         </div>
       </div>
     </section>
-    <!-- Катя testimonial конец -->
-    <!--MARYNA START-->
     <section class="calculator" id="calculator">
       <div class="calculatorCalorie">
         <div class="calculatorCalorie__text">
           <p class="calculatorCalorie__text-title">Calorie Calculator</p>
-          <p class="calculatorCalorie__text-body">
+          <h2 class="calculatorCalorie__text-body">
             Use the calorie calculator to estimate the number of daily calories your body needs to lose, gain or
             maintain your current weight in just one click
-          </p>
+          </h2>
         </div>
         <form class="calculatorForm" id="calculatorForm">
           <div class="calculatorForm__inputs">
@@ -218,7 +200,7 @@
             <input type="number" class="calculatorForm__inputs-height" id="height" required />
             <br />
             <div class="calculatorForm__inputs-gender">
-              <label for="gender">Gender:</label>
+              <p class="lable_gender">Gender:</p>
               <input type="radio" id="male" name="gender" value="male" required />
               <label for="male">Male</label>
               <input type="radio" id="female" name="gender" value="female" required />
@@ -230,6 +212,7 @@
             <div class="calculatorForm__options-goal">
               <label for="goal">Your goal:</label>
               <select id="goal" required>
+                <option selected disabled value=''>Please, choose</option>
                 <option value="maintain">Weight Maintenance</option>
                 <option value="mildlose">Mild weight loss</option>
                 <option value="weightlose">Weight loss</option>
@@ -243,6 +226,7 @@
             <div class="calculatorForm__options-macronutrients">
               <label for="macronutrients">Macro nutrients:</label>
               <select id="macronutrients" required>
+                <option selected disabled value=''>Please, choose</option>
                 <option value="balanced">balanced</option>
                 <option value="lowfat">lowfat</option>
                 <option value="lowcarbs">lowcarbs</option>
@@ -253,6 +237,7 @@
             <div class="calculatorForm__options-activity">
               <label for="activity">Activity Level:</label>
               <select id="activity" required>
+                <option selected disabled value=''>Please, choose</option>
                 <option value="level_1">Sedentary: no exercise</option>
                 <option value="level_2">Sedentary: little exercise</option>
                 <option value="level_3">Exercise 1-3 times/week</option>
@@ -283,21 +268,19 @@
         </div>
       </div>
     </section>
-    <!--MARYNA  END-->
-    <!--Clifford / START -->
     <section class="recipes" id="recipes">
       <div class="randomRecipe">
         <div class="randomRecipe__text">
           <p class="randomRecipe__text__title">Recipes</p>
-          <p class="randomRecipe__text__body">
+          <h2 class="randomRecipe__text__body">
             Discover our wide selection of perfectly balanced and delicious
             recipes
-          </p>
+          </h2>
         </div>
         <form class="randomRecipe__form">
           <div class="form__inputs">
             <select id="select-meal" name="selectMeal" class="form__inputs__meal">
-              <option selected="true" disabled="disabled">
+              <option selected="selected" disabled="disabled">
                 Please select meal type
               </option>
               <option value="breakfast">Breakfast</option>
@@ -319,12 +302,11 @@
           <div class="errorMessage"></div>
           <div class="result-display"></div>
         </div>
+      </div>
     </section>
-    <!--Clifford / END -->
-    <!-- Катя share-with-us начало -->
     <section class="share-with-us" id="share-with-us">
       <p class="share-with-us__title">Share with us</p>
-      <p class="share-with-us__heading-h2">We want to hear from you!</p>
+      <h2 class="share-with-us__heading-h2">We want to hear from you!</h2>
       <form class="share-with-us__form">
         <input class="share-with-us__input share-with-us__input_name" type="text" name="share-with-us__input_name"
           placeholder="You First and Last Name">
@@ -337,8 +319,6 @@
         </button>
       </form>
     </section>
-    <!-- Катя share-with-us конец -->
-    <!--Анжелика news начало-->
     <section class="form-news" id="form-news">
       <h2 class="form-news__title">Subscribe to our News!</h2>
       <div class="form-news__set">
@@ -352,7 +332,6 @@
       <div class="form-news__result"></div>
       <div class="form-news__errorMessage"></div>
     </section>
-    <!--Анжелика news конец-->
   </main>
   <footer class="footer">
     <img class="footer__logo" src="assets/images/smartdiettrack-low-resolution-logo-color-on-transparent-background.png"
@@ -384,5 +363,4 @@
   <script src="index.js"></script>
   <script src="itc-slider.js" defer></script>
 </body>
-
 </html>

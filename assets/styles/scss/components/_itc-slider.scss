@@ -1,12 +1,3 @@
-/**
- * ItcSlider
- * @version 1.0.1
- * @author https://github.com/itchief
- * @copyright Alexander Maltsev 2020 - 2023
- * @license MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
- * @tutorial https://itchief.ru/javascript/slider
- */
-
 .itc-slider {
   position: relative;
   width: 85%;
@@ -36,7 +27,6 @@
   will-change: transform;
 }
 
-/* кнопки влево и вправо */
 .itc-slider-btn {
   position: absolute;
   top: 50%;
@@ -90,7 +80,6 @@
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
-/* индикаторы */
 .itc-slider-indicators {
   right: 0;
   bottom: 0;

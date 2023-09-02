@@ -12,7 +12,7 @@
         @media (max-width: 828px) {
             font-size: 30px;
             line-height: 37px;
-                  }
+        }
     }
 }
 
@@ -40,9 +40,7 @@
     }
     
     &-error{
-        height: 25px;
-        @include title;
-        font-size: 20px;
+        @include text-error;
     }
 
     &-button {
@@ -89,7 +87,7 @@
     }
 
     &-title {
-        @include heading-h6;
+        @include heading-h3;
         padding-left: 20px;
     }
 
@@ -102,7 +100,7 @@
     }
 
     &-list {
-        @include heading-h6;
+        @include heading-h3;
         list-style: none;
         padding-inline-start: 0px;
     }

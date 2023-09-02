@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html {
   scroll-behavior: smooth;
 }
@@ -95,7 +94,7 @@ body._lock {
   text-decoration: none;
 }
 .header__list-item :hover {
-  color: #7EB693;
+  color: #525C60;
 }
 .header__text {
   position: relative;
@@ -515,10 +514,9 @@ body._lock {
   font-family: "Yellowtail";
   font-style: italic;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 25px;
   line-height: 49px;
   color: #7EB693;
-  font-size: 20px;
 }
 
 .result__item {
@@ -705,14 +703,12 @@ body._lock {
   border: 1px solid #7EB693;
 }
 .nutrients__form-error {
-  height: 25px;
   font-family: "Yellowtail";
   font-style: italic;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 25px;
   line-height: 49px;
   color: #7EB693;
-  font-size: 20px;
 }
 .nutrients__form-button {
   margin-top: 30px;
@@ -741,7 +737,6 @@ body._lock {
   margin-right: auto;
   margin-top: 20px;
   width: 335px;
-  height: -moz-fit-content;
   height: fit-content;
   border-radius: 20px;
   box-shadow: 1px 1px #525C60, 1em 0 0.4em #525C60;
@@ -1399,7 +1394,7 @@ body._lock {
   }
 }
 
-label {
+label, .lable_gender {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -1412,12 +1407,12 @@ label {
   color: #f9f8f8;
 }
 @media (max-width: 1142px) {
-  label {
+  label, .lable_gender {
     font-size: 18px;
   }
 }
 @media (max-width: 793px) {
-  label {
+  label, .lable_gender {
     font-size: 16px;
   }
 }
@@ -1501,6 +1496,15 @@ select {
     height: 40px;
     margin: 10px auto;
   }
+}
+
+.calculatorCalorie__error {
+  font-family: "Yellowtail";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 49px;
+  color: #7EB693;
 }
 
 @keyframes spin {
@@ -1591,14 +1595,6 @@ select {
     width: 27vw;
   }
 }
-/**
- * ItcSlider
- * @version 1.0.1
- * @author https://github.com/itchief
- * @copyright Alexander Maltsev 2020 - 2023
- * @license MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
- * @tutorial https://itchief.ru/javascript/slider
- */
 .itc-slider {
   position: relative;
   width: 85%;
@@ -1628,7 +1624,6 @@ select {
   will-change: transform;
 }
 
-/* кнопки влево и вправо */
 .itc-slider-btn {
   position: absolute;
   top: 50%;
@@ -1682,7 +1677,6 @@ select {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
-/* индикаторы */
 .itc-slider-indicators {
   right: 0;
   bottom: 0;
@@ -1794,16 +1788,11 @@ select {
   background-color: #EFD372;
   color: #274C5B;
   border-color: #EFD372;
-  height: 80px;
   margin-right: auto;
   margin-left: auto;
 }
 .share-with-us__btn:hover {
   background-color: #f9f8f8;
-}
-
-.share-with-us__btn:hover {
-  background-color: #EFD372;
 }
 
 .share-with-us__form {
@@ -1812,23 +1801,14 @@ select {
   margin-left: 10vw;
 }
 
-.share-with-us__error {
-  font-family: "Roboto", sans-serif;
+.share-with-us__error, .share-with-us__gratitude {
+  font-family: "Yellowtail";
   font-style: italic;
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 18px;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 49px;
+  color: #7EB693;
   color: rgb(163, 29, 29);
-}
-
-.share-with-us__gratitude {
-  font-family: "Roboto", sans-serif;
-  font-style: italic;
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 18px;
-  color: #234530;
-  margin-bottom: 20px;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {

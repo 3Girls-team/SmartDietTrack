@@ -42,7 +42,7 @@
 }
 
 .testimonial__heading-h6 {
-  @include heading-h6;
+  @include heading-h3;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {

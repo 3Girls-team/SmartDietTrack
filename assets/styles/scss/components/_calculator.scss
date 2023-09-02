@@ -174,7 +174,7 @@
     }
   }
 }
-label {
+label, .lable_gender {
   @include text-list;
   display: inline-block;
   font-size: 22px;
@@ -239,6 +239,11 @@ select {
     margin: 10px auto;
   }
 }
+
+.calculatorCalorie__error {
+  @include text-error;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);

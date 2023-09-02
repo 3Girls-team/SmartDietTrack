@@ -1,12 +1,3 @@
-/**
- * @class ItcSlider
- * @version 1.0.1
- * @author https://github.com/itchief
- * @copyright Alexander Maltsev 2020 - 2023
- * @license MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
- * @tutorial https://itchief.ru/javascript/slider
- */
-
 class ItcSlider {
   static #EL_WRAPPER = "wrapper";
   static #EL_ITEMS = "items";
@@ -32,22 +23,22 @@ class ItcSlider {
    */
   constructor(el, config = {}, prefix = "itc-slider-") {
     this.#state = {
-      prefix, // префикс для классов
-      el, // элемент который нужно активировать как ItcSlider
-      elWrapper: el.querySelector(`.${prefix}${this.constructor.#EL_WRAPPER}`), // элемент с #CLASS_WRAPPER
-      elItems: el.querySelector(`.${prefix}${this.constructor.#EL_ITEMS}`), // элемент, в котором находятся слайды
-      elListItem: el.querySelectorAll(`.${prefix}${this.constructor.#EL_ITEM}`), // список элементов, являющиеся слайдами
-      btnPrev: el.querySelector(`.${prefix}${this.constructor.#BTN_PREV}`), // кнопка, для перехода к предыдущему слайду
-      btnNext: el.querySelector(`.${prefix}${this.constructor.#BTN_NEXT}`), // кнопка, для перехода к следующему слайду
-      btnClassHide: prefix + this.constructor.#BTN_HIDE, // класс для скрытия кнопки
+      prefix,
+      el, 
+      elWrapper: el.querySelector(`.${prefix}${this.constructor.#EL_WRAPPER}`), 
+      elItems: el.querySelector(`.${prefix}${this.constructor.#EL_ITEMS}`),
+      elListItem: el.querySelectorAll(`.${prefix}${this.constructor.#EL_ITEM}`), 
+      btnPrev: el.querySelector(`.${prefix}${this.constructor.#BTN_PREV}`), 
+      btnNext: el.querySelector(`.${prefix}${this.constructor.#BTN_NEXT}`), 
+      btnClassHide: prefix + this.constructor.#BTN_HIDE, 
       exOrderMin: 0,
       exOrderMax: 0,
       exItemMin: null,
       exItemMax: null,
       exTranslateMin: 0,
       exTranslateMax: 0,
-      direction: "next", // направление смены слайдов
-      intervalId: null, // id таймера
+      direction: "next", 
+      intervalId: null, 
       isSwiping: false,
       swipeX: 0,
       swipeY: 0,
@@ -67,7 +58,6 @@ class ItcSlider {
   }
 
   /**
-   * Статический метод, который возвращает экземпляр ItcSlider, связанный с DOM-элементом
    * @param {HTMLElement} elSlider
    * @returns {?ItcSlider}
    */
@@ -96,7 +86,6 @@ class ItcSlider {
     return slider;
   }
 
-  // статический метод для активирования элементов как ItcSlider на основе data-атрибутов
   static createInstances() {
     document.querySelectorAll('[data-slider="itc-slider"]').forEach((el) => {
       const { dataset } = el;
@@ -135,12 +124,10 @@ class ItcSlider {
 
   get autoplay() {
     return {
-      // Start autoplay
       start: () => {
         this.#config.autoplay = true;
         this.#autoplay();
       },
-      // Stop autoplay
       stop: () => {
         this.#autoplay("stop");
         this.#config.autoplay = false;
@@ -553,24 +540,15 @@ class ItcSlider {
     }
   }
 
-  // приватный метод для выполнения первичной инициализации
   #init() {
-    // состояние элементов
     this.#state.els = [];
-    // текущее значение translate
     this.#state.translate = 0;
-    // позиции активных элементов
     this.#state.activeItems = [];
-    // состояние элементов
     this.#state.isBalancing = false;
-    // получаем gap между слайдами
     const gap = parseFloat(getComputedStyle(this.#state.elItems).gap) || 0;
-    // ширина одного слайда
     this.#state.width =
       this.#state.elListItem[0].getBoundingClientRect().width + gap;
-    // ширина #EL_WRAPPER
     const widthWrapper = this.#state.elWrapper.getBoundingClientRect().width;
-    // количество активных элементов
     this.#state.countActiveItems = Math.round(widthWrapper / this.#state.width);
     this.#state.elListItem.forEach((el, index) => {
       el.style.transform = "";
@@ -603,9 +581,7 @@ class ItcSlider {
   #reset() {
     const transitionNoneClass =
       this.#state.prefix + this.constructor.#TRANSITION_NONE;
-    // получаем gap между слайдами
     const gap = parseFloat(getComputedStyle(this.#state.elItems).gap) || 0;
-    // ширина одного слайда
     const widthItem =
       this.#state.elListItem[0].getBoundingClientRect().width + gap;
     const widthWrapper = this.#state.elWrapper.getBoundingClientRect().width;

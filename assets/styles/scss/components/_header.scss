@@ -1,6 +1,7 @@
-body._lock{
-overflow: hidden;
+body._lock {
+        overflow: hidden;
 }
+
 .header{
 display: flex;
 margin: 15px;
@@ -33,7 +34,7 @@ color: $color-sgrey;
 text-decoration: none;
 }
 &__list-item :hover{
-color: $color-green ;
+color: $color-dgrey ;
 }
 &__text{
 position: relative;
